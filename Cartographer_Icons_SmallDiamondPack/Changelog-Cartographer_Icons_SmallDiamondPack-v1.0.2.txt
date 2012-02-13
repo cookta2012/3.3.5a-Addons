@@ -1,0 +1,14 @@
+------------------------------------------------------------------------
+r8 | burnum | 2009-12-09 04:16:40 +0000 (Wed, 09 Dec 2009) | 1 line
+Changed paths:
+   A /tags/v1.0.2 (from /trunk:7)
+
+Tagging as v1.0.2 for 3.3
+------------------------------------------------------------------------
+r7 | burnum | 2009-12-09 03:53:44 +0000 (Wed, 09 Dec 2009) | 1 line
+Changed paths:
+   M /trunk/Cartographer_Icons_SmallDiamondPack.toc
+   M /trunk/Readme.html
+
+updates for 3.3
+------------------------------------------------------------------------

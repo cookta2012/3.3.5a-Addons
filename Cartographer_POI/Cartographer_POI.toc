@@ -1,0 +1,32 @@
+﻿## Interface: 30200
+## Title: Cartographer |r[|cffeda55fPOI|r]
+## Title-ruRU: Картограф |r[|cffeda55fИнтересные места|r]
+## X-Name: POI
+## X-Name-ruRU: Интересные места (POI)
+## X-Name-deDE: PoI
+## X-Name-koKR: 포인트
+## X-Name-zhTW: 資訊點
+## X-Name-esES: PdI
+## X-Name-zhCN: 信息点
+## X-ModuleName: POI
+## Notes: Module to manage points of interest.
+## Notes-ruRU: Модуль отвечает за отображение интересных/жилых мест на карте, синими точками (POI)
+## Notes-deDE: Modul zur Verwaltung interessanter Orte ('Points of Interest').
+## Notes-koKR: 위치 포인트 관리 모듈을 제공합니다.
+## Notes-zhTW: 管理資訊點的模組。
+## Notes-esES: Módulo que gestiona los puntos de interés
+## Notes-zhCN: 管理信息点模块。
+## Author: Chris "kergoth" Larson
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: Cartographer, Cartographer_Notes
+## OptionalDeps: 
+## X-Category: Map
+## X-eMail: clarson@kergoth.com
+## Version: 2.0
+## X-Curse-Packaged-Version: v2.5.6
+## X-Curse-Project-Name: Cartographer
+## X-Curse-Project-ID: cartographer
+## X-Curse-Repository-ID: wow/cartographer/mainline
+
+POI.lua

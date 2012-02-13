@@ -1,0 +1,265 @@
+------------------------------------------------------------------------
+r615 | sylvanaar | 2010-09-16 23:33:24 +0000 (Thu, 16 Sep 2010) | 1 line
+Changed paths:
+   A /tags/3.4.1 (from /trunk:614)
+
+Tagging as 3.4.1
+------------------------------------------------------------------------
+r614 | sylvanaar | 2010-09-16 23:31:02 +0000 (Thu, 16 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/modules/UrlCopy.lua
+
+fix urlcopy on live and beta
+------------------------------------------------------------------------
+r613 | sylvanaar | 2010-09-16 23:04:54 +0000 (Thu, 16 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/modules/Bubbles.lua
+
+fix the dynamic chatbubble expansion feature which was broken during optimization of scan frequency
+------------------------------------------------------------------------
+r612 | sylvanaar | 2010-09-16 22:41:01 +0000 (Thu, 16 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/modules/Bubbles.lua
+
+use the correct value for insetting the text
+------------------------------------------------------------------------
+r611 | sylvanaar | 2010-09-16 22:32:07 +0000 (Thu, 16 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/modules/Bubbles.lua
+
+make the chat bubbles size upwards and downwards along with changes to the text length and font/font size. This should prevent both early truncation and large blank spaces when using a small font
+------------------------------------------------------------------------
+r610 | sylvanaar | 2010-09-16 21:49:52 +0000 (Thu, 16 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/Prat-3.0.toc
+
+pickup localizations
+------------------------------------------------------------------------
+r609 | sylvanaar | 2010-09-16 21:28:02 +0000 (Thu, 16 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/modules/Bubbles.lua
+
+new option. set the font size of the chat bubble text
+------------------------------------------------------------------------
+r608 | sylvanaar | 2010-09-16 21:15:19 +0000 (Thu, 16 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/modules/Bubbles.lua
+
+fix issues with text wrapping due to text size or length changes. Resize the chatbubble if it is too small to fix the text after it has been reformatted
+------------------------------------------------------------------------
+r607 | sylvanaar | 2010-09-14 21:50:59 +0000 (Tue, 14 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/modules/UrlCopy.lua
+
+fix urlcopy on beta
+------------------------------------------------------------------------
+r604 | sylvanaar | 2010-09-11 21:45:47 +0000 (Sat, 11 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/modules/Bubbles.lua
+
+fix the bubbles module to display the correct font
+------------------------------------------------------------------------
+r603 | sylvanaar | 2010-09-08 18:56:26 +0000 (Wed, 08 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/services/events.lua
+
+revert last
+------------------------------------------------------------------------
+r602 | sylvanaar | 2010-09-08 03:09:46 +0000 (Wed, 08 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/services/events.lua
+
+whitelist _EMOTE and _TEXT_EMOTE
+------------------------------------------------------------------------
+r601 | sylvanaar | 2010-09-08 02:40:32 +0000 (Wed, 08 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/services/unitpopupmenus.lua
+
+fix leaked global
+------------------------------------------------------------------------
+r600 | sylvanaar | 2010-09-08 02:40:30 +0000 (Wed, 08 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/modules/Bubbles.lua
+
+make the option to set the font in the chat bubbles work properly
+------------------------------------------------------------------------
+r599 | sylvanaar | 2010-09-08 02:40:28 +0000 (Wed, 08 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/.hgignore
+
+update hgignore
+------------------------------------------------------------------------
+r598 | sylvanaar | 2010-09-08 02:40:27 +0000 (Wed, 08 Sep 2010) | 1 line
+Changed paths:
+   D /trunk/.idea/copyright
+
+remove the copyright settings since that plugin doesnt support lua
+------------------------------------------------------------------------
+r597 | sylvanaar | 2010-09-08 02:40:25 +0000 (Wed, 08 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/.hgignore
+
+re-update hgignore
+------------------------------------------------------------------------
+r596 | sylvanaar | 2010-09-08 02:40:22 +0000 (Wed, 08 Sep 2010) | 1 line
+Changed paths:
+   A /trunk/.hgignore
+   D /trunk/.idea/misc.xml
+   D /trunk/.idea/vcs.xml
+
+remove some parts of the idea project that arent needed
+------------------------------------------------------------------------
+r595 | sylvanaar | 2010-09-04 21:03:12 +0000 (Sat, 04 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/modules/PlayerNames.lua
+
+support dynamic loading of libwho-2.0 as a standalone since we do not embed it. one use for this is dealing with guilds with > 500 members
+------------------------------------------------------------------------
+r593 | sylvanaar | 2010-09-03 16:50:26 +0000 (Fri, 03 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/.idea/misc.xml
+   M /trunk/debug/printliteral.lua
+   M /trunk/modules/AltNames.lua
+   M /trunk/modules/ChannelSticky.lua
+   M /trunk/modules/ChatTabs.lua
+   M /trunk/modules/Clear.lua
+   M /trunk/modules/CopyChat.lua
+   M /trunk/modules/Editbox.lua
+   M /trunk/modules/Font.lua
+   M /trunk/modules/History.lua
+   M /trunk/modules/OriginalButtons.lua
+   M /trunk/modules/PlayerNames.lua
+   M /trunk/modules/UrlCopy.lua
+   M /trunk/services/unitpopupmenus.lua
+
+replace all getglobal calls with _G[]. fix a global self usage in the editbox module, and in the debug Print function
+------------------------------------------------------------------------
+r592 | sylvanaar | 2010-09-03 16:08:15 +0000 (Fri, 03 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/modules/CopyChat.lua
+
+fix right click copy from the player-links
+------------------------------------------------------------------------
+r591 | sylvanaar | 2010-09-03 05:17:59 +0000 (Fri, 03 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/modules/ChatTabs.lua
+
+restore the chatframe alpha correctly (#410)
+------------------------------------------------------------------------
+r590 | sylvanaar | 2010-09-03 01:49:44 +0000 (Fri, 03 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/.idea/misc.xml
+   M /trunk/Prat.iml
+
+commit IDEA project files
+------------------------------------------------------------------------
+r589 | sylvanaar | 2010-09-03 01:22:35 +0000 (Fri, 03 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/addon/addon.lua
+
+added 2 new commands for /pratblacklist and /pratunblacklist, these let you place names on a "do not color" list. Note: this only applies to the "color names everywhere" option.
+------------------------------------------------------------------------
+r587 | sylvanaar | 2010-09-02 21:44:39 +0000 (Thu, 02 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/modules/ChatTabs.lua
+
+set .oldAlpha explicitly to prevent an error in FCF
+------------------------------------------------------------------------
+r586 | sylvanaar | 2010-09-02 21:32:42 +0000 (Thu, 02 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/addon/addon.lua
+
+set the BN_CHAT flag to enable that functionality
+------------------------------------------------------------------------
+r585 | sylvanaar | 2010-09-02 21:14:54 +0000 (Thu, 02 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/libraries/Prat-3.0_Libraries.toc
+   M /trunk/pullouts/Prat-3.0_Debug/Prat-3.0_Debug.toc
+   M /trunk/pullouts/Prat-3.0_HighCPUUsageModules/Prat-3.0_HighCPUUsageModules.toc
+
+## X-Compatible-With: 40000 for the sub-addons
+------------------------------------------------------------------------
+r584 | sylvanaar | 2010-09-02 20:48:33 +0000 (Thu, 02 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/Prat-3.0.toc
+
+## X-Compatible-With: 40000
+------------------------------------------------------------------------
+r583 | sylvanaar | 2010-09-02 18:24:31 +0000 (Thu, 02 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/services/patterns.lua
+
+fixed problem....wasnt checking the pattern match tables to see if they were empty (in another place)
+------------------------------------------------------------------------
+r582 | sylvanaar | 2010-09-02 17:23:32 +0000 (Thu, 02 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/services/patterns.lua
+
+fixed problem....wasnt checking the pattern match tables to see if they were empty
+------------------------------------------------------------------------
+r581 | sylvanaar | 2010-09-02 17:16:33 +0000 (Thu, 02 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/services/patterns.lua
+
+chop out the broken portion until i can figure out the cause
+------------------------------------------------------------------------
+r580 | sylvanaar | 2010-09-02 14:47:08 +0000 (Thu, 02 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/Prat-3.0.toc
+
+## X-Compatible-With: 30200
+------------------------------------------------------------------------
+r579 | sylvanaar | 2010-08-30 18:35:53 +0000 (Mon, 30 Aug 2010) | 1 line
+Changed paths:
+   A /trunk/.idea
+   A /trunk/.idea/ant.xml
+   A /trunk/.idea/compiler.xml
+   A /trunk/.idea/copyright
+   A /trunk/.idea/copyright/profiles_settings.xml
+   A /trunk/.idea/encodings.xml
+   A /trunk/.idea/findbugs-idea.xml
+   A /trunk/.idea/misc.xml
+   A /trunk/.idea/modules.xml
+   A /trunk/.idea/uiDesigner.xml
+   A /trunk/.idea/vcs.xml
+   M /trunk/.pkgmeta
+   A /trunk/Prat.iml
+
+add my IDEA project files to the repo.
+------------------------------------------------------------------------
+r578 | sylvanaar | 2010-08-16 20:09:51 +0000 (Mon, 16 Aug 2010) | 1 line
+Changed paths:
+   M /trunk/Prat-3.0.toc
+
+test #406 again, this message should be a comment, kk??
+------------------------------------------------------------------------
+r577 | sylvanaar | 2010-08-16 03:31:36 +0000 (Mon, 16 Aug 2010) | 1 line
+Changed paths:
+   M /trunk/Prat-3.0.toc
+
+test #405
+------------------------------------------------------------------------
+r576 | sylvanaar | 2010-08-16 03:18:42 +0000 (Mon, 16 Aug 2010) | 1 line
+Changed paths:
+   M /trunk/Prat-3.0.toc
+
+test #406 again
+------------------------------------------------------------------------
+r575 | sylvanaar | 2010-08-16 03:14:34 +0000 (Mon, 16 Aug 2010) | 1 line
+Changed paths:
+   M /trunk/Prat-3.0.toc
+
+test #406
+------------------------------------------------------------------------
+r574 | sylvanaar | 2010-08-16 03:13:38 +0000 (Mon, 16 Aug 2010) | 1 line
+Changed paths:
+   M /trunk/Prat-3.0.toc
+
+test #406
+------------------------------------------------------------------------
+r573 | sylvanaar | 2010-08-08 18:03:34 +0000 (Sun, 08 Aug 2010) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+move to libalts tag:latest
+------------------------------------------------------------------------

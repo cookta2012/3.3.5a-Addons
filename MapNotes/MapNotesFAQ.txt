@@ -1,0 +1,97 @@
+
+
+One thing that people should be aware of is that this version of MapNotes has changed the Keying system for notes, and no longer uses the Continent/Zone as a heading under which to save them.
+Your MapNotes should be automatically converted the first time you log in.
+This means that you can't use older versions of Magellan for example, which will still try to create MapNotes under the old Continent / Zone system, and you won't be able to send/receive notes with players using older versions of MapNotes.
+NOTE : This version of MapNotes includes Magellan functionality via a new checkbox on the Options frame.
+
+
+
+Q01 - How do I make notes on the map now ?
+|
+A01 - <Control>-<Right Click> on the World Map to show the MapNotes menu from where you can Create a new note, or access the Options menu, etc. (The traditional methods of note creation via slash commands, or receiving from other users still work - note that you can only send/receive notes with other users of MapNotes (Fan's Update), and NOT to users of other versions of MapNotes.)
+OR
+<Control>-<Alt>-Right Click on the Map to speedily create a quicknote.
+Also check the key bindings and other information in the Readme.txt file for more details.
+<Control>-<Alt>-Right Click on a note to quickly open the Edit Window for that note.
+So you can quickly create and edit a new note by <Control>-<Alt>-Double Right Clicking.
+
+
+Q02 - The MapNotes in game help shows Slash Commands such as '/mn -q', etc. Can I still use the slash commands I'm used to such as '/quicknote' ?
+|
+A02 - Yes. I have introduced a new set of slash commands that I consider to be more consistant, but the legacy Slash commands are still available.
+If you need help on the Slash commands in game, I have added some Help messages - just type '/mn' on its own to see what version of MapNotes you are playing with, and what commands are available.
+New slash commands all follow the form '/mn [-switch] [parameters, ...]'
+But you can still use '/mn [MapNote]' to create a new note - see the Readme.txt file for details on how to format a [Mapnote] in order to create one from the command line.
+
+
+
+Q03 - Can I still use '/tloc' to show coordinates under the Minimap ?
+|
+A03 - '/tloc' can still be used to toggle the display of coordinates under the minimap. There are NO other dependancies apart from MapNotes itself, and this command will display MapNotes' own coordinates whether or not you have Thottbott installed.
+'/tloc' is basically identical to the new '/mn -minic' command for toggling minimap coordinates.
+
+
+
+Q04 - Can I still use '/tloc xx,yy' to place a Thottbott marker on the World Map ?
+|
+A04 - No. Use either '/mn -tloc xx,yy' or '/mntloc xx,yy'. There are various reasons for why I separated the toggling of Minimap coordinates from the creation of a Thottbott Note - see separate posting for details.
+
+
+
+Q05 - Is there a way to quickly create a note at my Players current location while I play ?
+(i.e. without having to move away so that I can click on the part of the map that my Player arrow was obscuring...)
+|
+A05 - MapNotes (Fan's Update) provides several methods for the creation of Quicknotes :
+1.) the original Slash command functionality; '/mn -q' OR '/quicknote'
+2.) NEW slash command '/mn -t' will create a MapNote at the Players current location if you have nothing Targetted.
+However, if you do have a target, then '/mn -t' will create a MapNote with details of your Target at the PLAYER'S current location. If you are too near to an existing MapNote, then you will be warned that no MapNote can be created.
+3.) NEW slash command '/mn -m' will also create a MapNote based on the player's current Target, at the PLAYER'S current location.
+However, if the player is too near an existing MapNote to create a new one, then the details of the current Target will be Merged with the existing MapNote.
+4.) NEW Key-Binding added for the QuickNote/TargetNote ('/mn -t') command; And NEW Key-Binding added for the TargetNote/MergeNote ('/mn -m') command also.
+5.) <Alt>-Left-Clicking on the MapNotes Minimap Coordinates will also execute the QuickNote/TargetNote functionality.
+6.) <Alt>-Right-Clicking on the MapNotes Minimap Coordinates will execute the TargetNote/MergeNote functionality.
+
+
+
+Q06 - The 'Turn Mininote Off' button is no longer available when I bring up the 'Create New Note' menu by <Control>-<Right Clicking> on the World Map. Also, when I type, '/mininoteoff' or '/mn -minioff', the current Mininote does not disappear.
+What's going on ?
+|
+A06 - MapNotes (Fan's Update) now allows you to use multiple MapNotes as Mininotes that you can track via the Minimap.
+You can still only use ONE Party Note OR ONE Thottbott marker - but you can turn on as many MapNotes as you like to use as Mininotes. This means that currently, the '/mn -minioff' command will only turn off Party/Thottbott Mininotes. Any mininote that is based on a permanent MapNote must be turned off by one of 2 methods :
+1.) <Control>-<Alt>-<Left Click> on any Mininote on the Minimap to turn off that Mininote - this is probably the easies/quickest method. It will NOT delete the underlying MapNotes - just stop using it as a Mininote.
+2.) Right-Click on the MapNote itself on the World Map, and choose the "Turn Mininote Off" option for that note.
+(Note that when you use the "Set As Mininote" button for a MapNote, then the option automatically changes to "Turn Mininote Off" when you Right-Click that MapNote again.)
+3.) Delete the underlying MapNote - extreme but it works.
+Note : Yup, that's right, there is no global way to turn off ALL Mininotes at the moment - I didn't think it was necessary so far, as <Control>-<Alt>-<Left Clicking> the actual Mininotes on the Minimap is a quick easy way to turn them off...
+4.) New key binding or "/mn -allmini" command to toggle all MapNotes on/off as Mininotes
+
+
+
+Q07 - Is there an easy way to adjust the position of a Note, other than deleting it, and re-creating it in a new location ?
+|
+A07 - Map Notes can easily be moved to new locations by <Control>-<Alt>-Left-Click dragging with the Mouse.
+
+
+
+Q08 - Can MapNotes show Player/Cursor Coordinates on the WorldMap ?
+|
+A08 - Use '/mn -mapc' to toggle display of Player/Cursor coordinates on the World Map. If you are not happy with the default location of the coordinates, you can <Control>-Click drag them to a different location, and they will remember where you drop them.
+
+
+
+Q09 - Can the <Alt>-Click method of line drawing be used again ?
+|
+A09 - Yes. The toggling of lines between points by <Alt>-Left-Clicking each point has been fixed in this version.
+
+
+
+Q10 - I want to be able to make notes on Atlas Instance maps
+|
+A10 - MapNotes (Fan's Update) comes with a Plugins Interface allowing it to make notes on Frames/Maps belonging to other AddOns. But the other AddOns need to use the MapNotes Interface. AlphaMap (Fan's Update) v2.62.11200 and later works with MapNotes (Fan's Update) so that you can create MapNotes on AlphaMap Battleground/Instance/WorldBoss maps in exactly the same way as you do on the WorldMap. MapNotes (Fan's Update) also comes with in-built support for the current version of Atlas, so that you can make MapNotes on any of the Atlas maps.
+
+
+
+Q11 - I want to use MapNotes (Fan's Update) to make notes on the Naxxramas Dungeon map in AlphaMap, but nothing happens when I <Control>-<Right Click> on AlphaMap's Naxxramas map ?
+|
+A11 - Open up the Naxxramas map in AlphaMap; Open up the AlphaMap Options frame; Click on the first 'General' Tab, and make sure that the "Enable Map Notes" check box is checked. Make sure this option is checked for any map where you want to be able to make MapNotes in AlphaMap.

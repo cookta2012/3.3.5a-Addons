@@ -1,0 +1,13 @@
+## Interface: 30300
+## Title: MapNotesForAtlas
+## Author: Cortello (previously Telic)
+## eMail: cortello@gmx.com
+## Version: 1.00.30300
+## Notes: Allows MapNotes functionality and notes on Atlas Maps
+## RequiredDeps: MapNotes, Atlas
+## OptionalDeps:
+## DefaultState: enabled
+## SavedVariables:
+
+MapNotesForAtlas.lua
+

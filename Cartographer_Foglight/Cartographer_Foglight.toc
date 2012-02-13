@@ -1,0 +1,35 @@
+﻿## Interface: 30200
+## Title: Cartographer |r[|cffeda55fFoglight|r]
+## Title-ruRU: Картограф |r[|cffeda55fПротивотуман|r]
+## X-Name: Foglight
+## X-Name-ruRU: Противотуман
+## X-Name-deDE: Licht im Nebel
+## X-Name-frFR: Antibrouillard
+## X-Name-koKR: 미 탐색 지역
+## X-Name-zhTW: 迷霧
+## X-Name-esES: Faro Antiniebla
+## X-Name-zhCN: 迷雾
+## X-ModuleName: Foglight
+## Notes: Module to show unexplored areas on the map.
+## Notes-ruRU: Модуль отображает неисследованные территории на карте.
+## Notes-deDE: Modul zur Aufdeckung nicht erkundeter Bereiche auf der Weltkarte.
+## Notes-frFR: Module permettant d'afficher les zones inexplorées sur la carte.
+## Notes-koKR: 지도에 탐험하지 못한 지역을 보여줍니다.
+## Notes-zhTW: 顯示地圖尚未探索地區的模組。
+## Notes-esES: Módulo que muestra las zonas inexploradas del mapa
+## Notes-zhCN: 显示地图尚未探索地区模块。
+## Author: ckknight
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: Cartographer
+## OptionalDeps: 
+## X-Category: Map
+## X-eMail: ckknight@gmail.com
+## X-Website: http://ckknight.wowinterface.com/
+## Version: 2.0
+## X-Curse-Packaged-Version: v2.5.6
+## X-Curse-Project-Name: Cartographer
+## X-Curse-Project-ID: cartographer
+## X-Curse-Repository-ID: wow/cartographer/mainline
+
+Foglight.lua

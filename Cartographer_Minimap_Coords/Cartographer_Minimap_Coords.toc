@@ -1,0 +1,18 @@
+## Interface: 30300
+## Title: Cartographer |r[|cffeda55fMinimap Coords|r]
+## Author: Jebus905
+## Version: 3.30a
+## Notes: Show coordinates on minimap
+## SavedVariables: Cartographer_MiniMapCoordsDB
+## Dependencies: Cartographer
+## X-Curse-Packaged-Version: v3.30a
+## X-Curse-Project-Name: Cartographer_Minimap_Coords
+## X-Curse-Project-ID: cartographer_minimap_coords
+## X-Curse-Repository-ID: wow/cartographer_minimap_coords/mainline
+
+## X-Credits: Jebus905
+## X-Email: jasondpowell@gmail.com
+## X-Category: Map
+## X-AceForum: 11498
+
+Cartographer_Minimap_Coords.lua

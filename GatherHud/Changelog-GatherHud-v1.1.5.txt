@@ -1,0 +1,13 @@
+tag v1.1.5
+a94d06c245a6979f29f5fba3a57406d544b4572a
+Xaroz <xaroz@grum.nl>
+2009-04-29 20:54:24 +0200
+
+Updated to use the wowace locale system.
+
+
+--------------------
+
+Xaroz:
+	Updated TOC Version to use keyword replacement.
+	Use wowace's localization system -- http://www.wowace.com/projects/gather-hud/localization/

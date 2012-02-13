@@ -1,0 +1,14 @@
+## Interface: 30200
+## Title: TicketChaos
+## Author: Chocochaos
+## Version: 1.5
+## X-Date: June 5th, 2009
+## X-Email: msn@chocochaos.com
+## DefaultState: Enabled
+## SavedVariables: WhisperMacros
+Chronos\Chronos.xml
+TicketChaos.lua
+TicketChaos.xml
+MinimapButton.xml
+Whispermacros.lua
+Whispermacros.xml

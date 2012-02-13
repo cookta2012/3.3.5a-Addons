@@ -1,0 +1,8 @@
+## Interface: 30300
+## Title: MoveAnything!
+## Notes: 3.3-09 by Wagthaa
+## Version: 3.3-09
+## Author: Skrag - Mod: Jason - TBC: Vincent - WotLK: Wagthaa @ Earthen Ring EU
+## SavedVariables: MoveAnything_CustomFrames, MoveAnything_CharacterSettings, MoveAnything_UseCharacterSettings, MADB
+
+MoveAnything.xml

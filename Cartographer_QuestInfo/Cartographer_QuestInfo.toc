@@ -1,0 +1,60 @@
+## Interface: 30200
+## Title: Cartographer |r[|cffeda55fQuestInfo|r]
+## Notes: Quest library for mob location and other information
+## Title-ruRU: Картограф |r[|cffeda55fИнфо-Задания|r]
+## Notes-ruRU: Библиотека заданий о местонахождение монстров и другой информации
+## Title-zhCN: |cFF00FF00[地图]|r任务资料 Cartographer [|cffeda55fQuestInfo|r]
+## Notes-zhCN: 制图大师的配件，提供任务资料库
+## Title-zhTW: |cFF00FF00[地圖]|r任務資訊 Cartographer [|cffeda55fQuestInfo|r]
+## Notes-zhTW: 製圖大師模組，提供任務資料庫功能
+## Title-koKR:Cartographer [|cffeda55f퀘스트 정보|r]
+## Notes-koKR: 지도와 미니맵에 퀘스트 관련 정보를 출력해줍니다.
+## Author: lahow (aka purple@bahamut)
+## SavedVariables: Cartographer_QuestInfoDB
+## LoadOnDemand: 1
+## LoadWith: Cartographer_Notes
+## RequiredDeps: Cartographer
+## OptionalDeps: Cartographer_Notes, LibQuixote-2.0, LibGratuity-3.0, QuestGuru
+## X-Category: Map
+## X-eMail: lahow DOT studio AT gmail DOT com
+## X-Embeds: LibQuixote-2.0, LibGratuity-3.0
+## X-Name: QuestInfo
+## X-Name-ruRU: Инфо-Задания
+## X-Name-koKR: 퀘스트 정보
+## X-Name-zhTW: 任務資訊
+## X-Name-zhCN: 任务资料
+## X-ModuleName: QuestInfo
+## X-Curse-Packaged-Version: 3.2.0.3
+## X-Curse-Project-Name: Cartographer_QuestInfo
+## X-Curse-Project-ID: cartographer_quest-info
+## X-Curse-Repository-ID: wow/cartographer_quest-info/mainline
+
+embeds.xml
+
+Data\Quest.lua
+Data\NPC.lua
+Data\Zone.lua
+Data\Name-deDE.lua
+Data\Name-esES.lua
+Data\Name-frFR.lua
+Data\Name-koKR.lua
+Data\Name-zhTW.lua
+Data\Name-zhCN.lua
+Data\Name-ruRU.lua
+Data\Name-enUS.lua
+
+Locale\Locale-enUS.lua
+Locale\Locale-ruRU.lua
+Locale\Locale-zhTW.lua
+Locale\Locale-zhCN.lua
+Locale\Locale-koKR.lua
+Locale\Locale-esES.lua
+
+Core.lua
+Map.lua
+LocationFrame.lua
+SeriesFrame.lua
+QuestFuPatch.lua
+QuestLogPatch.lua
+
+Buttons.xml

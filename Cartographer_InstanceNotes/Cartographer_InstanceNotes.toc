@@ -1,0 +1,45 @@
+﻿## Interface: 30200
+## Title: Cartographer |r[|cffeda55fInstance Notes|r]
+## Title-ruRU: Картограф |r[|cffeda55fЗаметки Подземелий|r]
+## X-Name: Instance Notes
+## X-Name-ruRU: Заметки подземелий
+## X-Name-deDE: Instanznotizen
+## X-Name-frFR: Notes d'instance
+## X-Name-koKR: 인스턴스 노트
+## X-Name-zhTW: 副本註記
+## X-Name-esES: Notas de Instancia
+## X-Name-zhCN: 副本标记
+## X-ModuleName: InstanceNotes
+## Notes: Module which adds default notes to the instance maps.
+## Notes-ruRU: Модуль позволяет вам размещать заметки на картах подземелий.
+## Notes-deDE: Modul, das den Instanzkarten die Standardnotizen hinzufügt.
+## Notes-frFR: Module permettant l'ajout de notes pré-définies sur les cartes d'instance.
+## Notes-koKR: 인스턴스 던전에 기본 노트를 추가합니다
+## Notes-zhTW: 新增預設註記到副本地圖的模組。
+## Notes-esES: Módulo que añade notas por defecto a los mapas de instancia
+## Notes-zhCN: 预设标记到副本地图模组。
+## Author: ckknight
+## X-Credits: Funkydude
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: Cartographer, Cartographer_Notes, Cartographer_InstanceMaps
+## OptionalDeps: LibBabble-Boss-3.0
+## X-Category: Map
+## X-eMail: ckknight@gmail.com
+## X-Website: http://ckknight.wowinterface.com/
+## Version: 2.0
+## X-Curse-Packaged-Version: v2.5.6
+## X-Curse-Project-Name: Cartographer
+## X-Curse-Project-ID: cartographer
+## X-Curse-Repository-ID: wow/cartographer/mainline
+
+enUS.lua
+ruRU.lua
+koKR.lua
+frFR.lua
+deDE.lua
+esES.lua
+zhTW.lua
+zhCN.lua
+module.lua
+notes.lua

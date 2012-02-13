@@ -1,0 +1,59 @@
+------------------------------------------------------------------------
+r308 | zarnivoop | 2010-10-28 09:02:39 +0000 (Thu, 28 Oct 2010) | 1 line
+Changed paths:
+   A /tags/1.2-30 (from /trunk:307)
+
+seems alright - tagging as 1.2-30
+------------------------------------------------------------------------
+r307 | zarnivoop | 2010-10-22 18:20:29 +0000 (Fri, 22 Oct 2010) | 1 line
+Changed paths:
+   M /trunk/Skada.lua
+   M /trunk/Skada.toc
+
+fixed broken whisper reports; added an (untested ) fix for certain pets being displayed separately
+------------------------------------------------------------------------
+r306 | zarnivoop | 2010-10-15 18:30:21 +0000 (Fri, 15 Oct 2010) | 1 line
+Changed paths:
+   M /trunk/modules/SkadaAbsorbs/Absorbs.lua
+
+added Holy Paladin mastery shield absorbs
+------------------------------------------------------------------------
+r304 | zarnivoop | 2010-10-13 17:56:28 +0000 (Wed, 13 Oct 2010) | 1 line
+Changed paths:
+   M /trunk/modules/SkadaAbsorbs/SkadaAbsorbs.toc
+   M /trunk/modules/SkadaCC/SkadaCC.toc
+   M /trunk/modules/SkadaDamage/SkadaDamage.toc
+   M /trunk/modules/SkadaDamageTaken/SkadaDamageTaken.toc
+   M /trunk/modules/SkadaDeaths/SkadaDeaths.toc
+   M /trunk/modules/SkadaDebuffs/SkadaDebuffs.toc
+   M /trunk/modules/SkadaDispels/SkadaDispels.toc
+   M /trunk/modules/SkadaEnemies/SkadaEnemies.toc
+   M /trunk/modules/SkadaFailbot/SkadaFailbot.toc
+   M /trunk/modules/SkadaHealing/SkadaHealing.toc
+   M /trunk/modules/SkadaPower/SkadaPower.toc
+   M /trunk/modules/SkadaThreat/SkadaThreat.toc
+
+forgot module .tocs as usual
+------------------------------------------------------------------------
+r302 | zarnivoop | 2010-10-13 17:29:12 +0000 (Wed, 13 Oct 2010) | 1 line
+Changed paths:
+   M /trunk/Options.lua
+   M /trunk/Skada.lua
+   M /trunk/Skada.toc
+   M /trunk/locale/enUS.lua
+
+option for aggressive combat detection added
+------------------------------------------------------------------------
+r301 | talryn1 | 2010-10-12 06:47:19 +0000 (Tue, 12 Oct 2010) | 1 line
+Changed paths:
+   M /trunk/modules/SkadaAbsorbs/Absorbs.lua
+
+Added DK Blood Shield to absorbs to trak
+------------------------------------------------------------------------
+r300 | zarnivoop | 2010-06-16 20:38:00 +0000 (Wed, 16 Jun 2010) | 2 lines
+Changed paths:
+   M /trunk/Skada.lua
+
+Slight fix.
+
+------------------------------------------------------------------------

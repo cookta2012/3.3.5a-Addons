@@ -1,0 +1,30 @@
+------------------------------------------------------------------------
+r52 | Odlaw | 2010-05-03 21:47:36 +0000 (Mon, 03 May 2010) | 1 line
+Changed paths:
+   M /trunk/MacroBank.toc
+
+zhCN update (thanks wowuicn)
+------------------------------------------------------------------------
+r51 | Odlaw | 2010-04-23 04:03:20 +0000 (Fri, 23 Apr 2010) | 5 lines
+Changed paths:
+   M /trunk/MacroBank.lua
+
+Shift-Clicking Save will now save the entire global or character macros to a category of your choice.
+Shift-Clicking Load will now load the entire category.
+Added AutoLoad for Global/Char macros on login options.
+Updated a few localization phrases
+
+------------------------------------------------------------------------
+r50 | Odlaw | 2010-04-22 21:41:52 +0000 (Thu, 22 Apr 2010) | 2 lines
+Changed paths:
+   M /trunk/MacroBank.lua
+
+Moved the loading of Blizzard_MacroUI to PLAYER_ENTERING_WORLD instead of OnEnable.  This should fix it not working with LargeMacroIconSelection addon.
+Also increased the size of MacroBank's Icon selection to 10x10 as that seems to be pretty nice.
+------------------------------------------------------------------------
+r49 | Odlaw | 2010-02-05 18:44:32 +0000 (Fri, 05 Feb 2010) | 1 line
+Changed paths:
+   M /trunk/MacroBank.lua
+
+Fix error when blizzard macro ui is loaded early.
+------------------------------------------------------------------------

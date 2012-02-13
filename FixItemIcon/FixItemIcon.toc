@@ -1,0 +1,6 @@
+﻿## Interface: 30300
+## Title: |cFFFF8080FixItemIcon|r修复物品图标
+## Version: 3.0.5
+## Notes: FixItemIcon
+## Notes-zhCN: 修复物品图标
+FixItemIcon.lua

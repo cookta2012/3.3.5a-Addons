@@ -1,0 +1,38 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+
+<!--@debug@
+
+<Script file="Cartographer_Battlegrounds\Battlegrounds.lua"/>
+<Script file="Cartographer_Coordinates\Coordinates.lua"/>
+<Script file="Cartographer_Foglight\Foglight.lua"/>
+<Script file="Cartographer_GroupColors\GroupColors.lua"/>
+<Script file="Cartographer_GuildPositions\GuildPositions.lua"/>
+<Script file="Cartographer_InstanceMaps\Data.lua"/>
+<Script file="Cartographer_InstanceMaps\InstanceMaps.lua"/>
+<Script file="Cartographer_LookNFeel\LookNFeel.lua"/>
+<Script file="Cartographer_Notes\Notes.lua"/>
+<Script file="Cartographer_Professions\Professions.lua"/>
+<Script file="Cartographer_ZoneInfo\ZoneInfo.lua"/>
+<Script file="Cartographer_POI\POI.lua"/>
+<Script file="Cartographer_InstanceNotes\enUS.lua"/>
+<Script file="Cartographer_InstanceNotes\ruRU.lua"/>
+<Script file="Cartographer_InstanceNotes\koKR.lua"/>
+<Script file="Cartographer_InstanceNotes\frFR.lua"/>
+<Script file="Cartographer_InstanceNotes\deDE.lua"/>
+<Script file="Cartographer_InstanceNotes\esES.lua"/>
+<Script file="Cartographer_InstanceNotes\zhTW.lua"/>
+<Script file="Cartographer_InstanceNotes\zhCN.lua"/>
+<Script file="Cartographer_InstanceNotes\module.lua"/>
+<Script file="Cartographer_InstanceNotes\notes.lua"/>
+<Script file="Cartographer_InstanceLoot\InstanceLoot.lua"/>
+<Script file="Cartographer_Waypoints\WayPoint.lua"/>
+<Script file="Cartographer_Waypoints\CorpsePoint.lua"/>
+<Script file="Cartographer_Waypoints\NotePoint.lua"/>
+<Script file="Cartographer_Waypoints\GuildPoint.lua"/>
+<Script file="Cartographer_Waypoints\PartyPoint.lua"/>
+<Script file="Cartographer_Waypoints\Waypoints.lua"/>
+
+@end-debug@-->
+
+</Ui>

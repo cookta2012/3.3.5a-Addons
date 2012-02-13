@@ -1,0 +1,35 @@
+﻿## Interface: 30200
+## Title: Cartographer |r[|cffeda55fBattlegrounds|r]
+## Title-ruRU: Картограф |r[|cffeda55fПоля сражений|r]
+## X-Name: Battlegrounds
+## X-Name-ruRU: Поля сражений
+## X-Name-deDE: Schlachtfelder
+## X-Name-frFR: Champs de bataille
+## X-Name-koKR: 전장
+## X-Name-zhTW: 戰場
+## X-Name-esES: Campos de Batalla
+## X-Name-zhCN: 战场
+## X-ModuleName: Battlegrounds
+## Notes: Module which provides maps of battlegrounds.
+## Notes-ruRU: Модуль отображает карты полей сражений
+## Notes-deDE: Modul, das Schlachtfeldkarten zur Verfügung stellt.
+## Notes-frFR: Module fournissant des cartes pour les champs de bataille.
+## Notes-koKR: 전장 지도 모듈을 제공합니다.
+## Notes-zhTW: 提供戰場地圖的模組。
+## Notes-esES: Módulo que provee mapas de los campos de batalla.
+## Notes-zhCN: 提供战场地图模块。
+## Author: ckknight
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: Cartographer
+## OptionalDeps: LibBabble-Zone-2.2, LibTourist-3.0
+## X-Category: Map
+## X-eMail: ckknight@gmail.com
+## X-Website: http://ckknight.wowinterface.com/
+## Version: 2.0
+## X-Curse-Packaged-Version: v2.5.6
+## X-Curse-Project-Name: Cartographer
+## X-Curse-Project-ID: cartographer
+## X-Curse-Repository-ID: wow/cartographer/mainline
+
+Battlegrounds.lua

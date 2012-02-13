@@ -1,0 +1,14 @@
+## Interface: 30300
+## Title: LevelBuddy
+## Author: Aelixia (The Maelstrom EU)
+## Version: 3.3b
+## Notes: Keep track of your friend's xp and share quests automatically.
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## SavedVariablesPerCharacter: LevelBuddy_Send,LevelBuddy_Receive,LevelBuddy_Share,LevelBuddy_Settings
+
+libs\LibStub.lua
+libs\CallbackHandler-1.0.xml
+libs\LibDataBroker-1.1.lua
+
+LevelBuddy.lua

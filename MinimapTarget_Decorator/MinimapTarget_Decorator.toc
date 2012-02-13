@@ -1,0 +1,13 @@
+## Interface: 30100
+## X-Curse-Packaged-Version: v1.5
+## X-Curse-Project-Name: MinimapTarget
+## X-Curse-Project-ID: minimap-target
+## X-Curse-Repository-ID: wow/minimap-target/mainline
+
+## Title: MinimapTarget Decorator
+## Notes: Add reaction, class and level information to MinimapTarget menu entries.
+## Author: Adirelle
+## Version: v1.5
+## Dependencies: MinimapTarget
+
+..\MinimapTarget\Decorator.lua

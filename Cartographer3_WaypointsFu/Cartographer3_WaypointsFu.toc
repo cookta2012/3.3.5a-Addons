@@ -1,0 +1,13 @@
+## Interface: 30000
+## Title: Cartographer 3.0 |r[|cffAF66FFWaypointsFu|r]
+## Notes: Allows for manual input of coordinates into Cartographer3 Waypoints. Just Click and type in coordinates from WoWHead, Thottbot, Allakahzam, or other sites providing waypoints. Also Has Optional Questhelper Support.
+## Version: 1.0.2
+## X-Category: Map
+## X-Embeds: FuBarPlugin-2.0, Ace2, TabletLib
+## Dependencies: Cartographer3
+## OptionalDeps: Ace2, FuBarPlugin-2.0, TabletLib, QuestHelper, Cartographer3_Waypoints
+## LoadOnDemand: 0
+## DefaultState: Disabled
+
+embeds.xml
+Cartographer3_WaypointsFu.xml

@@ -1,0 +1,152 @@
+<!--
+	MapNotes: Adds a note system to the WorldMap
+
+	See the README file for more information.
+-->
+
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/FrameXML/UI.xsd">
+
+	<Frame name="MapNotesSendFrame" inherits="MapNotes_FrameTemplate">
+		<Size>
+			<AbsDimension x="450" y="180"/>
+		</Size>
+		<Anchors>
+			<Anchor point="CENTER"/>
+		</Anchors>
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString inherits="GameFontGreenLarge" text="MAPNOTES_SEND_MENU">
+					<Anchors>
+						<Anchor point="TOP" relativeTo="MapNotesSendFrame">
+							<Offset><AbsDimension x="0" y="-8"/></Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+			<Layer level="OVERLAY">
+				<FontString name="MapNotes_SendFrame_Title" inherits="GameFontNormal" text="MAPNOTES_SEND_TITLE" justifyH="LEFT">
+					<Size>
+						<AbsDimension x="222" y="20"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset><AbsDimension x="22" y="-22"/></Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="MapNotes_SendFrame_Tip" inherits="GameFontNormalSmall" text="MAPNOTES_SEND_TIP" justifyH="LEFT">
+					<Size>
+						<AbsDimension x="400" y="32"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset><AbsDimension x="22" y="-36"/></Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="MapNotes_SendFrame_Player" inherits="GameFontNormalSmall" text="MAPNOTES_SEND_PLAYER" justifyH="LEFT">
+					<Size>
+						<AbsDimension x="222" y="16"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset><AbsDimension x="22" y="-65"/></Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<Button name="MapNotesChangeSendFrame" inherits="MapNotes_ButtonTemplate" text="MAPNOTES_SLASHCOMMAND">
+				<Anchors>
+					<Anchor point="CENTER" relativePoint="Bottom">
+						<Offset><AbsDimension x="-102.5" y="30"/></Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						PlaySound("igMainMenuOption");
+						MapNotes_ShowSendFrame(MapNotes_ToggleSendValue);
+					</OnClick>
+				</Scripts>
+			</Button>
+
+			<Button name="$parentCancel" inherits="MapNotes_CancelButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="MapNotesChangeSendFrame">
+						<Offset><AbsDimension x="20" y="0"/></Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+
+			<Button name="MapNotesSendPlayer" inherits="MapNotes_ButtonTemplate" text="MAPNOTES_SENDTOPLAYER">
+				<Anchors>
+					<Anchor point="CENTER" relativePoint="BOTTOM" relativeTo="MapNotesChangeSendFrame">
+						<Offset><AbsDimension x="0" y="37"/></Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						if ( MapNotes_SendWideEditBox:GetText() ~= "" ) then
+							PlaySound("igMainMenuOption");
+							MapNotes_SendNote(1);
+						end
+					</OnClick>
+				</Scripts>
+			</Button>
+			<EditBox name="MapNotes_SendWideEditBox" historyLines="0" letters="255">
+				<Size>
+					<AbsDimension x="400" y="64"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset><AbsDimension x="24" y="-63"/></Offset>
+					</Anchor>
+				</Anchors>
+				<HitRectInsets>
+					<AbsInset left="0" right="0" top="-22" bottom="22"/>
+				</HitRectInsets>
+				<Scripts>
+					<OnLoad>
+						MapNotes_SendWideEditBox:SetText("");
+					</OnLoad>
+					<OnEscapePressed>
+						MapNotesSendFrame:Hide();
+					</OnEscapePressed>
+					<OnShow>
+						this:SetFrameLevel( this:GetParent():GetFrameLevel() + 2 );
+					</OnShow>
+				</Scripts>
+				<FontString inherits="ChatFontNormal"/>
+			</EditBox>
+			<Frame>
+				<Size>
+					<AbsDimension x="420" y="30"/>
+				</Size>
+				<Anchors>
+					<Anchor point="CENTER" relativePoint="CENTER" relativeTo="MapNotes_SendWideEditBox"/>
+				</Anchors>
+				<Backdrop bgFile="" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+					<BackgroundInsets>
+						<AbsInset left="0" right="0" top="0" bottom="0"/>
+					</BackgroundInsets>
+					<TileSize>
+						<AbsValue val="16"/>
+					</TileSize>
+					<EdgeSize>
+						<AbsValue val="16"/>
+					</EdgeSize>
+				</Backdrop>
+			</Frame>
+		</Frames>
+		<Scripts>
+			<OnShow>
+				MapNotes_NormaliseScale(this);
+			</OnShow>
+			<OnLoad>
+				MapNotes_OnLoad();
+				this:SetBackdropColor(0,0,0,1);
+			</OnLoad>
+		</Scripts>
+	</Frame>
+</Ui>

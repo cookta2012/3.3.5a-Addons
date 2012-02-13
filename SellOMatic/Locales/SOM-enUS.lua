@@ -1,0 +1,106 @@
+-- Sell-O-Matic Locale
+-- Please uses the Localization Tool on WowAce to update this
+-- http://www.wowace.com/addons/sell-o-matic/localization/
+
+local debug = false
+--[===[@debug@
+debug = true
+--@end-debug@]===]
+
+local L = LibStub("AceLocale-3.0"):NewLocale("SellOMatic", "enUS", true, debug)
+
+L["Actions"] = true
+L["added to save list."] = true
+L["added to sell list."] = true
+L["Add item"] = true
+L["Adds item to sell/save list."] = true
+L["add #text to the sell list if used."] = true
+L["Add to save list"] = true
+L["Add to sell list"] = true
+L["Allow Blue"] = true
+L["Allow Epic"] = true
+L["already on save list."] = true
+L["already on sell list."] = true
+L["Auto sell"] = true
+L["Autoselling items!"] = true
+L["Blue items"] = true
+L["BoE items"] = true
+L["BoP items"] = true
+L["Choose the type of information"] = true
+L["Commands"] = true
+L["Delete"] = true
+L["Delete from save list"] = true
+L["Delete from sell list"] = true
+L["deletes all save list data."] = true
+L["deletes all sell list data."] = true
+L["Deletes item from sell/save list."] = true
+L["delete #text from the sell list if used."] = true
+L["Del item"] = true
+L["Destroy junk"] = true
+L["Destroys all gray items on inventory"] = true
+L["Dungeon"] = true
+L["Epic items"] = true
+L["FULL"] = true
+L["General Options"] = true
+L["Green items"] = true
+L["Import sell list"] = true
+L["imports old sell list if available."] = true
+L["Imports the old sell list."] = true
+L["Information type"] = true
+L["is not valid."] = true
+L["item(s) from inventory?"] = true
+L["item(s) sold"] = true
+L["item(s) sold for"] = true
+L["junk item(s) deleted"] = true
+L["LITE"] = true
+L["No"] = true
+L["No import data found."] = true
+L["not found on save list."] = true
+L["not found on sell list."] = true
+L["Old data imported to list."] = true
+L["opens add item box."] = true
+L["opens del item box."] = true
+L["prints sell/save list if used."] = true
+L["removed from save list."] = true
+L["removed from sell list."] = true
+L["Reset save list"] = true
+L["Reset sell list"] = true
+L["Resets the save list."] = true
+L["Resets the sell list."] = true
+L["same as /sellomatic."] = true
+L["#### Save List ####"] = true
+L["Save list empty!"] = true
+L["Save list reset."] = true
+L["Sell BoE"] = true
+L["Sell BoP"] = true
+L["Sell common"] = true
+L["Selling "] = true
+L["#### Sell List ####"] = true
+L["Sell list empty!"] = true
+L["Sell list reset."] = true
+L["Show"] = true
+L["Show detail"] = true
+L["Show list"] = true
+L["Shows the sell/save lists."] = true
+L["SUMMARY"] = true
+L["this menu."] = true
+L["Toggle ON/OFF automatic mode."] = true
+L["Toggle ON/OFF item sell detail."] = true
+L["Toggle ON/OFF selling blue quality items."] = true
+L["Toggle ON/OFF selling common (white) items."] = true
+L["Toggle ON/OFF selling epic quality items."] = true
+L["Toggle ON/OFF selling green bind on equip items."] = true
+L["Toggle ON/OFF selling green soulbound items."] = true
+L["Toggle ON/OFF the sell/save list."] = true
+L["Track Bind on Equip items"] = true
+L["Track Bind on Pickup items"] = true
+L["Track dungeon items"] = true
+L["Track epic quality items"] = true
+L["Track rare quality items"] = true
+L["Track uncommon quality items"] = true
+L["Type the item/part of the item text box."] = true
+L["Use list"] = true
+L["Yes"] = true
+L["You're not using any list. Use list option is off."] = true
+L["You've earned "] = true
+

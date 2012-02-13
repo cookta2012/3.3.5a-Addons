@@ -1,0 +1,12 @@
+﻿## Interface: 20400
+## Title: GatherMate_CartImport
+## Notes: Imports data from Cartographer gathering modules into GatherMate
+## Notes-ruRU: Импортирование данных из собирательных модулей Картографа в GatherMate
+## Notes-frFR: Importe les données des modules de récolte de Cartographer dans GatherMate.
+## Author: kagaro, Xinhuan
+## X-Email: sal.scotto@gmail.com
+## X-Category: Map
+## Version: 1.0
+## Dependencies: GatherMate, Cartographer
+
+GatherMate_CartImport.lua

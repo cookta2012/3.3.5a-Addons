@@ -1,0 +1,6 @@
+## Interface: 20000
+## Title: XPwatch
+## Notes: 1.0
+## SavedVariables: XPWatchLocked, XPWatchEnableColor, XPWatchMaxLvl, XPWatchGrowUpward, XPWatchRoundedBorder, XPWatchMainWidth, XPWatchPartyWidth, XPWatchHideB
+XPwatch.lua
+XPwatch.xml

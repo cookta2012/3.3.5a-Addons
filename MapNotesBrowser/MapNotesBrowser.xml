@@ -1,0 +1,489 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
+
+	<Script file="Localisation.en.lua"/>
+	<Script file="MapNotesBrowser.lua"/>
+
+	<!-- TEMPLATE FOR SCROLL LIST BUTTONS -->
+	<Button name="MNB_ScrollButtonTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="300" y="16"/>
+		</Size>
+		<Frames>
+			<Frame name="$parentNote" setAllPoints="true">
+				<Layers>
+					<Layer level="ARTWORK">
+		     		    <Texture name="$parentMininote" file="Interface\Buttons\UI-CheckBox-Check">
+							<Size>
+								<AbsDimension x="16" y="16"/>
+							</Size>
+							<Anchors>
+								<Anchor point="LEFT">
+									<Offset>
+										<AbsDimension x="4" y="-1"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+		     		    </Texture>
+		     		    <Texture name="$parentIcon" file="Interface\Addons\NotesUNeed\Artwork\tAlliance">
+							<Size>
+								<AbsDimension x="12" y="12"/>
+							</Size>
+							<Anchors>
+								<Anchor point="RIGHT">
+					 				<Offset>
+					 					<AbsDimension x="-12" y="0"/>
+					 				</Offset>
+								</Anchor>
+							</Anchors>
+		     		    </Texture>
+		     		    <Texture name="$parentPointy" file="Interface\AddOns\MapNotesBrowser\Graphics\ScrollMark">
+							<Size>
+								<AbsDimension x="16" y="16"/>
+							</Size>
+							<Anchors>
+								<Anchor point="RIGHT">
+									<Offset>
+										<AbsDimension x="-26" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+		     		    </Texture>
+						<FontString name="$parentZone" inherits="GameFontNormal" text="Zone" hidden="true" justifyH="LEFT">
+							<Size>
+								<AbsDimension x="252" y="12"/>
+							</Size>
+							<Anchors>
+								<Anchor point="LEFT">
+									<Offset>
+										<AbsDimension x="12" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+						<FontString name="$parentName" inherits="GameFontNormal" text="Wibble" justifyH="LEFT">
+							<Size>
+								<AbsDimension x="252" y="12"/>
+							</Size>
+							<Anchors>
+								<Anchor point="LEFT">
+									<Offset>
+										<AbsDimension x="32" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+			</Frame>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				self:RegisterForClicks("LeftButtonDown", "RightButtonDown");
+			</OnLoad>
+			<OnClick>
+				MNB.ScrollButton_OnClick(self, arg1);
+			</OnClick>
+			<OnEnter>
+				MNB.ScrollButton_OnEnter(self);
+			</OnEnter>
+			<OnLeave>
+				if ( not MNB_PointyPointy.fixed ) then
+					MNB_PointyPointy:Hide();
+				end
+				GameTooltip:Hide();
+				WorldMapTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+		<HighlightTexture file="Interface\QuestFrame\UI-QuestTitleHighlight" alphaMode="ADD"/>
+	</Button>
+
+	<!-- MAIN BROWSER FRAME -->
+	<Frame name="MNB_Browser" hidden="true" toplevel="true" enableMouse="true" movable="true" parent="WorldMapButton">
+		<Size>
+			<AbsDimension x="354" y="406"/>
+		</Size>
+		<Anchors>
+ 			<Anchor point="RIGHT">
+ 				<Offset>
+ 					<AbsDimension x="-80" y="0"/>
+ 				</Offset>
+ 			</Anchor>
+ 		</Anchors>
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString name="MNB_Title" inherits="GameFontGreenLarge" text="MNB_NAME">
+					<Anchors>
+						<Anchor point="TOP" relativeTo="MNB_Browser">
+							<Offset><AbsDimension x="0" y="-12"/></Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="MNB_ZoneName" inherits="GameFontNormal" text="Zone Info">
+					<Anchors>
+						<Anchor point="TOP" relativeTo="MNB_Title" relativePoint="BOTTOM">
+							<Offset><AbsDimension x="0" y="-10"/></Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<Button name="MNB_BrowserCloseButton" inherits="UIPanelCloseButton">
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="4" y="4"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Frame name="MNB_FilterBorder">
+				<Size>
+					<AbsDimension x="230" y="24"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="16" y="-64"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Backdrop bgFile="Interface\TutorialFrame\TutorialFrameBackground" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+					<BackgroundInsets>
+						<AbsInset left="0" right="0" top="0" bottom="0"/>
+					</BackgroundInsets>
+					<TileSize>
+						<AbsValue val="12"/>
+					</TileSize>
+					<EdgeSize>
+						<AbsValue val="12"/>
+					</EdgeSize>
+				</Backdrop>
+			</Frame>
+			<Button name="MNB_MarkerButton" hidden="true">
+				<Size>
+					<AbsDimension x="24" y="24"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="20" y="-20"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+		     		    <Texture name="$parentArrow" file="Interface\AddOns\MapNotesBrowser\Graphics\ScrollMark"/>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnLoad>
+						self:RegisterForClicks("LeftButtonUp", "RightButtonUp");
+					</OnLoad>
+					<OnClick>
+						MNB.Marker_OnClick(self, arg1);
+					</OnClick>
+					<OnEnter>
+						MN_NoteOnEnter(self);
+					</OnEnter>
+					<OnLeave>
+						GameTooltip:Hide();
+						WorldMapTooltip:Hide();
+					</OnLeave>
+				</Scripts>
+				<HighlightTexture file="Interface\QuestFrame\UI-QuestTitleHighlight" alphaMode="ADD"/>
+			</Button>
+			<EditBox name="MNB_FilterEditBox" autofocus="false" letters="64">
+				<Size>
+					<AbsDimension x="216" y="32"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="22" y="-59"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnEnterPressed>
+						<!-- Allow global searches on Enter pressed -->
+						MNB.PopulateScroll(MNB_Browser.Plugin);
+					</OnEnterPressed>
+					<OnTextChanged>
+						<!-- Do NOT carry out global searches on every text changed event - too processor intensive -->
+						if ( MNB.mode ~= "searching" ) then
+							MNB.PopulateScroll(MNB_Browser.Plugin);
+						end
+					</OnTextChanged>
+					<OnEscapePressed>
+						MNB_Browser:Hide();
+					</OnEscapePressed>
+				</Scripts>
+				<FontString inherits="ChatFontNormal"/>
+			</EditBox>
+			<Button name="MNB_SearchButton" inherits="UIPanelButtonTemplate" text="MNB_ALLMAPS">
+				<Size>
+					<AbsDimension x="90" y="26"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="MNB_FilterEditBox" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="10" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						self:RegisterForClicks("LeftButtonUp", "RightButtonUp");
+					</OnLoad>
+					<OnClick>
+						MNB.Search_OnClick(self, arg1);
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Frame name="MNB_ScrollBorder">
+				<Size>
+					<AbsDimension x="322" y="296"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" relativeTo="MNB_Browser">
+						<Offset>
+							<AbsDimension x="16" y="12"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Backdrop bgFile="Interface\TutorialFrame\TutorialFrameBackground" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+					<BackgroundInsets>
+						<AbsInset left="0" right="0" top="0" bottom="0"/>
+					</BackgroundInsets>
+					<TileSize>
+						<AbsValue val="12"/>
+					</TileSize>
+					<EdgeSize>
+						<AbsValue val="12"/>
+					</EdgeSize>
+				</Backdrop>
+			</Frame>
+			<ScrollFrame name="MNB_BrowserScroll" inherits="FauxScrollFrameTemplate">
+				<Size>
+					<AbsDimension x="296" y="288"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" relativeTo="MNB_Browser">
+						<Offset>
+							<AbsDimension x="16" y="14"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnVerticalScroll>
+						FauxScrollFrame_OnVerticalScroll(self, offset, 16, MNB.Refresh);
+					</OnVerticalScroll>
+				</Scripts>
+			</ScrollFrame>
+			<Button name="MNB_Scroll1" inherits="MNB_ScrollButtonTemplate" id="1">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="MNB_BrowserScroll">
+						<Offset>
+							<AbsDimension x="2" y="-6"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="MNB_Scroll2" inherits="MNB_ScrollButtonTemplate" id="2">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="MNB_Scroll1" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="MNB_Scroll3" inherits="MNB_ScrollButtonTemplate" id="3">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="MNB_Scroll2" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="MNB_Scroll4" inherits="MNB_ScrollButtonTemplate" id="4">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="MNB_Scroll3" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="MNB_Scroll5" inherits="MNB_ScrollButtonTemplate" id="5">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="MNB_Scroll4" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="MNB_Scroll6" inherits="MNB_ScrollButtonTemplate" id="6">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="MNB_Scroll5" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="MNB_Scroll7" inherits="MNB_ScrollButtonTemplate" id="7">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="MNB_Scroll6" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="MNB_Scroll8" inherits="MNB_ScrollButtonTemplate" id="8">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="MNB_Scroll7" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="MNB_Scroll9" inherits="MNB_ScrollButtonTemplate" id="9">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="MNB_Scroll8" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="MNB_Scroll10" inherits="MNB_ScrollButtonTemplate" id="10">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="MNB_Scroll9" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="MNB_Scroll11" inherits="MNB_ScrollButtonTemplate" id="11">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="MNB_Scroll10" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="MNB_Scroll12" inherits="MNB_ScrollButtonTemplate" id="12">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="MNB_Scroll11" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="MNB_Scroll13" inherits="MNB_ScrollButtonTemplate" id="13">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="MNB_Scroll12" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="MNB_Scroll14" inherits="MNB_ScrollButtonTemplate" id="14">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="MNB_Scroll13" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="MNB_Scroll15" inherits="MNB_ScrollButtonTemplate" id="15">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="MNB_Scroll14" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="MNB_Scroll16" inherits="MNB_ScrollButtonTemplate" id="16">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="MNB_Scroll15" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="MNB_Scroll17" inherits="MNB_ScrollButtonTemplate" id="17">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="MNB_Scroll16" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="MNB_Scroll18" inherits="MNB_ScrollButtonTemplate" id="18">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="MNB_Scroll17" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+		</Frames>
+		<Scripts>
+			<OnShow>
+				MapNotes_NormaliseScale(self);
+			</OnShow>
+			<OnMouseDown>
+				if ( arg1 == "LeftButton" ) then
+					self:StartMoving();
+				end
+			</OnMouseDown>
+			<OnMouseUp>
+				if ( arg1 == "LeftButton" ) then
+					self:StopMovingOrSizing();
+				end
+			</OnMouseUp>
+		</Scripts>
+		<Backdrop bgFile="Interface\TutorialFrame\TutorialFrameBackground" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+			<BackgroundInsets>
+				<AbsInset left="0" right="0" top="0" bottom="0"/>
+			</BackgroundInsets>
+			<TileSize>
+				<AbsValue val="12"/>
+			</TileSize>
+			<EdgeSize>
+				<AbsValue val="12"/>
+			</EdgeSize>
+		</Backdrop>
+	</Frame>
+
+	<Frame name="MNB_PointyPointy" frameStrata="TOOLTIP" toplevel="true" hidden="true" parent="WorldMapButton">
+		<Size>
+			<AbsDimension x="192" y="192"/>
+		</Size>
+		<Anchors>
+ 			<Anchor point="CENTER"/>
+ 		</Anchors>
+		<Layers>
+			<Layer level="OVERLAY">
+     		    <Texture name="MNB_PointyPointyT" setAllPoints="true" file="Interface\AddOns\MapNotesBrowser\Graphics\PointyPointy"/>
+			</Layer>
+		</Layers>
+	</Frame>
+
+</Ui>

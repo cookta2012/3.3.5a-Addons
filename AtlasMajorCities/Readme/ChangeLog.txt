@@ -1,0 +1,23 @@
+==============
+= Change Log =
+==============
+
+v1.5:
+-Rewrite of the Code. Its done to make the translation easy as Possible.
+-Darlaran & Darlaran Sewers are in it.
+-Gnugpl v2 to CC-by-NC-SA-3 License Change.
+-English only (enUS/enGB)
+
+v1.4:
+- updated to work with Atlas v1.12.0 (Dan Gilbert)
+- English (enUS) only
+
+v1.3.1:
+- Working with the Latest Atlas and 2.4
+
+v1.3.0:
+-Darnassus Complete (German Client).
+-Added Shattrath.
+
+v1.2.0:
+-Darnassus Almost Complete.

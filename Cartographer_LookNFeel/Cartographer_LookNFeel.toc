@@ -1,0 +1,35 @@
+﻿## Interface: 30200
+## Title: Cartographer |r[|cffeda55fLook 'n' Feel|r]
+## Title-ruRU: Картограф |r[|cffeda55fНаглядность и Восприятие|r]
+## X-Name: Look 'n' Feel
+## X-Name-ruRU: Наглядность и Восприятие
+## X-Name-deDE: Look 'n' Feel
+## X-Name-frFR: Affichage et comportement
+## X-Name-koKR: 모양
+## X-Name-zhTW: 外觀設定
+## X-Name-esES: Apariencia
+## X-Name-zhCN: 外观设置
+## X-ModuleName: LookNFeel
+## Notes: Module which allows you to change the transparency, position, and scale of the world map.
+## Notes-ruRU: Модуль позволяет настраивать прозрачность, позиции и масштаб Карты Мира.
+## Notes-deDE: Modul zur Einstellung der Transparenz, Position und Skalierung der Weltkarte.
+## Notes-frFR: Module permettant la personnalisation de la transparence, la position et la taille de la carte du monde.
+## Notes-koKR: 세계 지도의 투명도, 위치 그리고 크기등을 변경합니다.
+## Notes-zhTW: 讓你可以改變世界地圖透明度、位置和大小的模組。
+## Notes-esES: Módulo que te permite cambiar la transparencia, posición y escala del mapa del mundo
+## Notes-zhCN: 让你设置世界地图的透明度，位置和大小模组。
+## Author: ckknight
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: Cartographer
+## OptionalDeps: Ace2, TabletLib
+## X-Category: Map
+## X-eMail: ckknight@gmail.com
+## X-Website: http://ckknight.wowinterface.com/
+## Version: 2.0
+## X-Curse-Packaged-Version: v2.5.6
+## X-Curse-Project-Name: Cartographer
+## X-Curse-Project-ID: cartographer
+## X-Curse-Repository-ID: wow/cartographer/mainline
+
+LookNFeel.lua

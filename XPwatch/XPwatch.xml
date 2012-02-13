@@ -1,0 +1,755 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+ http://wowprogramming.com/FrameXML/UI.xsd">
+
+  <!--Main Frame-->
+
+  <Frame name="XPDisplayFrame" frameLevel="10" toplevel="true" frameStrata="MEDIUM" enableMouse="true" movable="true" parent="UIparent">
+    <Size>
+      <AbsDimension x="200" y="20"/>
+    </Size>
+    <Anchors>
+      <Anchor point="CENTER"/>
+    </Anchors>
+    <Backdrop edgeFile="Interface\Addons\XPwatch\DialogEdge" tile="true">
+      <EdgeSize>
+        <AbsValue val="12"/>
+      </EdgeSize>
+      <TileSize>
+        <AbsValue val="32"/>
+      </TileSize>
+    </Backdrop>
+    <Scripts>
+      <OnLoad>
+        XPDisplayFrame:RegisterEvent("PLAYER_XP_UPDATE")
+        XPDisplayFrame:RegisterEvent("ADDON_LOADED")
+      </OnLoad>
+      <OnEvent>
+        SendAddonMessage("XPWATCH", "message recived", "WHISPER", UnitName("player"))
+        XPAmount:SetText(UnitXP("player") .. "/" .. UnitXPMax("player") .. "     " .. round(UnitXP("player")/(UnitXPMax("player")/20), 1) .. "/20 bars");
+        XPBarColor();
+      </OnEvent>
+      <OnMouseDown>
+        MoveXPFrame()
+      </OnMouseDown>
+      <OnMouseUp>
+        self:StopMovingOrSizing();
+      </OnMouseUp>
+    </Scripts>
+    <Layers>
+      <Layer level="OVERLAY">
+        <FontString name="XPAmount" font="Fonts\ARIALN.TTF">
+          <Color r="1" g="0.8" b="1" a="1"/>
+          <FontHeight>
+            <AbsValue val="12"/>
+          </FontHeight>
+        </FontString>
+      </Layer>
+    </Layers>
+  </Frame>
+
+  <!--XP bar-->
+
+  <StatusBar name="XPStatusBar" frameLevel="5" frameStrata="LOW" inherits="TextStatusBar">
+    <Size>
+      <AbsDimension x="185" y="18"/>
+    </Size>
+    <Anchors>
+      <Anchor point="LEFT" relativeTo="XPDisplayFrame" relativePoint="LEFT">
+        <Offset x="2" y="0"/>
+      </Anchor>
+    </Anchors>
+    <Scripts>
+      <OnLoad>
+        XPStatusBar_OnLoad();
+      </OnLoad>
+      <OnEvent>
+        PlayerXPBarCalc();
+      </OnEvent>
+    </Scripts>
+    <BarTexture file="Interface\Addons\XPwatch\StatusBar"/>
+    <BarColor r="0.5" g="0" b="0.5"/>
+  </StatusBar>
+
+  <!--Background Frame-->
+
+  <Frame name="XPBGFRAME" frameStrata="LOW" enableMouse="true" movable="true">
+    <Size>
+      <AbsDimension x="200" y="20"/>
+    </Size>
+    <Anchors>
+      <Anchor relativeTo="XPDisplayFrame" relativePoint="TOPLEFT" point="TOPLEFT">
+      </Anchor>
+    </Anchors>
+    <Backdrop bgFile="Interface\Addons\XPwatch\DialogBG" tile="false">
+      <EdgeSize>
+        <AbsValue val="0"/>
+      </EdgeSize>
+      <TileSize>
+        <AbsValue val="32"/>
+      </TileSize>
+      <BackgroundInsets>
+        <AbsInset left="2" right="2" top="2" bottom="2"/>
+      </BackgroundInsets>
+    </Backdrop>
+  </Frame>
+
+  <!--Options Frame-->
+
+  <Frame name="XPWatchOptions" frameStrata="MEDIUM" toplevel="true" enableMouse="true" movable="true" hidden="true" parent="UIparent">
+    <Size>
+      <AbsDimension x="350" y="400"/>
+    </Size>
+    <Anchors>
+      <Anchor point="CENTER"/>
+    </Anchors>
+    <Backdrop bgFile="Interface\Addons\XPwatch\DialogBG" edgeFile="Interface\Addons\XPwatch\DialogEdge" tile="true">
+      <EdgeSize>
+        <AbsValue val="24"/>
+      </EdgeSize>
+      <TileSize>
+        <AbsValue val="32"/>
+      </TileSize>
+      <BackgroundInsets>
+        <AbsInset left="4" right="4" top="4" bottom="4"/>
+      </BackgroundInsets>
+    </Backdrop>
+    <Layers>
+      <Layer level="OVERLAY">
+        <FontString name="XPOptionsTitle" font="Fonts\ARIALN.TTF" text="XPwatch Options">
+          <Anchors>
+            <Anchor point="TOP" relativeTo="XPWatchOptions" relativePoint="TOP">
+              <Offset x="0" y="-20"/>
+            </Anchor>
+          </Anchors>
+          <Color r="0.4" g="0" b="1" a="1"/>
+          <FontHeight>
+            <AbsValue val="24"/>
+          </FontHeight>
+        </FontString>
+        <FontString name="XPOptionsLockText" font="Fonts\ARIALN.TTF" text="Lock XP Bar">
+          <Anchors>
+            <Anchor point="TOPLEFT" relativeTo="XPWatchOptions" relativePoint="TOPLEFT">
+              <Offset x="95" y="-75"/>
+            </Anchor>
+          </Anchors>
+          <Color r="0.8" g="0.8" b="0.8" a="1"/>
+          <FontHeight>
+            <AbsValue val="12"/>
+          </FontHeight>
+        </FontString>
+        <FontString name="XPOptionsColorText" font="Fonts\ARIALN.TTF" text="Scale Text Color With XP">
+          <Anchors>
+            <Anchor point="TOPLEFT" relativeTo="XPWatchOptions" relativePoint="TOPLEFT">
+              <Offset x="95" y="-125"/>
+            </Anchor>
+          </Anchors>
+          <Color r="0.8" g="0.8" b="0.8" a="1"/>
+          <FontHeight>
+            <AbsValue val="12"/>
+          </FontHeight>
+        </FontString>
+        <FontString name="XPOptionsLvlText" font="Fonts\ARIALN.TTF" text="Hide Addon">
+          <Anchors>
+            <Anchor point="TOPLEFT" relativeTo="XPWatchOptions" relativePoint="TOPLEFT">
+              <Offset x="95" y="-295"/>
+            </Anchor>
+          </Anchors>
+          <Color r="0.8" g="0.8" b="0.8" a="1"/>
+          <FontHeight>
+            <AbsValue val="12"/>
+          </FontHeight>
+        </FontString>
+        <FontString name="XPOptionsUpwardText" font="Fonts\ARIALN.TTF" text="Grow Bars Upward">
+          <Anchors>
+            <Anchor point="TOPLEFT" relativeTo="XPWatchOptions" relativePoint="TOPLEFT">
+              <Offset x="95" y="-165"/>
+            </Anchor>
+          </Anchors>
+          <Color r="0.8" g="0.8" b="0.8" a="1"/>
+          <FontHeight>
+            <AbsValue val="12"/>
+          </FontHeight>
+        </FontString>
+        <FontString name="XPOptionsUpwardText" font="Fonts\ARIALN.TTF" text="Rounded Border">
+          <Anchors>
+            <Anchor point="TOPLEFT" relativeTo="XPWatchOptions" relativePoint="TOPLEFT">
+              <Offset x="95" y="-145"/>
+            </Anchor>
+          </Anchors>
+          <Color r="0.8" g="0.8" b="0.8" a="1"/>
+          <FontHeight>
+            <AbsValue val="12"/>
+          </FontHeight>
+        </FontString>
+        <FontString name="XPOptionsHideBText" font="Fonts\ARIALN.TTF" text="Hide Default XP Bar">
+          <Anchors>
+            <Anchor point="TOPLEFT" relativeTo="XPWatchOptions" relativePoint="TOPLEFT">
+              <Offset x="95" y="-105"/>
+            </Anchor>
+          </Anchors>
+          <Color r="0.8" g="0.8" b="0.8" a="1"/>
+          <FontHeight>
+            <AbsValue val="12"/>
+          </FontHeight>
+        </FontString>
+      </Layer>
+    </Layers>
+  </Frame>
+
+
+  <Slider name="XPOptionsSlider" inherits="OptionsSliderTemplate" parent="XPWatchOptions" enableMouse="true" drawLayer="OVERLAY" minValue="200" maxValue="1050" defaultValue="200" valueStep="1" orientation="HORIZONTAL">
+    <Size x="300" y="15"/>
+    <Anchors>
+      <Anchor point="CENTER" relativePoint="CENTER">
+        <Offset y="-10"/>
+      </Anchor>
+    </Anchors>
+    <Scripts>
+      <OnLoad>
+        self:RegisterEvent("VARIABLES_LOADED")
+      </OnLoad>
+      <OnEvent>
+        XPSliderLoad();
+      </OnEvent>
+      <OnUpdate>
+        XPSliderMoved();
+      </OnUpdate>
+    </Scripts>
+  </Slider>
+
+  <Slider name="XPOptionsSlider2" inherits="OptionsSliderTemplate" parent="XPWatchOptions" enableMouse="true" drawLayer="OVERLAY" minValue="150" maxValue="1050" defaultValue="200" valueStep="1" orientation="HORIZONTAL">
+    <Size x="300" y="15"/>
+    <Anchors>
+      <Anchor point="CENTER" relativePoint="CENTER">
+        <Offset y="-40"/>
+      </Anchor>
+    </Anchors>
+    <Scripts>
+      <OnLoad>
+        self:RegisterEvent("VARIABLES_LOADED")
+      </OnLoad>
+      <OnEvent>
+        XPSliderLoad2();
+      </OnEvent>
+      <OnUpdate>
+        XPSliderMoved2();
+      </OnUpdate>
+    </Scripts>
+  </Slider>
+  
+  <Button name="XPOptionsCloseButton" enableMouse="true" frameLevel="3" toplevel="true" parent="XPWatchOptions">
+    <Anchors>
+      <Anchor point="TOPRIGHT">
+        <Offset x="-15" y="-15"/>
+      </Anchor>
+    </Anchors>
+    <Size>
+      <AbsDimension x="30" y="30"/>
+    </Size>
+    <Scripts>
+      <OnClick>XPWatchOptions:Hide();</OnClick>
+    </Scripts>
+    <NormalTexture file="Interface\Addons\XPwatch\ClosebuttonUp"/>
+    <PushedTexture file="Interface\Addons\XPwatch\ClosebuttonDown"/>
+    <DisabledTexture file="Interface\Addons\XPwatch\ClosebuttonDisable"/>
+  </Button>
+  <Button name="XPDropDownMenuButton">
+    <Anchors>
+      <Anchor point="LEFT" relativeTo="XPStatusBar" relativePoint="LEFT">
+        <Offset x="-25" y="0"/>
+      </Anchor>
+    </Anchors>
+    <Size>
+      <AbsDimension x="24" y="24"/>
+    </Size>
+    <Scripts>
+      <OnClick>
+        XPDropDownMenuButton_OnClick()
+      </OnClick>
+    </Scripts>
+    <NormalTexture file="Interface\Addons\XPwatch\ArrowUp"/>
+    <PushedTexture file="Interface\Addons\XPwatch\ArrowDown"/>
+    <DisabledTexture file="Interface\Addons\XPwatch\ArrowDis"/>
+  </Button>
+    <!--Options-->
+  <CheckButton name="XPOptionsCheckButton" inherits="OptionsCheckButtonTemplate" checked="false" parent="XPWatchOptions">
+    <Anchors>
+      <Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="XPWatchOptions">
+        <Offset x="60" y="-70"/>
+      </Anchor>
+    </Anchors>
+    <Scripts>
+      <OnClick>
+        XPWatchsetlockedvar();
+      </OnClick>
+      <OnLoad>
+        XPOptionsCheckButton:RegisterEvent("VARIABLES_LOADED");
+      </OnLoad>
+      <OnEvent>
+        XPWatchIsLockedCheck();
+      </OnEvent>
+    </Scripts>
+  </CheckButton>
+  <CheckButton name="XPOptionsCheckButton2" inherits="OptionsCheckButtonTemplate" checked="false" parent="XPWatchOptions">
+    <Anchors>
+      <Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="XPWatchOptions">
+        <Offset x="60" y="-120"/>
+      </Anchor>
+    </Anchors>
+    <Scripts>
+      <OnClick>
+        XPWatchsetcolorvar();
+      </OnClick>
+      <OnLoad>
+        XPOptionsCheckButton2:RegisterEvent("VARIABLES_LOADED");
+      </OnLoad>
+      <OnEvent>
+        XPWatchColorCheck();
+      </OnEvent>
+    </Scripts>
+  </CheckButton>
+  <CheckButton name="XPOptionsCheckButton3" inherits="OptionsCheckButtonTemplate" checked="false" parent="XPWatchOptions">
+    <Anchors>
+      <Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="XPWatchOptions">
+        <Offset x="60" y="-290"/>
+      </Anchor>
+    </Anchors>
+    <Scripts>
+      <OnClick>
+        XPWatchsetmaxlvlvar();
+      </OnClick>
+      <OnLoad>
+        XPOptionsCheckButton3:RegisterEvent("VARIABLES_LOADED");
+      </OnLoad>
+      <OnEvent>
+        XPWatchMaxLvlCheck();
+      </OnEvent>
+    </Scripts>
+  </CheckButton>
+  <CheckButton name="XPOptionsCheckButton4" inherits="OptionsCheckButtonTemplate" checked="false" parent="XPWatchOptions">
+    <Anchors>
+      <Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="XPWatchOptions">
+        <Offset x="60" y="-160"/>
+      </Anchor>
+    </Anchors>
+    <Scripts>
+      <OnClick>
+        XPWatchsetupwardvar();
+      </OnClick>
+      <OnLoad>
+        XPOptionsCheckButton4:RegisterEvent("VARIABLES_LOADED");
+      </OnLoad>
+      <OnEvent>
+        XPWatchUpwardCheck();
+      </OnEvent>
+    </Scripts>
+  </CheckButton>
+  <CheckButton name="XPOptionsCheckButton6" inherits="OptionsCheckButtonTemplate" checked="false" parent="XPWatchOptions">
+    <Anchors>
+      <Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="XPWatchOptions">
+        <Offset x="60" y="-100"/>
+      </Anchor>
+    </Anchors>
+    <Scripts>
+      <OnClick>
+        XPWatchsetHideBvar();
+      </OnClick>
+      <OnLoad>
+        XPOptionsCheckButton6:RegisterEvent("VARIABLES_LOADED");
+      </OnLoad>
+      <OnEvent>
+        XPWatchHideBCheck();
+      </OnEvent>
+
+    </Scripts>
+  </CheckButton>
+
+  <Frame name="XPHide">
+    <Scripts>
+      <OnUpdate>
+        XPWatchsetHideBvar();
+      </OnUpdate>
+    </Scripts>
+  </Frame>
+      <!--Borders-->
+  <CheckButton name="XPOptionsCheckButton5" inherits="OptionsCheckButtonTemplate" checked="false" parent="XPWatchOptions">
+    <Anchors>
+      <Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="XPWatchOptions">
+        <Offset x="60" y="-140"/>
+      </Anchor>
+    </Anchors>
+    <Scripts>
+      <OnClick>
+        XPWatchsetbordervar();
+      </OnClick>
+      <OnLoad>
+        XPOptionsCheckButton5:RegisterEvent("VARIABLES_LOADED");
+      </OnLoad>
+      <OnEvent>
+        XPWatchBorderCheck();
+      </OnEvent>
+    </Scripts>
+  </CheckButton>
+
+<!--Communication Frames-->
+  
+  <Frame name="XPCommFrame">
+    <Scripts>
+      <OnLoad>
+        XPCommFrame:RegisterEvent("PLAYER_XP_UPDATE")
+        XPCommFrame:RegisterEvent("PARTY_MEMBERS_CHANGED")
+        XPCommFrame:RegisterEvent("UPDATE_EXHAUSTION")
+      </OnLoad>
+      <OnEvent>
+        xpwatchcomm();
+        XPgetrested();
+      </OnEvent>
+    </Scripts>
+  </Frame>
+  <!--Party Member 1-->
+  <Frame name="XPpartyframe1" hidden="true" frameStrata="MEDIUM" toplevel="true" enableMouse="true" movable="true" parent="XPDisplayFrame">
+    <Size>
+      <AbsDimension x="150" y="18"/>
+    </Size>
+    <Anchors>
+      <Anchor relativeTo="XPDisplayFrame" relativePoint="BOTTOMLEFT" point="TOPLEFT"/>
+    </Anchors>
+    <Backdrop edgeFile="Interface\Addons\XPwatch\DialogEdge" tile="true">
+      <EdgeSize>
+        <AbsValue val="12"/>
+      </EdgeSize>
+      <TileSize>
+        <AbsValue val="32"/>
+      </TileSize>
+    </Backdrop>
+    <Layers>
+      <Layer level="OVERLAY">
+        <FontString name="Party1XPAmount" font="Fonts\ARIALN.TTF">
+          <Color r="1" g="0.8" b="1" a="1"/>
+          <FontHeight>
+            <AbsValue val="12"/>
+          </FontHeight>
+        </FontString>
+      </Layer>
+    </Layers>
+  </Frame>
+  <Frame name="XPpartybg1" frameStrata="LOW" enableMouse="true" movable="true" parent="XPpartyframe1">
+    <Size>
+      <AbsDimension x="150" y="18"/>
+    </Size>
+    <Anchors>
+      <Anchor point="TOPLEFT">
+      </Anchor>
+    </Anchors>
+    <Backdrop bgFile="Interface\Addons\XPwatch\DialogBG" tile="false">
+      <EdgeSize>
+        <AbsValue val="0"/>
+      </EdgeSize>
+      <TileSize>
+        <AbsValue val="32"/>
+      </TileSize>
+      <BackgroundInsets>
+        <AbsInset left="2" right="2" top="2" bottom="2"/>
+      </BackgroundInsets>
+    </Backdrop>
+  </Frame>
+  <StatusBar name="XPpartybar1" frameStrata="LOW" toplevel="true" inherits="TextStatusBar" parent="XPpartyframe1">
+    <Size>
+      <AbsDimension x="146" y="14"/>
+    </Size>
+    <Anchors>
+      <Anchor point="LEFT" relativeTo="XPpartyframe1" relativePoint="LEFT">
+        <Offset x="2" y="0"/>
+      </Anchor>
+    </Anchors>
+    <Scripts>
+      <OnLoad>
+        PartyXPBar_OnLoad();
+      </OnLoad>
+      <OnEvent>
+        partyXPBarCalc1();
+      </OnEvent>
+    </Scripts>
+    <BarTexture file="Interface\Addons\XPwatch\StatusBar"/>
+    <BarColor r="0.5" g="0" b="0.5"/>
+  </StatusBar>
+  <!--Party Member 2-->
+  <Frame name="XPpartyframe2" hidden="true" frameStrata="MEDIUM" toplevel="true" enableMouse="true" movable="true" parent="XPDisplayFrame">
+    <Size>
+      <AbsDimension x="150" y="18"/>
+    </Size>
+    <Anchors>
+      <Anchor relativeTo="XPpartyframe1" relativePoint="BOTTOMLEFT" point="TOPLEFT"/>
+    </Anchors>
+    <Backdrop edgeFile="Interface\Addons\XPwatch\DialogEdge" tile="true">
+      <EdgeSize>
+        <AbsValue val="12"/>
+      </EdgeSize>
+      <TileSize>
+        <AbsValue val="32"/>
+      </TileSize>
+    </Backdrop>
+    <Layers>
+      <Layer level="OVERLAY">
+        <FontString name="Party2XPAmount" font="Fonts\ARIALN.TTF">
+          <Color r="1" g="0.8" b="1" a="1"/>
+          <FontHeight>
+            <AbsValue val="12"/>
+          </FontHeight>
+        </FontString>
+      </Layer>
+    </Layers>
+  </Frame>
+  <Frame name="XPpartybg2" frameStrata="LOW" enableMouse="true" movable="true" parent="XPpartyframe2">
+    <Size>
+      <AbsDimension x="150" y="18"/>
+    </Size>
+    <Anchors>
+      <Anchor point="TOPLEFT">
+      </Anchor>
+    </Anchors>
+    <Backdrop bgFile="Interface\Addons\XPwatch\DialogBG" tile="false">
+      <EdgeSize>
+        <AbsValue val="0"/>
+      </EdgeSize>
+      <TileSize>
+        <AbsValue val="32"/>
+      </TileSize>
+      <BackgroundInsets>
+        <AbsInset left="2" right="2" top="2" bottom="2"/>
+      </BackgroundInsets>
+    </Backdrop>
+  </Frame>
+  <StatusBar name="XPpartybar2" frameStrata="LOW" toplevel="true" inherits="TextStatusBar" parent="XPpartyframe2">
+    <Size>
+      <AbsDimension x="146" y="14"/>
+    </Size>
+    <Anchors>
+      <Anchor point="LEFT" relativeTo="XPpartyframe2" relativePoint="LEFT">
+        <Offset x="2" y="0"/>
+      </Anchor>
+    </Anchors>
+    <Scripts>
+      <OnLoad>
+        PartyXPBar_OnLoad();
+      </OnLoad>
+      <OnEvent>
+        partyXPBarCalc2();
+      </OnEvent>
+    </Scripts>
+    <BarTexture file="Interface\Addons\XPwatch\StatusBar"/>
+    <BarColor r="0.5" g="0" b="0.5"/>
+  </StatusBar>
+  <!--Party Member 3-->
+  <Frame name="XPpartyframe3" hidden="true" frameStrata="MEDIUM" toplevel="true" enableMouse="true" movable="true" parent="XPDisplayFrame">
+    <Size>
+      <AbsDimension x="150" y="18"/>
+    </Size>
+    <Anchors>
+      <Anchor relativeTo="XPpartyframe2" relativePoint="BOTTOMLEFT" point="TOPLEFT"/>
+    </Anchors>
+    <Backdrop edgeFile="Interface\Addons\XPwatch\DialogEdge" tile="true">
+      <EdgeSize>
+        <AbsValue val="12"/>
+      </EdgeSize>
+      <TileSize>
+        <AbsValue val="32"/>
+      </TileSize>
+    </Backdrop>
+    <Layers>
+      <Layer level="OVERLAY">
+        <FontString name="Party3XPAmount" font="Fonts\ARIALN.TTF">
+          <Color r="1" g="0.8" b="1" a="1"/>
+          <FontHeight>
+            <AbsValue val="12"/>
+          </FontHeight>
+        </FontString>
+      </Layer>
+    </Layers>
+  </Frame>
+  <Frame name="XPpartybg3" frameStrata="LOW" enableMouse="true" movable="true" parent="XPpartyframe3">
+    <Size>
+      <AbsDimension x="150" y="18"/>
+    </Size>
+    <Anchors>
+      <Anchor point="TOPLEFT">
+      </Anchor>
+    </Anchors>
+    <Backdrop bgFile="Interface\Addons\XPwatch\DialogBG" tile="false">
+      <EdgeSize>
+        <AbsValue val="0"/>
+      </EdgeSize>
+      <TileSize>
+        <AbsValue val="32"/>
+      </TileSize>
+      <BackgroundInsets>
+        <AbsInset left="2" right="2" top="2" bottom="2"/>
+      </BackgroundInsets>
+    </Backdrop>
+  </Frame>
+  <StatusBar name="XPpartybar3" frameStrata="LOW" toplevel="true" inherits="TextStatusBar" parent="XPpartyframe3">
+    <Size>
+      <AbsDimension x="146" y="14"/>
+    </Size>
+    <Anchors>
+      <Anchor point="LEFT" relativeTo="XPpartyframe3" relativePoint="LEFT">
+        <Offset x="2" y="0"/>
+      </Anchor>
+    </Anchors>
+    <Scripts>
+      <OnLoad>
+        PartyXPBar_OnLoad();
+      </OnLoad>
+      <OnEvent>
+        partyXPBarCalc3();
+      </OnEvent>
+    </Scripts>
+    <BarTexture file="Interface\Addons\XPwatch\StatusBar"/>
+    <BarColor r="0.5" g="0" b="0.5"/>
+  </StatusBar>
+  <!--Party Member 4-->
+  <Frame name="XPpartyframe4" hidden="true" frameStrata="MEDIUM" toplevel="true" enableMouse="true" movable="true" parent="XPDisplayFrame">
+    <Size>
+      <AbsDimension x="150" y="18"/>
+    </Size>
+    <Anchors>
+      <Anchor relativeTo="XPpartyframe3" relativePoint="BOTTOMLEFT" point="TOPLEFT"/>
+    </Anchors>
+    <Backdrop edgeFile="Interface\Addons\XPwatch\DialogEdge" tile="true">
+      <EdgeSize>
+        <AbsValue val="12"/>
+      </EdgeSize>
+      <TileSize>
+        <AbsValue val="32"/>
+      </TileSize>
+    </Backdrop>
+    <Layers>
+      <Layer level="OVERLAY">
+        <FontString name="Party4XPAmount" font="Fonts\ARIALN.TTF">
+          <Color r="1" g="0.8" b="1" a="1"/>
+          <FontHeight>
+            <AbsValue val="12"/>
+          </FontHeight>
+        </FontString>
+      </Layer>
+    </Layers>
+  </Frame>
+  <Frame name="XPpartybg4" frameStrata="LOW" enableMouse="true" movable="true" parent="XPpartyframe4">
+    <Size>
+      <AbsDimension x="150" y="18"/>
+    </Size>
+    <Anchors>
+      <Anchor point="TOPLEFT">
+      </Anchor>
+    </Anchors>
+    <Backdrop bgFile="Interface\Addons\XPwatch\DialogBG" tile="false">
+      <EdgeSize>
+        <AbsValue val="0"/>
+      </EdgeSize>
+      <TileSize>
+        <AbsValue val="32"/>
+      </TileSize>
+      <BackgroundInsets>
+        <AbsInset left="2" right="2" top="2" bottom="2"/>
+      </BackgroundInsets>
+    </Backdrop>
+  </Frame>
+  <StatusBar name="XPpartybar4" frameStrata="LOW" toplevel="true" inherits="TextStatusBar" parent="XPpartyframe4">
+    <Size>
+      <AbsDimension x="146" y="14"/>
+    </Size>
+    <Anchors>
+      <Anchor point="LEFT" relativeTo="XPpartyframe4" relativePoint="LEFT">
+        <Offset x="2" y="0"/>
+      </Anchor>
+    </Anchors>
+    <Scripts>
+      <OnLoad>
+        PartyXPBar_OnLoad();
+      </OnLoad>
+      <OnEvent>
+        partyXPBarCalc4();
+      </OnEvent>
+    </Scripts>
+    <BarTexture file="Interface\Addons\XPwatch\StatusBar"/>
+    <BarColor r="0.5" g="0" b="0.5"/>
+  </StatusBar>
+  <!--Party Member 5-->
+  <Frame name="XPpartyframe5" hidden="true" frameStrata="MEDIUM" toplevel="true" enableMouse="true" movable="true" parent="XPDisplayFrame">
+    <Size>
+      <AbsDimension x="150" y="18"/>
+    </Size>
+    <Anchors>
+      <Anchor relativeTo="XPpartyframe4" relativePoint="BOTTOMLEFT" point="TOPLEFT"/>
+    </Anchors>
+    <Backdrop edgeFile="Interface\Addons\XPwatch\DialogEdge" tile="true">
+      <EdgeSize>
+        <AbsValue val="12"/>
+      </EdgeSize>
+      <TileSize>
+        <AbsValue val="32"/>
+      </TileSize>
+    </Backdrop>
+    <Layers>
+      <Layer level="OVERLAY">
+        <FontString name="Party5XPAmount" font="Fonts\ARIALN.TTF">
+          <Color r="1" g="0.8" b="1" a="1"/>
+          <FontHeight>
+            <AbsValue val="12"/>
+          </FontHeight>
+        </FontString>
+      </Layer>
+    </Layers>
+  </Frame>
+  <Frame name="XPpartybg5" frameStrata="LOW" enableMouse="true" movable="true" parent="XPpartyframe5">
+    <Size>
+      <AbsDimension x="150" y="18"/>
+    </Size>
+    <Anchors>
+      <Anchor point="TOPLEFT">
+      </Anchor>
+    </Anchors>
+    <Backdrop bgFile="Interface\Addons\XPwatch\DialogBG" tile="false">
+      <EdgeSize>
+        <AbsValue val="0"/>
+      </EdgeSize>
+      <TileSize>
+        <AbsValue val="32"/>
+      </TileSize>
+      <BackgroundInsets>
+        <AbsInset left="2" right="2" top="2" bottom="2"/>
+      </BackgroundInsets>
+    </Backdrop>
+  </Frame>
+  <StatusBar name="XPpartybar5" frameStrata="LOW" toplevel="true" inherits="TextStatusBar" parent="XPpartyframe5">
+    <Size>
+      <AbsDimension x="146" y="14"/>
+    </Size>
+    <Anchors>
+      <Anchor point="LEFT" relativeTo="XPpartyframe5" relativePoint="LEFT">
+        <Offset x="2" y="0"/>
+      </Anchor>
+    </Anchors>
+    <Scripts>
+      <OnLoad>
+        PartyXPBar_OnLoad();
+      </OnLoad>
+      <OnEvent>
+        partyXPBarCalc5();
+      </OnEvent>
+    </Scripts>
+    <BarTexture file="Interface\Addons\XPwatch\StatusBar"/>
+    <BarColor r="0.5" g="0" b="0.5"/>
+  </StatusBar>
+  <!--1.3 Fix-->
+  <Frame name="xpreloadfixframe">
+    <Scripts>
+      <OnLoad>
+        self:RegisterEvent("ADDON_LOADED");
+      </OnLoad>
+      <OnEvent>
+        xpreloadfix(addonname);
+      </OnEvent>
+    </Scripts>
+  </Frame>
+</Ui>

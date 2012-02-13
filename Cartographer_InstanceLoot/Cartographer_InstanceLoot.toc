@@ -1,0 +1,36 @@
+﻿## Interface: 30200
+## Title: Cartographer |r[|cffeda55fInstance Loot|r]
+## Title-ruRU: Картограф |r[|cffeda55fТрофеи Подземелий|r]
+## X-Name: Instance Loot
+## X-Name-deDE: Instanzloot
+## X-Name-ruRU: Трофеи Подземелий
+## X-Name-frFR: Butin d'instance
+## X-Name-koKR: 인스턴스 획득품
+## X-Name-zhTW: 副本掉落
+## X-Name-esES: Botín de Instancia
+## X-Name-zhCN: 副本掉落
+## X-ModuleName: InstanceLoot
+## Notes: Display of loot on instance bosses.
+## Notes-ruRU: Отображаtn трофеи боссов в подземельях.
+## Notes-deDE: Zeigt den Loot der Instanzbosse an.
+## Notes-frFR: Affiche le butin des boss d'instance.
+## Notes-koKR: 인스턴스 보스의 획득품을 표시합니다.
+## Notes-zhTW: 顯示副本首領的掉落物品。
+## Notes-esES: Muestra el botín de los bosses de instancia
+## Notes-zhCN: 显示副本首领的掉落物品。
+## Author: nymbia
+## X-Credits: Funkydude
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: Cartographer, Cartographer_Notes, Cartographer_InstanceMaps, Cartographer_InstanceNotes
+## OptionalDeps: LibBabble-Boss-3.0, TabletLib
+## X-Category: Map
+## X-eMail: nymbia@gmail.com
+## X-Website: http://ckknight.wowinterface.com/
+## Version: 2.0
+## X-Curse-Packaged-Version: v2.5.6
+## X-Curse-Project-Name: Cartographer
+## X-Curse-Project-ID: cartographer
+## X-Curse-Repository-ID: wow/cartographer/mainline
+
+InstanceLoot.lua

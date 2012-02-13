@@ -1,0 +1,21 @@
+## Interface: 30300
+## X-Curse-Packaged-Version: v1.2.3
+## X-Curse-Project-Name: Cartographer_Icons_SmallBoxPack
+## X-Curse-Project-ID: cartographer_icons_small-box-pac
+## X-Curse-Repository-ID: wow/cartographer_icons_small-box-pac/mainline
+
+## Title: Cartographer_Icons |cff7fff7f SmallBox|r
+## Notes: Small Box Icon Pack for Cartographer
+## Author: Steve Dodds (Darkclaw of Hyjal)
+## Version: 1.2.3
+## X-Category: Map
+## X-Donate: PayPal:sd_at_ebay AT mac DOT com
+## X-License: CC Attribution Noncommercial Share Alike 3.0 License
+
+## DefaultState: Enabled
+## LoadOnDemand: 0
+
+## OptionalDeps: Ace2
+## RequiredDeps: Cartographer_Icons
+
+pack.lua

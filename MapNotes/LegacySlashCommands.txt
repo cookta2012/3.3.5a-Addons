@@ -1,0 +1,90 @@
+
+Legacy Slash Command Details
+----------------------------
+
+
+
+/mapnote    OR    /mapnotes    OR    /mn
+Only used to insert a Map Note by a slash command (which you can create in the Send Menu), for example, to put a note at the Entrance of Stormwind City on the map Elwynn Forest:
+
+ "/mapnote k<WM Elwynn> x<0.320701> y<0.491480> t<Stormwind> i1<Entrance> i2<> cr<ciphersimian> i<0> tf<0> i1f<0> i2f<0>"
+
+NOTE: The above would all be on one line Description of the identifiers:
+
+k<#> - Key based on the map name from GetMapInfo() prefixed by "WM " (English name on all clients - never localised) Varies for other AddOns using the Plugin functionality
+x<#> - X coordinate, based on the GetPlayerMapPosition() function
+y<#> - Y coordinate, based on the GetPlayerMapPosition() function
+t<text> - Title for the MapNote
+i1<text> - first line of text displayed under the Title in the MapNote (Info 1)
+i2<text> - second line of text displayed under the Title in the MapNote (Info 2)
+cr<text> - Creator of the MapNote
+i<#> - icon to use for the MapNote, AddOns/MapNotes/POIIcons/Icon#.tga
+tf<#> - color of the Title, AddOns/MapNotes/POIIcons/Color#.tga
+i1f<#> - color of the Info 1 line (colors as above)
+i1f<#> - color of the Info 2 line (colors as above)
+
+
+
+/onenote [on|off]    OR    /allowonenote [on|off]    OR    /aon [on|off]    OR    /mn1 [on|off]
+Allows you to receive the next note, even if you have disabled receiving in the options.  If invoked with no parameters, it will toggle the current state.
+
+
+/nextmininote [on|off]    OR    /nmn [on|off]     OR     /mnmn [on|off]
+Shows the next note created (using any method) as a MiniNote and also puts it on the WorldMap.  If invoked with no parameters, it will toggle the current state.
+
+
+/nextmininoteonly [on|off]    OR    /nmno [on|off]
+Like the previous command, but doesn't put the note on the WorldMap.
+
+
+/mininoteoff    OR    /mno
+Turns the MiniNote off.
+
+
+/mntloc tbX,tbY
+Sets a "Thottbot location" on the map. Use it with no arguments to toggle it off.
+X and Y are in "Thottbot coordinates" which can be represented as follows:
+ local x,y = GetPlayerMapPosition()
+ local tbX = math.floor(x*100)
+ local tbY = math.floor(y*100)
+This note is not bound to the map you are currently on.  Left click on it and select "Create New Note" to turn it into a standard note on the map you are viewing.
+
+
+/quicknote [icon] [name]    OR    /qnote [icon] [name]
+Adds a note at your current location, icon and name are optional (icon any number from 0 to 9, AddOns/MapNotes/POIIcons/Icon#.tga)
+
+
+/quicktloc xx,yy [icon] [name]    OR    /qtloc xx,yy [icon] [name]
+Addes a note on the map you are currently on at the given thottbot location, icon and name are optional (icon any number from 0 to 9, AddOns/MapNotes/POIIcons/Icon#.tga)
+
+
+NEW SLASH COMMANDS IN MapNotes(Fan's Update)
+
+/mnsearch [search text]     OR     /mns [search text]
+If you want to search for a note, to see if one exists, or where it is, then you can use this command, and MapNotes will print out a report in the chat window, displaying the names of all maps which have a note containing that text
+
+
+/mnhighlight [note name]     OR     /mnhl [note name]
+If you have lots of notes and want to clearly identify a single one on a map, or if you want a certain note to remain highlighted, then use this command and they will be displayed with a green circle around them.
+If there are several notes with that name, then they will all be highlighted
+
+
+/mnmapc
+Toggle the display of Player and Cursor Coordinates on the World Map
+Control-Left-Click and drag the coordinates to move them to a different position on the World Map if you are not happy with the default.
+
+
+/mnminic
+Toggle the display of Player coordinates below the Minimap.
+
+
+
+/mnt
+Creates a quicknote at the Player's current location if the Player has no target.
+If the Player does have a target, then it will create a note for that target at the Player's current location.
+
+
+/mnm
+Creates a note for the Player's target at the Player's current location.
+OR Merges the details for the Player's current target in to a Map Note that has already been created at the Player's current location.
+MUST have targetted a Player/NPC/Mob for this to work.

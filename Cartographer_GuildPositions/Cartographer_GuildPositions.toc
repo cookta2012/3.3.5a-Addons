@@ -1,0 +1,34 @@
+﻿## Interface: 30200
+## Title: Cartographer |r[|cffeda55fGuild Positions|r]
+## Title-ruRU: Картограф |r[|cffeda55fПозиции Гильдии|r]
+## X-Name: Guild Positions
+## X-Name-ruRU: Позиции Гильдии
+## X-Name-deDE: Gildenpositionen
+## X-Name-frFR: Positions guilde
+## X-Name-koKR: 길드원 위치
+## X-Name-esES: Posiciones de Hermandad
+## X-Name-zhCN: 公会成员位置
+## X-ModuleName: GuildPositions
+## Notes: Module which shows you your fellow guild members' positions, as well as allowing them to see you.
+## Notes-ruRU: Модуль отображает местоположение ваших товарищей из гильдии, также позволяет им видеть вас.
+## Notes-deDE: Zeigt Dir die Position Deiner Gildenmitglieder an und erlaubt ihnen, Deine zu sehen.
+## Notes-frFR: Module affichant la position des membres de votre guilde, et leur permettant de voir la votre.
+## Notes-koKR: 당신의 위치를 길드원에게 표시하거나 길드원의 위치를 표시하는 모듈을 제공합니다.
+## Notes-esES: Módulo que muestra las posiciones de tus compañeros de hermandad, y también les permite verte a ti
+## Notes-zhTW: 這個模組可以讓你看到公會其他成員的位置，當然也可以讓他們看見你。
+## Notes-zhCN: 此模块允许你看到公会其他成员的位置, 同时也可以让他们看见你。
+## Author: ckknight
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: Cartographer
+## OptionalDeps: Ace2, RosterLib, TabletLib, LibBabble-Zone-3.0, LibCrayon-3.0, LibTourist-3.0, LibGuildPositions-1.0, LibGuild-1.0
+## X-Category: Map
+## X-eMail: ckknight@gmail.com
+## X-Website: http://ckknight.wowinterface.com/
+## Version: 2.0
+## X-Curse-Packaged-Version: v2.5.6
+## X-Curse-Project-Name: Cartographer
+## X-Curse-Project-ID: cartographer
+## X-Curse-Repository-ID: wow/cartographer/mainline
+
+GuildPositions.lua

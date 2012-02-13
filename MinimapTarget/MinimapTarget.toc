@@ -1,0 +1,18 @@
+## Interface: 30100
+## X-Curse-Packaged-Version: v1.5
+## X-Curse-Project-Name: MinimapTarget
+## X-Curse-Project-ID: minimap-target
+## X-Curse-Repository-ID: wow/minimap-target/mainline
+
+## Title: MinimapTarget
+## Notes: Right-click on minimap blips to open a targeting menu (out of combat).
+## Author: Adirelle
+## Version: v1.5
+## X-Date: 2009-06-04T12:27:33Z
+## X-Category: Interface Enhancements
+## X-License: GPL v2 or later
+## X-eMail: adirelle@tagada-team.net
+
+## OptionalDeps: Chinchilla, SexyMap
+
+MinimapTarget.lua

@@ -1,0 +1,11 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML/UI.xsd">
+	<Script file="Locales\GatherMate_Sharing-enUS.lua"/>
+	<Script file="Locales\GatherMate_Sharing-deDE.lua"/>
+	<Script file="Locales\GatherMate_Sharing-esES.lua"/>
+	<Script file="Locales\GatherMate_Sharing-frFR.lua"/>
+	<Script file="Locales\GatherMate_Sharing-koKR.lua"/>
+	<Script file="Locales\GatherMate_Sharing-zhCN.lua"/>
+	<Script file="Locales\GatherMate_Sharing-zhTW.lua"/>
+	<Script file="Locales\GatherMate_Sharing-ruRU.lua"/>
+</Ui>

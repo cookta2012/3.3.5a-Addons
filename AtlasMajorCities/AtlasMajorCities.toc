@@ -1,0 +1,47 @@
+## Interface: 30200
+## Title: AtlasMajorCities
+## Notes: Capital Cities NPC Browser
+## Notes-deDE: Hauptstadt NPC Browser
+## Title-zhCN: Atlas Major Cities |r|cFF0099FF[主城地图]|r
+## Notes-zhCN: Atlas Major Cities, 显示各主城NPC和主要建筑位置
+## Title-zhTW: |r|cFF0099FF[地圖]|rAtlas 主城地圖
+## Notes-zhTW: Atlas Major Cities, 顯示主城各 NPC 與設施位置圖
+## Version: v1.5a
+## Author: Modefanz Coding
+## X-Date: September, 2009
+## X-Email: cashdash@t-online.de
+## X-Website: http://www.modefanz.eu/
+## X-Category: Map
+## X-License: CC BY-NC-SA 3.0
+## RequiredDeps: Atlas
+## X-Curse-Packaged-Version: v1.5b-release
+## X-Curse-Project-Name: AtlasMajorCities
+## X-Curse-Project-ID: amc
+## X-Curse-Repository-ID: wow/amc/mainline
+
+##############################
+# Libaries|Optional Buildins #
+##############################
+
+lib\LibStub.lua
+lib\tekKonfigAboutPanel.lua
+
+##############################
+#        Localisation        #
+##############################
+
+Locale\amc_enUS.lua
+--Locale\amc_deDE.lua
+--Locale\amc_esES.lua
+--Locale\amc_esMX.lua
+--Locale\amc_frFR.lua
+--Locale\amc_koKR.lua
+--Locale\amc_ruRU.lua
+--Locale\amc_zhCN.lua
+--Locale\amc_zhTW.lua
+
+##############################
+#         Core Code          #
+##############################
+
+AtlasMajorCities.lua

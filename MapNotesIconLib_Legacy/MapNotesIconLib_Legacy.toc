@@ -1,0 +1,5 @@
+## Interface: 30300
+## Title: MapNotesIconLib_Legacy
+## Notes: Original MapNotes Icons for MapNotesIconLib
+## Dependencies: MapNotesIconLib
+MapNotesIconLib_Legacy.lua

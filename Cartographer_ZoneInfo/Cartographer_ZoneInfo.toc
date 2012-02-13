@@ -1,0 +1,35 @@
+﻿## Interface: 30200
+## Title: Cartographer |r[|cffeda55fZone Info|r]
+## Title-ruRU: Картограф |r[|cffeda55fИнфо о Зонах|r]
+## X-Name: Zone Info
+## X-Name-ruRU: Инфо о Зонах
+## X-Name-deDE: Zoneninfo
+## X-Name-frFR: Infos de zone
+## X-Name-koKR: 지역 정보
+## X-Name-zhTW: 地區資訊
+## X-Name-esES: Información de Zona
+## X-Name-zhCN: 区域信息
+## X-ModuleName: ZoneInfo
+## Notes: Module which on hovering over a zone, will show the levels of the zone, the instances in the zone, their levels, and the number of men the instance is made for (e.g. 5-man, 40-man).
+## Notes-ruRU: Модуль который при наводке курсора на зону отображает уровни зоны, подземелья, их уровни допуска, и максимальное число человек доступное в подземельях (пример: 5-чел, 40-чел)
+## Notes-deDE: Modul, das Dir zu jeder Zone die Stufe sowie vorhandene Instanzen mit deren Level und jeweiliger Begrenzung der Spielerzahl anzeigt, wenn Du mit der Maus darauf zeigst.
+## Notes-frFR: Module affichant au passage de la souris sur une zone : la fourchette de niveaux de la zone, les instances s'y trouvant, leurs niveaux, et le nombre de joueurs que l'instance peut accueillir (par ex. 5j, 40j).
+## Notes-koKR: 해당 지역에 위치한 인던 및 참여할 수 있는 인원(예. 5명, 40명)등을 보여줍니다.
+## Notes-zhTW: 顯示游標所在地區資訊的模組，在世界地圖上顯示此地區的適合等級，此地區的副本和副本的人數限制 (例如: 5人、40人)。
+## Notes-esES: Módulo que muestra los niveles e instancias de la zona y los niveles y número de hombres necesarios para las instancias (p.ej. 5-hombres, 40-hombres) cuando se pasa el cursor por encima
+## Notes-zhCN: 显示鼠标所指的区域信息模块。在世界地图上显示该区域的适合等级，该区域的副本及副本人数限制（例如5人、40人）。
+## Author: ckknight
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: Cartographer
+## OptionalDeps: LibTourist-3.0
+## X-Category: Map
+## X-eMail: ckknight@gmail.com
+## X-Website: http://ckknight.wowinterface.com/
+## Version: 2.0
+## X-Curse-Packaged-Version: v2.5.6
+## X-Curse-Project-Name: Cartographer
+## X-Curse-Project-ID: cartographer
+## X-Curse-Repository-ID: wow/cartographer/mainline
+
+ZoneInfo.lua

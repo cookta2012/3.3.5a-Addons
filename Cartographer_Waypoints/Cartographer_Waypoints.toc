@@ -1,0 +1,37 @@
+﻿## Interface: 30200
+## Title: Cartographer |r[|cffeda55fWaypoints|r]
+## Title-ruRU: Картограф |r[|cffeda55fТочки маршрута|r]
+## X-Name: Waypoints
+## X-Name-ruRU: Точки маршрута
+## X-Name-koKR: 위치 포인트
+## X-Name-deDE: Wegpunkte
+## X-Name-zhCN: 路径
+## X-Name-esES: Puntos de Ruta
+## X-ModuleName: Waypoints
+## Notes: Module which shows an arrow to direct you to a specified note or location.
+## Notes-ruRU: Модуль отображает стрелкой направление к указанной заметке или местонахождении
+## Notes-koKR: 당신이 작성한 노트나 위치를 화살표로 안내하는 모듈입니다.
+## Notes-deDE: Modul das einen Pfeil anzeigt der dich zu einer Notiz oder Position führt.
+## Notes-zhTW: 顯示箭頭指引你到特定註記或地點的模組。
+## Notes-zhCN: 显示箭头指引你到特定注释或地点模块。
+## Notes-esES: Modulo que muestra una flecha que te dirije a una nota o localizacion especificada.
+## Author: Wobin
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: Cartographer
+## OptionalDeps: Ace2, DewdropLib, TabletLib, RosterLib, LibTourist-3.0, LibCrayon-3.0, LibBabble-Zone-3.0, LibAbacus-3.0, LibGuild-1.0
+## X-Category: Map
+## X-eMail: wobster@gmail.com
+## X-Website: http://wobin.wowinterface.com/
+## Version: 2.0
+## X-Curse-Packaged-Version: v2.5.6
+## X-Curse-Project-Name: Cartographer
+## X-Curse-Project-ID: cartographer
+## X-Curse-Repository-ID: wow/cartographer/mainline
+
+Waypoint.lua
+PartyPoint.lua
+GuildPoint.lua
+NotePoint.lua
+CorpsePoint.lua
+Waypoints.lua

@@ -1,0 +1,11 @@
+v1.2.4:
+- Added no-lib support.
+- Added destroy bulk options.
+- Added warning to /som destroyitem x
+- Added new frames to replace the old ones.
+- Added add/del buttons to merchant frame.
+- Modified locales to be in a separate subdir.
+- Modified SOM functions to modulize them.
+- Modified TOC file.
+- Fixed add/del frames not showing above interface configuration options.
+- Updated locales.

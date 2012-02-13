@@ -1,0 +1,71 @@
+------------------------------------------------------------------------
+r40 | sylvanaar | 2010-04-14 03:52:15 +0000 (Wed, 14 Apr 2010) | 1 line
+Changed paths:
+   A /tags/3.3.3 (from /trunk:39)
+
+Tagging as 3.3.3
+------------------------------------------------------------------------
+r39 | sylvanaar | 2010-04-14 03:48:45 +0000 (Wed, 14 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/ACP.lua
+
+kludge for nil entries in the addon list
+------------------------------------------------------------------------
+r38 | sylvanaar | 2010-04-14 03:28:44 +0000 (Wed, 14 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/ACP.lua
+   M /trunk/ACP.toc
+
+make the version displayed the same as the project version
+------------------------------------------------------------------------
+r37 | sylvanaar | 2010-04-13 19:24:23 +0000 (Tue, 13 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/ACP.lua
+   M /trunk/localization-enUS.lua
+   M /trunk/localization-zhCN.lua
+
+added localization for 'close' per suggestion by zzjbcn
+------------------------------------------------------------------------
+r36 | sylvanaar | 2010-04-13 19:03:53 +0000 (Tue, 13 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/ACP.lua
+
+add '_' to the special case list.
+------------------------------------------------------------------------
+r34 | sylvanaar | 2010-04-10 01:18:58 +0000 (Sat, 10 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/ACP.lua
+
+remove debug lines (bad sylv), and add special case for ShadowedUnitFrames
+------------------------------------------------------------------------
+r33 | sylvanaar | 2010-04-10 01:13:15 +0000 (Sat, 10 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/ACP.lua
+
+fix an issue with the last commit - make sure to use the special case names function when comparing names
+------------------------------------------------------------------------
+r32 | sylvanaar | 2010-04-10 00:48:36 +0000 (Sat, 10 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/ACP.lua
+
+solution suggested by dorn123 for fixing the misssing addons bug in the sort by name view. thanks a bunch.
+------------------------------------------------------------------------
+r31 | sylvanaar | 2010-04-09 09:28:14 +0000 (Fri, 09 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/ACP.lua
+
+when comparing addon names, use the special case names or don't. just don't try to compare a special case name with a non special case name
+------------------------------------------------------------------------
+r29 | sylvanaar | 2010-04-06 22:57:16 +0000 (Tue, 06 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/ACP.lua
+
+fix a huge bug in the handling of blizzard addons
+------------------------------------------------------------------------
+r28 | sylvanaar | 2009-12-11 10:46:38 +0000 (Fri, 11 Dec 2009) | 1 line
+Changed paths:
+   M /trunk/ACP.toc
+   M /trunk/ACP.xml
+
+update authorship and TOC version, pretty-print XML
+------------------------------------------------------------------------

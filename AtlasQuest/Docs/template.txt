@@ -1,0 +1,91 @@
+Just some templates I can quickly copy/paste.
+If/when this slips into a release, just ignore it. :)
+
+
+--Quest 1 Alliance
+Inst93Quest1 = ""
+Inst93Quest1_Level = ""
+Inst93Quest1_Attain = ""
+Inst93Quest1_Aim = ""
+Inst93Quest1_Location = ""
+Inst93Quest1_Note = ""
+Inst93Quest1_Prequest = ""
+Inst93Quest1_Folgequest = ""
+Inst93Quest1PreQuest = "true"
+Inst93Quest1FQuest = "true"
+--
+Inst93Quest1name1 = ""
+-- No Rewards for this quest
+
+
+--Quest 1 Horde
+Inst93Quest1_HORDE = ""
+Inst93Quest1_HORDE_Level = ""
+Inst93Quest1_HORDE_Attain = ""
+Inst93Quest1_HORDE_Aim = ""
+Inst93Quest1_HORDE_Location = ""
+Inst93Quest1_HORDE_Note = ""
+Inst93Quest1_HORDE_Prequest = ""
+Inst93Quest1_HORDE_Folgequest = ""
+Inst93Quest1PreQuest_HORDE = "true"
+Inst93Quest1FQuest_HORDE = "true"
+--
+Inst93Quest1name1_HORDE = ""
+-- No Rewards for this quest
+
+
+
+
+--Quest 1 Horde  (same as Quest 1 Alliance)
+Inst93Quest1_HORDE = Inst93Quest1
+Inst93Quest1_HORDE_Level = Inst93Quest1_Level
+Inst93Quest1_HORDE_Attain = Inst93Quest1_Attain
+Inst93Quest1_HORDE_Aim = Inst93Quest1_Aim
+Inst93Quest1_HORDE_Location = Inst93Quest1_Location
+Inst93Quest1_HORDE_Note = Inst93Quest1_Note
+Inst93Quest1_HORDE_Prequest = Inst93Quest1_Prequest
+Inst93Quest1_HORDE_Folgequest = Inst93Quest1_Folgequest
+Inst93Quest1PreQuest_HORDE = Inst93Quest1PreQuest
+Inst93Quest1FQuest_HORDE = Inst93Quest1FQuest
+--
+Inst93Quest1name1_HORDE = Inst93Quest1name1
+-- No Rewards for this quest
+
+
+
+
+--Quest 1 Alliance
+Inst93Quest1Rewardtext = AQDiscription_REWARD..WHITE.."1"..AQDiscription_OR..WHITE.."2"..AQDiscription_OR..WHITE.."3"..AQDiscription_OR..WHITE.."4"
+--ITEM1
+Inst93Quest1ITC1 = Itemc4;
+Inst93Quest1description1 = AQITEM_
+Inst93Quest1ID1 = ""
+--ITEM2
+Inst93Quest1ITC2 = Itemc4;
+Inst93Quest1description2 = AQITEM_
+Inst93Quest1ID2 = ""
+--ITEM3
+Inst93Quest1ITC3 = Itemc4;
+Inst93Quest1description3 = AQITEM_
+Inst93Quest1ID3 = ""
+--ITEM4
+Inst93Quest1ITC4 = Itemc4;
+Inst93Quest1description4 = AQITEM_
+Inst93Quest1ID4 = ""
+
+
+
+
+--Quest 1 Alliance
+Inst93Quest1Rewardtext = AQNoReward
+
+
+
+
+
+Inst93Quest1_QuestID = ""
+
+Inst93Quest1_HORDE_QuestID = ""
+
+
+AQ__Level = ""

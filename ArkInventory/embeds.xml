@@ -1,0 +1,28 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/..\FrameXML\UI.xsd">
+	
+	<Include file="Externals\Ace3\AceAddon-3.0\AceAddon-3.0.xml" />
+	<Include file="Externals\Ace3\AceConsole-3.0\AceConsole-3.0.xml" />
+	<Include file="Externals\Ace3\AceGUI-3.0\AceGUI-3.0.xml" />
+	<Include file="Externals\Ace3\AceConfig-3.0\AceConfig-3.0.xml" />
+	<Include file="Externals\Ace3\AceDB-3.0\AceDB-3.0.xml" />
+	<Include file="Externals\Ace3\AceDBOptions-3.0\AceDBOptions-3.0.xml" />
+	<Include file="Externals\Ace3\AceLocale-3.0\AceLocale-3.0.xml" />
+	<Include file="Externals\Ace3\AceHook-3.0\AceHook-3.0.xml" />
+	<Include file="Externals\Ace3\AceEvent-3.0\AceEvent-3.0.xml" />
+	<Include file="Externals\Ace3\AceTimer-3.0\AceTimer-3.0.xml" />
+	<Include file="Externals\Ace3\AceBucket-3.0\AceBucket-3.0.xml" />
+	
+	<Script file="Externals\Ace2\AceLibrary\AceLibrary.lua" />
+	<Script file="Externals\Dewdrop\Dewdrop-2.0\Dewdrop-2.0.lua" />
+	
+	<Script file="Externals\PeriodicTable\LibPeriodicTable-3.1\LibPeriodicTable-3.1.lua" />
+	<Script file="Externals\PeriodicTable\LibPeriodicTable-3.1-Consumable\LibPeriodicTable-3.1-Consumable.lua" />
+	<Script file="Externals\PeriodicTable\LibPeriodicTable-3.1-Misc\LibPeriodicTable-3.1-Misc.lua" />
+	<Script file="Externals\PeriodicTable\LibPeriodicTable-3.1-Reputation\LibPeriodicTable-3.1-Reputation.lua" />
+	<Script file="Externals\PeriodicTable\LibPeriodicTable-3.1-Tradeskill\LibPeriodicTable-3.1-Tradeskill.lua" />
+	<Script file="Externals\PeriodicTable\LibPeriodicTable-3.1-TradeskillResultMats\LibPeriodicTable-3.1-TradeskillResultMats.lua" />
+	
+	<Include file="Externals\LibSharedMedia\LibSharedMedia-3.0\lib.xml" />
+	<Include file="Externals\LibSharedMedia\AceGUI-3.0-SharedMediaWidgets\widget.xml" />
+	
+</Ui>

@@ -1,0 +1,46 @@
+﻿## Interface: 30200
+## Title: Cartographer |r[|cffeda55fInstance Maps|r]
+## Title-ruRU: Картограф |r[|cffeda55fКарты Подземелий|r]
+## X-Name: Instance Maps
+## X-Name-ruRU: Карты подземелий
+## X-Name-deDE: Instanzkarten
+## X-Name-frFR: Cartes d'instance
+## X-Name-koKR: 인스턴스 던전
+## X-Name-zhTW: 副本地圖
+## X-Name-esES: Mapas de Instancia
+## X-Name-zhCN: 副本地图
+## X-ModuleName: InstanceMaps
+## Notes: Module which provides maps of instances.
+## Notes-ruRU: Модуль включает отображение карт подземелий
+## Notes-deDE: Modul, das Instanzkarten zur Verfügung stellt.
+## Notes-frFR: Module fournissant des cartes pour les instances.
+## Notes-koKR: 인스턴스 던전을 보여줍니다.
+## Notes-zhTW: 提供副本地圖的模組。
+## Notes-esES: Módulo que provee mapas de instancias
+## Notes-zhCN: 显示副本地图模块。
+## Author: ckknight
+## X-Credits: Funkydude
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: Cartographer
+## OptionalDeps: Ace2, DewdropLib, LibBabble-Zone-3.0, LibTourist-3.0
+## X-Category: Map
+## X-eMail: ckknight@gmail.com
+## X-Website: http://ckknight.wowinterface.com/
+## Version: 2.0
+## X-Curse-Packaged-Version: v2.5.6
+## X-Curse-Project-Name: Cartographer
+## X-Curse-Project-ID: cartographer
+## X-Curse-Repository-ID: wow/cartographer/mainline
+
+#Libs\AceLibrary\AceLibrary.lua
+#Libs\AceOO-2.0\AceOO-2.0.lua
+#Libs\AceEvent-2.0\AceEvent-2.0.lua
+#Libs\AceAddon-2.0\AceAddon-2.0.lua
+#Libs\AceComm-2.0\AceComm-2.0.lua
+#Libs\AceLocale-2.2\AceLocale-2.2.lua
+#Libs\Babble-Zone-2.2\Babble-Zone-2.2.lua
+#Libs\Tourist-2.0\Tourist-2.0.lua
+
+Data.lua
+InstanceMaps.lua

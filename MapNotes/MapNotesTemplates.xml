@@ -1,0 +1,73 @@
+<!--
+	MapNotes: Adds a note system to the WorldMap and other AddOns that use the Plugins facility provided
+
+	See the README file for more information.
+-->
+
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/FrameXML/UI.xsd">
+
+	<Script file="MapNotesConstants.lua"/>
+	<Script file="MapNotesColours.lua"/>
+	<Script file="localization.en.lua"/>
+	<Script file="localization.de.lua"/>
+	<Script file="localization.fr.lua"/>
+	<Script file="localization.kr.lua"/>
+	<Script file="localization.tw.lua"/>
+	<Script file="localization.es.lua"/>
+	<Script file="localization.cn.lua"/>
+	<Script file="Utilities.lua"/>		<!-- Telic_1 -->
+	<Script file="PlugIns.lua"/>		<!-- Telic_2 -->
+
+	<Frame name="MapNotes_FrameTemplate" toplevel="true" movable="true" hidden="true"
+		parent="WorldMapFrame" frameStrata="TOOLTIP" enableMouse="true" virtual="true">		<!-- Telic_2  frameStrata -->
+		<Scripts>
+			<OnMouseDown>
+				if ( arg1 == "LeftButton" ) then
+					self:StartMoving();
+				end
+			</OnMouseDown>
+			<OnMouseUp>
+				if ( arg1 == "LeftButton" ) then
+					self:StopMovingOrSizing();
+				end
+			</OnMouseUp>
+			<OnShow>					<!-- Telic_1 -->
+				this:SetAlpha(1.0);			<!-- Telic_1 - caters for AddOns that can change the parent frame Alpha setting -->
+			</OnShow>					<!-- Telic_1 -->
+		</Scripts>
+
+		<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+			<BackgroundInsets>
+				<AbsInset left="5" right="5" top="5" bottom="5"/>
+			</BackgroundInsets>
+			<TileSize>
+				<AbsValue val="16"/>
+			</TileSize>
+			<EdgeSize>
+				<AbsValue val="16"/>
+			</EdgeSize>
+		</Backdrop>
+	</Frame>
+
+	<Button name="MapNotes_ButtonTemplate" inherits="UIPanelButtonTemplate2" virtual="true">
+		<Size>
+			<AbsDimension x="185" y="21"/>
+		</Size>
+		<Scripts>									<!-- Telic_2 -->
+			<OnShow>								<!-- Telic_2 -->
+				this:SetFrameLevel( this:GetParent():GetFrameLevel() + 1 );	<!-- Telic_2 -->
+			</OnShow>								<!-- Telic_2 -->
+		</Scripts>									<!-- Telic_2 -->
+	</Button>
+
+	<Button name="MapNotes_CancelButtonTemplate" inherits="MapNotes_ButtonTemplate" virtual="true" text="MAPNOTES_CANCEL">
+		<Scripts>
+			<OnClick>
+				PlaySound("igMainMenuOption");
+				this:GetParent():Hide();
+			</OnClick>
+		</Scripts>
+	</Button>
+
+	<Texture name="MapNotesLineTemplate" hidden="true" virtual="true"/>
+</Ui>

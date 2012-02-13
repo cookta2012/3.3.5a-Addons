@@ -1,0 +1,61 @@
+------------------------------------------------------------------------
+r298 | kagaro | 2010-06-13 05:28:49 +0000 (Sun, 13 Jun 2010) | 1 line
+Changed paths:
+   A /tags/v2.06 (from /trunk:297)
+
+GatherMate_Data: weekly update
+------------------------------------------------------------------------
+r297 | kagaro | 2010-06-13 05:28:48 +0000 (Sun, 13 Jun 2010) | 1 line
+Changed paths:
+   M /trunk/HerbalismData.lua
+   M /trunk/MiningData.lua
+   M /trunk/TreasureData.lua
+   M /trunk/version
+
+GatherMate_Data: Weekly update
+------------------------------------------------------------------------
+r295 | kagaro | 2010-06-06 05:29:04 +0000 (Sun, 06 Jun 2010) | 1 line
+Changed paths:
+   M /trunk/HerbalismData.lua
+   M /trunk/MiningData.lua
+   M /trunk/TreasureData.lua
+   M /trunk/version
+
+GatherMate_Data: Weekly update
+------------------------------------------------------------------------
+r293 | kagaro | 2010-05-30 05:29:12 +0000 (Sun, 30 May 2010) | 1 line
+Changed paths:
+   M /trunk/HerbalismData.lua
+   M /trunk/MiningData.lua
+   M /trunk/TreasureData.lua
+   M /trunk/version
+
+GatherMate_Data: Weekly update
+------------------------------------------------------------------------
+r291 | kagaro | 2010-05-23 11:15:58 +0000 (Sun, 23 May 2010) | 1 line
+Changed paths:
+   M /trunk/HerbalismData.lua
+   M /trunk/MiningData.lua
+   M /trunk/TreasureData.lua
+   M /trunk/version
+
+GatherMate_Data: Weekly update
+------------------------------------------------------------------------
+r289 | kagaro | 2010-05-23 05:28:52 +0000 (Sun, 23 May 2010) | 1 line
+Changed paths:
+   M /trunk/HerbalismData.lua
+   M /trunk/MiningData.lua
+   M /trunk/TreasureData.lua
+   M /trunk/version
+
+GatherMate_Data: Weekly update
+------------------------------------------------------------------------
+r287 | kagaro | 2010-05-16 05:00:50 +0000 (Sun, 16 May 2010) | 1 line
+Changed paths:
+   M /trunk/HerbalismData.lua
+   M /trunk/MiningData.lua
+   M /trunk/TreasureData.lua
+   M /trunk/version
+
+GatherMate_Data: Weekly update
+------------------------------------------------------------------------

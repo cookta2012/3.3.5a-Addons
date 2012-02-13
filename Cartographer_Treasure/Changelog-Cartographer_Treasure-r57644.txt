@@ -1,0 +1,16 @@
+------------------------------------------------------------------------
+r57644 | cwdg | 2007-12-29 09:32:19 -0500 (Sat, 29 Dec 2007) | 2 lines
+Changed paths:
+   M /trunk/Cartographer_Treasure/Cartographer_Treasure.lua
+   M /trunk/Cartographer_Treasure/Cartographer_Treasure.toc
+
+Cartographer_Treasure:
+- update zhCN local. please don't add your name in local chunk
+------------------------------------------------------------------------
+r57464 | xionglingfeng | 2007-12-25 11:09:39 -0500 (Tue, 25 Dec 2007) | 2 lines
+Changed paths:
+   M /trunk/Cartographer_Treasure/Cartographer_Treasure.lua
+
+Cartographer_Treasure:
+- Chs updated.
+------------------------------------------------------------------------

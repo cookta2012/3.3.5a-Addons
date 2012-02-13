@@ -1,0 +1,34 @@
+------------------------------------------------------------------------
+r236 | arkayenro | 2010-05-22 03:05:29 +0000 (Sat, 22 May 2010) | 4 lines
+Changed paths:
+   A /tags/3.02.46 (from /trunk:235)
+
+*3.02.46 (22-MAY-2010)*
+ * added - config option for bar name anchor points - automatic (default) | top | bottom
+ * fixed - mount: frosty flying carpet (was set as a land mount)
+
+------------------------------------------------------------------------
+r235 | arkayenro | 2010-05-22 03:00:45 +0000 (Sat, 22 May 2010) | 4 lines
+Changed paths:
+   M /trunk/ArkInventory.lua
+   M /trunk/ArkInventoryCompanion.lua
+   M /trunk/ArkInventoryConfig.lua
+   M /trunk/ArkInventoryLDB.lua
+   M /trunk/ArkInventoryRules.lua
+   M /trunk/ArkInventoryStorage.lua
+   M /trunk/Locale/deDE.lua
+   M /trunk/Locale/enUS.lua
+   M /trunk/Locale/esES.lua
+   M /trunk/Locale/esMX.lua
+   M /trunk/Locale/frFR.lua
+   M /trunk/Locale/koKR.lua
+   M /trunk/Locale/ruRU.lua
+   M /trunk/Locale/zhCN.lua
+   M /trunk/Locale/zhTW.lua
+   M /trunk/VersionHistory.txt
+
+*3.02.46 (22-MAY-2010)*
+ * added - config option for bar name anchor points - automatic (default) | top | bottom
+ * fixed - mount: frosty flying carpet (was set as a land mount)
+
+------------------------------------------------------------------------

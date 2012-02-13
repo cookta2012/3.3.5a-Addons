@@ -1,0 +1,32 @@
+﻿## Interface: 30200
+## Notes: Addon to manipulate the map
+## Notes-ruRU: Аддон для монипуляции картой.
+## Notes-frFR: Addon permettant la manipulation de la carte.
+## Notes-esES: Accesorio para manipular el mapa
+## Notes-koKR: 지도에 관련된 여러 기능을 조작하기 위한 애드온입니다.
+## Title: Cartographer
+## Title-ruRU: Картограф
+## Notes-zhTW: 增強地圖的處理功能。
+## Notes-zhCN: 增强地图处理功能。
+## Author: ckknight
+## DefaultState: enabled
+## LoadOnDemand: 0
+## SavedVariables: CartographerDB
+## OptionalDeps: LibRock-1.0, LibRockEvent-1.0, LibRockTimer-1.0, LibRockDB-1.0, LibRockModuleCore-1.0, LibRockHook-1.0, LibRockConfig-1.0, LibRockComm-1.0, LibRockLocale-1.0, LibRockConsole-1.0, Ace2, LibGuildPositions-1.0, Cartographer3, LibBabble-Zone-3.0, LibTourist-3.0, LibCrayon-3.0, LibGuild-1.0, LibAbacus-3.0, DewdropLib, LibPeriodicTable-3.1, TabletLib, RosterLib, LibBabble-Boss-3.0, LibBabble-Class-3.0
+## X-Category: Map
+## X-Credits: Abydos, Arrowmaster, Funkydude, kergoth, kagaro, Mery (for the waypoint images), Moncaí
+## X-eMail: ckknight AT gmail DOT com
+## X-Website: http://www.wowace.com/
+## X-Donate: PayPal:ckknight AT gmail DOT com
+## X-IssueTracker: Wowace:10024
+## Version: 2.0
+## X-Curse-Packaged-Version: v2.5.6
+## X-Curse-Project-Name: Cartographer
+## X-Curse-Project-ID: cartographer
+## X-Curse-Repository-ID: wow/cartographer/mainline
+
+embeds.xml
+
+Cartographer.lua
+
+modules.xml

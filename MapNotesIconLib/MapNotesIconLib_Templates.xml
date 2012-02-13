@@ -1,0 +1,197 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+
+	<Script file="MapNotesIconLib_Library.lua"/>
+	<Script file="MapNotesIconLib.en.lua"/>
+	<Script file="MapNotesIconLib.lua"/>
+
+
+
+	<!-- MNIL Fonts -->
+
+	<Font name="MNIL_NormalFont" inherits="GameFontNormalLarge" font="Fonts\ARIALN.TTF" virtual="true">
+		<FontHeight>
+			<AbsValue val="15"/>
+		</FontHeight>
+		<Shadow>
+			<Offset>
+				<AbsDimension x="0" y="0"/>
+			</Offset>
+			<Color r="0" g="0" b="0"/>
+		</Shadow>
+		<Color r="1.0" g="1.0" b="0.0"/>
+	</Font>
+	<Font name="MNIL_GreenFont" inherits="GameFontNormal" font="Fonts\ARIALN.TTF" virtual="true">
+		<FontHeight>
+			<AbsValue val="12"/>
+		</FontHeight>
+		<Shadow>
+			<Offset>
+				<AbsDimension x="0" y="0"/>
+			</Offset>
+			<Color r="0" g="0" b="0"/>
+		</Shadow>
+		<Color r="0.0" g="0.0" b="1"/>
+	</Font>
+	<Font name="MNIL_BlackFont" inherits="GameFontNormal" font="Fonts\ARIALN.TTF" virtual="true">
+		<FontHeight>
+			<AbsValue val="12"/>
+		</FontHeight>
+		<Shadow>
+			<Offset>
+				<AbsDimension x="0" y="0"/>
+			</Offset>
+			<Color r="0" g="0" b="0"/>
+		</Shadow>
+		<Color r="0.0" g="0.0" b="0.0"/>
+	</Font>
+
+
+	<!-- Master Templates -->
+
+	<Frame name="MNIL_ScriptTemplate" enableMouse="true" virtual="true">
+		<Scripts>
+			<OnMouseDown>
+				MNIL.Button_OnMouseDown(this);			<!-- Button pressed animation -->
+			</OnMouseDown>
+			<OnMouseUp>
+				MNIL.Button_OnMouseUp(this, arg1);		<!-- Button released animation -->
+			</OnMouseUp>								<!-- Buttons based on this template can call their own secondary, customised OnClick func -->
+			<OnEnter>
+				MNIL.Button_OnMouseEnter(this);			<!-- Buttons based on this template can provide their own Tooltip key -->
+			</OnEnter>
+			<OnLeave>
+				MNIL.Button_OnMouseLeave(this);			<!-- Hide tooltip -->
+			</OnLeave>
+		</Scripts>
+	</Frame>
+
+	<Frame name="MNIL_IconButtonTemplate" inherits="MNIL_ScriptTemplate" enableMouse="true" virtual="true">
+		<Frames>
+			<Frame name="$parentArtWork">
+				<Size>
+					<AbsDimension x="18" y="18"/>
+				</Size>
+				<Anchors>
+					<Anchor point="CENTER"/>
+				</Anchors>
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture name="$parentTexture" file="Interface\QuestFrame\UI-QuestTitleHighlight">
+							<Size>
+								<AbsDimension x="18" y="18"/>
+							</Size>
+							<Anchors>
+								<Anchor point="CENTER"/>
+							</Anchors>
+						</Texture>
+					</Layer>
+					<Layer level="OVERLAY">
+						<Texture name="$parentHighlight" hidden="true" file="Interface\QuestFrame\UI-QuestTitleHighlight" alphaMode="ADD">
+							<Size>
+								<AbsDimension x="14" y="14"/>
+							</Size>
+							<Anchors>
+								<Anchor point="CENTER"/>
+							</Anchors>
+						</Texture>
+					</Layer>
+				</Layers>
+			</Frame>
+		</Frames>
+	</Frame>
+
+
+
+	<!-- Specific Button Templates -->
+
+	<!-- IconLib Default Icons -->
+	<Frame name="MNIL_ILIconButtonTemplate" inherits="MNIL_IconButtonTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="16" y="16"/>
+		</Size>
+		<Anchors>
+			<Anchor point="CENTER" relativeTo="MNILSelectorFrame" relativePoint="CENTER"/>
+		</Anchors>
+		<Scripts>
+			<OnLoad>
+				this.onClickFunc = MNIL.IL_IconOnClick;
+				this.tooltipKey = "IL_ICONTOOLTIP";
+				this.overlayHighlight = true;
+				this.enabled = true;
+			</OnLoad>
+		</Scripts>
+	</Frame>
+
+	<!-- MapNotes Default Icons -->
+	<Frame name="MNIL_MNIconButtonTemplate" inherits="MNIL_IconButtonTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="16" y="16"/>
+		</Size>
+		<Anchors>
+			<Anchor point="CENTER" relativeTo="MNILOptionsFrame" relativePoint="CENTER"/>
+		</Anchors>
+	</Frame>
+
+	<!-- Navigation -->
+	<Frame name="MNIL_NavButtonTemplate" inherits="MNIL_ScriptTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="32" y="32"/>
+		</Size>
+		<Frames>
+			<Frame name="$parentArtWork">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>
+				<Anchors>
+					<Anchor point="CENTER"/>
+				</Anchors>
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture name="$parentTexture" file="Interface\AddOns\MapNotesIconLib\Graphics\Down">
+							<Size>
+								<AbsDimension x="32" y="32"/>
+							</Size>
+							<Anchors>
+								<Anchor point="CENTER"/>
+							</Anchors>
+						</Texture>
+					</Layer>
+				</Layers>
+			</Frame>
+		</Frames>
+	</Frame>
+
+	<!-- Generic -->
+	<Frame name="MNIL_GenButtonTemplate" inherits="MNIL_ScriptTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="80" y="22"/>
+		</Size>
+		<Frames>
+			<Frame name="$parentArtWork">
+				<Size>
+					<AbsDimension x="128" y="128"/>
+				</Size>
+				<Anchors>
+					<Anchor point="CENTER"/>
+				</Anchors>
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture name="$parentTexture" file="Interface\AddOns\MapNotesIconLib\Graphics\GenRaw">
+							<Size>
+								<AbsDimension x="128" y="128"/>
+							</Size>
+							<Anchors>
+								<Anchor point="CENTER"/>
+							</Anchors>
+						</Texture>
+					</Layer>
+					<Layer level="ARTWORK">
+						<FontString name="$parentText" inherits="MNIL_NormalFont"/>
+					</Layer>
+				</Layers>
+			</Frame>
+		</Frames>
+	</Frame>
+
+</Ui>

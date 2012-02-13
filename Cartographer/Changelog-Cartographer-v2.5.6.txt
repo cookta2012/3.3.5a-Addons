@@ -1,0 +1,32 @@
+------------------------------------------------------------------------
+r2328 | moncai | 2009-08-05 19:17:18 +0000 (Wed, 05 Aug 2009) | 1 line
+Changed paths:
+   A /tags/v2.5.6 (from /trunk:2327)
+
+Tagging as 2.5.6
+------------------------------------------------------------------------
+r2327 | moncai | 2009-08-05 17:48:34 +0000 (Wed, 05 Aug 2009) | 1 line
+Changed paths:
+   M /trunk/Cartographer.toc
+   M /trunk/Cartographer_Battlegrounds/Cartographer_Battlegrounds.toc
+   M /trunk/Cartographer_Coordinates/Cartographer_Coordinates.toc
+   M /trunk/Cartographer_Foglight/Cartographer_Foglight.toc
+   M /trunk/Cartographer_GroupColors/Cartographer_GroupColors.toc
+   M /trunk/Cartographer_GuildPositions/Cartographer_GuildPositions.toc
+   M /trunk/Cartographer_InstanceLoot/Cartographer_InstanceLoot.toc
+   M /trunk/Cartographer_InstanceMaps/Cartographer_InstanceMaps.toc
+   M /trunk/Cartographer_InstanceNotes/Cartographer_InstanceNotes.toc
+   M /trunk/Cartographer_LookNFeel/Cartographer_LookNFeel.toc
+   M /trunk/Cartographer_Notes/Cartographer_Notes.toc
+   M /trunk/Cartographer_POI/Cartographer_POI.toc
+   M /trunk/Cartographer_Waypoints/Cartographer_Waypoints.toc
+   M /trunk/Cartographer_ZoneInfo/Cartographer_ZoneInfo.toc
+
+Update all tocs to 30200
+------------------------------------------------------------------------
+r2325 | ckknight | 2009-08-05 16:53:11 +0000 (Wed, 05 Aug 2009) | 1 line
+Changed paths:
+   M /trunk/Cartographer.toc
+
+bump toc and add optionaldeps so things load properly.
+------------------------------------------------------------------------

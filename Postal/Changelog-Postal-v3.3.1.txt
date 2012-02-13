@@ -1,0 +1,25 @@
+------------------------------------------------------------------------
+r284 | xinhuan | 2010-03-21 19:43:44 +0000 (Sun, 21 Mar 2010) | 1 line
+Changed paths:
+   A /tags/v3.3.1 (from /trunk:283)
+
+Tag release v3.3.1.
+------------------------------------------------------------------------
+r283 | xinhuan | 2010-03-21 19:43:04 +0000 (Sun, 21 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/Postal.toc
+
+Update Postal's version to 3.3.1.
+------------------------------------------------------------------------
+r282 | xinhuan | 2010-03-21 19:42:02 +0000 (Sun, 21 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/Modules/Wire.lua
+
+Fixed unintended bug where Postal allowed CoD amounts larger than 10000g to be sent if the Wire module is active (Blizzard just reduces the CoD amount to 10000g if it was larger). This is now fixed and the default UI behavior to disable the Send button if the amount is larger than 10000g is restored (reported by thefluffyrocker).
+------------------------------------------------------------------------
+r281 | xinhuan | 2009-12-29 01:33:30 +0000 (Tue, 29 Dec 2009) | 1 line
+Changed paths:
+   M /trunk/Modules/OpenAll.lua
+
+Fix minor bug where "Processing Message 0:" is printed when performing an Open All.
+------------------------------------------------------------------------

@@ -1,0 +1,172 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   xsi:schemaLocation="http://www.blizzard.com/wow/ui/"> 
+   <Script file="Cartographer3_WaypointsFu.lua"/> 
+
+   <!-- Frame to handle all Cartographer core events --> 
+   <Frame name="C3WaypointsFuCore" parent="UIParent" hidden="false"> 
+   </Frame> 
+   
+   <Frame name="C3WaypointsFuFrame" toplevel="true" enableMouse="true" movable="true" parent="UIParent" hidden="true" >
+	 <TitleRegion setAllPoints="true"/> 	  
+		<Size>
+			<AbsDimension x="354" y="80"/>
+		</Size>
+		<Anchors>
+ 			<Anchor point="CENTER">
+ 				<Offset>
+ 					<AbsDimension x="0" y="0"/>
+ 				</Offset>
+ 			</Anchor>
+ 		</Anchors>
+		<Layers>
+			<Layer level="ARTWORK">
+				<Texture file="Interface\MoneyFrame\UI-MoneyFrame2">
+				      <Color r="0" g="0" b="0" a="0.75"/>
+					<Size>
+						<AbsDimension x="520" y="108"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="C3WaypointsFuFrame">
+							<Offset>
+								<AbsDimension x="0" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+				<FontString name="C3WaypointsFuTitleText" inherits="GameFontHighlight" text="Cart3:WaypointsFu">
+					<Size>
+						<AbsDimension x="256" y="16"/>
+					</Size>
+					<Color r="0" g="1.0" b="0" a="0.75"/>
+					<Anchors>
+						<Anchor point="CENTER" relativeTo="C3WaypointsFuFrame" telativePoint="CENTER">
+							<Offset>
+								<AbsDimension x="0" y="26"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<Button name="C3WaypointsFuCloseButton" inherits="UIPanelCloseButton">
+				<Anchors>
+					<Anchor point="CENTER" relativeTo="C3WaypointsFuFrame" relativePoint="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-34" y="-17" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+
+			<Button name="C3WaypointsFuSubmitButton" inherits="UIPanelButtonTemplate" text="Submit">
+				<Size>
+					<AbsDimension x="65" y="22"/>
+				</Size>
+				<Anchors>
+					<Anchor point="CENTER" relativeTo="C3WaypointsFuFrame">
+						<Offset>
+							<AbsDimension x="-95" y="-20"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						C3WaypointsFu_Submit();
+					</OnClick>
+				</Scripts>
+			</Button>
+			
+			<Button name="C3WaypointsFuClearButton" inherits="UIPanelButtonTemplate" text="Clear All">
+				<Size>
+					<AbsDimension x="65" y="22"/>
+				</Size>
+				<Anchors>
+					<Anchor point="CENTER" relativeTo="C3WaypointsFuSubmitButton">
+						<Offset>
+							<AbsDimension x="190" y="-0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						C3WaypointsFu_Clear();
+					</OnClick>
+				</Scripts>
+			</Button>
+			
+<!--			<Button name="C3WaypointsFuViewButton" inherits="UIPanelButtonTemplate" text="Clear Zone">
+				<Size>
+					<AbsDimension x="125" y="22"/>
+				</Size>
+				<Anchors>
+					<Anchor point="CENTER" relativeTo="C3WaypointsFuClearButton">
+						<Offset>
+							<AbsDimension x="95" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						C3WaypointsFu_View();
+					</OnClick>
+				</Scripts>
+			</Button> -->
+			
+			<EditBox name="C3WaypointsFuFrameEdit" letters="256" multiLine="false" historyLines="10" autoFocus="true">
+				<Size>
+					<AbsDimension x="245" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="CENTER" relativeTo="C3WaypointsFuFrame" relativePoint="CENTER">
+						<Offset>
+							<AbsDimension x="0" y="2" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture name="C3WaypointsFuFrameEditBackground">
+							<Color r="0" g="0" b="0" a="0.75"/>
+						</Texture>
+					</Layer>
+					<Layer level="ARTWORK">
+					<Texture file="Interface\CastingBar\UI-CastingBar-Border">
+						<Size>
+							<AbsDimension x="335" y="80"/>
+						</Size>
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="C3WaypointsFuFrame" relativePoint="CENTER">
+								<Offset>
+									<AbsDimension x="0" y="2" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Texture>
+					</Layer>
+				</Layers>
+				<FontString inherits="GameFontNormal">
+					<Color r="1" g="1" b="1" a="1"/>
+				</FontString>
+				<Scripts>
+					<OnEnterPressed>
+						C3WaypointsFu_Submit();
+					</OnEnterPressed>
+					<OnEscapePressed>
+						HideUIPanel(C3WaypointsFuFrame);
+					</OnEscapePressed>
+				</Scripts>
+			</EditBox>			
+		</Frames>
+		<Scripts>
+			<OnDragStart>
+				this:StartMoving();
+				this.isMoving = true;
+			</OnDragStart>
+			<OnDragStop>
+				this:StopMovingOrSizing();
+				this.isMoving = false;
+			</OnDragStop>
+		</Scripts>		
+	</Frame>
+		
+</Ui>

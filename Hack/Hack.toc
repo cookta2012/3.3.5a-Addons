@@ -1,0 +1,10 @@
+## Interface: 30300
+## Title: Hack
+## Version: 1.2.2
+## Notes: Notebook / coding framework.
+## Author: Mud, aka Eric Tetz <erictetz@gmail.com>
+## SavedVariables: HackDB
+HackExamples.lua
+Hack.lua
+Hack.xml
+Indent.lua

@@ -1,0 +1,24 @@
+﻿## Interface: 30100
+## Notes: Database sharing module for GatherMate
+## Notes-ruRU: Модуль коллективного использования базы данных для GatherMate
+## Notes-frFR: Module de partage de base de données pour GatherMate.
+## Title: GatherMate_Sharing
+## Author: kagaro, Xinhuan
+## X-Email: sal.scotto@gmail.com
+## SavedVariables: GatherMate_SharingDB
+## X-Category: Map
+## Version: 1.3
+## X-Curse-Packaged-Version: v1.3
+## X-Curse-Project-Name: GatherMate_Sharing
+## X-Curse-Project-ID: gathermate_sharing
+## X-Curse-Repository-ID: wow/gathermate_sharing/mainline
+
+## Dependencies: GatherMate
+## OptionalDeps: Ace3
+## X-Embeds: Ace3
+
+#@no-lib-strip@
+embeds.xml
+#@end-no-lib-strip@
+Locales.xml
+GatherMate_Sharing.lua

@@ -1,0 +1,5 @@
+## Interface: 30300
+## Title: MapNotesIconLib_Numbers
+## Notes: A Variety of Numbered Icons for MapNotesIconLib
+## Dependencies: MapNotesIconLib
+MapNotesIconLib_Numbers.lua

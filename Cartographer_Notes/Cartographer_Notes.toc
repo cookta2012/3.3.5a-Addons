@@ -1,0 +1,35 @@
+﻿## Interface: 30200
+## Title: Cartographer |r[|cffeda55fNotes|r]
+## Title-ruRU: Картограф |r[|cffeda55fЗаметки|r]
+## X-Name: Notes
+## X-Name-ruRU: Заметки
+## X-Name-deDE: Notizen
+## X-Name-frFR: Notes
+## X-Name-koKR: 노트
+## X-Name-zhTW: 註記
+## X-Name-esES: Notas
+## X-Name-zhCN: 注释
+## X-ModuleName: Notes
+## Notes: Module which allows you to put notes on the map.
+## Notes-ruRU: Модуль позволяет вам размещать заметки на карте.
+## Notes-deDE: Modul zur Erstellung von Notizen auf der Karte.
+## Notes-frFR: Module permettant l'ajout de notes sur la carte.
+## Notes-koKR: 지도에 노트를 작성합니다.
+## Notes-zhTW: 讓你可以在地圖上做註記的模組。
+## Notes-esES: Módulo que te permite poner notas en el mapa
+## Notes-zhCN: 让你可以在地图上做注释模组。
+## Author: ckknight
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: Cartographer
+## OptionalDeps: LibBabble-Zone-3.0
+## X-Category: Map
+## X-eMail: ckknight@gmail.com
+## X-Website: http://ckknight.wowinterface.com/
+## Version: 2.0
+## X-Curse-Packaged-Version: v2.5.6
+## X-Curse-Project-Name: Cartographer
+## X-Curse-Project-ID: cartographer
+## X-Curse-Repository-ID: wow/cartographer/mainline
+
+Notes.lua

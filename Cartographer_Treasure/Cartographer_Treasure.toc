@@ -1,0 +1,36 @@
+﻿## Interface: 20300
+
+## Title: Cartographer_Treasure |cff7fff7f -Ace2-|r
+## Title-deDE: Cartographer [|cffeda55fTreasure|r]
+## Notes: Treasure mapnotes for Cartographer (based on Cartographer_Mining by kergoth)
+## Notes-deDe: Kartennotizen von Schätzen für Cartographer (basiert auf Cartographer_Mining von kergoth)
+## Notes-esES: Notas de mapa de tesoros para Cartographer (basado en Cartographer_Mining por kergoth)
+
+## Title-zhCN: |cFF37A2F7[|r|cFF7FFF7FCA|r|cFF34A2F7]|r寻宝专家|r[|cffeda55fTreasure|r]
+## Notes-zhCN: 记录各种宝物的地点
+
+## Author: kagaro
+## Version: 1.0
+## X-Category: Map
+## X-eMail: sal.scotto@gmail.com
+## X-License: GPL v2
+
+## DefaultState: Enabled
+## LoadOnDemand: 0
+
+## OptionalDeps: Ace2, Babble-2.2, Cartographer_Notes
+## RequiredDeps: Cartographer
+## SavedVariables: Cartographer_TreasureDB
+## LIBS START
+## X-Embeds: Ace2, Babble-2.2, DewdropLib, TabletLib
+Libs\AceLibrary\AceLibrary.lua
+Libs\AceOO-2.0\AceOO-2.0.lua
+Libs\AceConsole-2.0\AceConsole-2.0.lua
+Libs\AceAddon-2.0\AceAddon-2.0.lua
+Libs\AceLocale-2.2\AceLocale-2.2.lua
+Libs\Babble-Spell-2.2\Babble-Spell-2.2.lua
+Libs\Babble-Zone-2.2\Babble-Zone-2.2.lua
+Libs\Dewdrop-2.0\Dewdrop-2.0.lua
+Libs\Tablet-2.0\Tablet-2.0.lua
+## LIBS END
+Cartographer_Treasure.lua

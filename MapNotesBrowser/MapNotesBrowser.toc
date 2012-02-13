@@ -1,0 +1,11 @@
+## Interface: 30300
+## Title: MapNotesBrowser |c0000FF00(v1.00.30300)|r
+## Author: Cortello (previously Telic)
+## eMail: cortello@gmx.com
+## Version: v1.00.30300
+## Notes: Frame for listing a map's notes alphabetically, and searching for notes
+## SavedVariables: 
+## OptionalDeps:
+## Dependencies: MapNotes
+
+MapNotesBrowser.xml

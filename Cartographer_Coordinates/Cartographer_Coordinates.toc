@@ -1,0 +1,35 @@
+﻿## Interface: 30200
+## Title: Cartographer |r[|cffeda55fCoordinates|r]
+## Title-ruRU: Картограф |r[|cffeda55fКоординаты|r]
+## X-Name: Coordinates
+## X-Name-ruRU: Координаты
+## X-Name-deDE: Koordinaten
+## X-Name-frFR: Coordonnées
+## X-Name-koKR: 좌표
+## X-Name-zhTW: 座標
+## X-Name-esES: Coordenadas
+## X-Name-zhCN: 坐标
+## X-ModuleName: Coordinates
+## Notes: Module to add coordinates to the bottom of the world map of the player and the cursor.
+## Notes-ruRU: Модуль добавляет координаты персонажа и курсора в нижнюю часть карты.
+## Notes-deDE: Modul zur Anzeige der Spieler- und Mauszeiger-Koordinaten im unteren Bereich der Weltkarte.
+## Notes-frFR: Modules indiquant les coordonnées du joueur et du curseur en bas de la carte du monde.
+## Notes-koKR: 플레이어와 커서의 좌표를 세계 지도 밑에 보여줍니다.
+## Notes-zhTW: 在世界地圖底端增加游標和玩家目前座標的模組。
+## Notes-esES: Módulo para añadir coordenadas del jugador y cursor en la parte inferior del mapa del mundo
+## Notes-zhCN: 在世界地图底部增加鼠标所在位置坐标和玩家当前坐标模块。
+## Author: ckknight
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: Cartographer
+## OptionalDeps: LibTourist-3.0
+## X-Category: Map
+## X-eMail: ckknight@gmail.com
+## X-Website: http://ckknight.wowinterface.com/
+## Version: 2.0
+## X-Curse-Packaged-Version: v2.5.6
+## X-Curse-Project-Name: Cartographer
+## X-Curse-Project-ID: cartographer
+## X-Curse-Repository-ID: wow/cartographer/mainline
+
+Coordinates.lua

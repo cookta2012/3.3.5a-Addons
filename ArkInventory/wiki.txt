@@ -1,0 +1,190 @@
+﻿= Beta Versions =
+
+ensure you take a backup of copy of your saved variables file before installing a beta version - you cannot revert without that backup
+
+your saved variable file is normally located in \World of Warcraft\WTF\Account\yourwowaccountname\!SavedVariables\!ArkInventory.lua
+
+a simple way to back it up is to just do a copy and paste then rename the new file (using the version number of AI is a good idea), eg !ArkInventory-212.lua
+
+Wrath of the Lich King betas (v3.xx) can only be used on the beta servers at this time, they are NOT backwards compatible with the live servers.  Locale files have been temporarily disabled.
+
+
+= About =
+
+!ArkInventory (AI or ARKINV) is an inventory mod that was based off !EngInventory when the BtS 2.0.0 patch came out and I needed a working replacement.
+
+http://groups.google.com/group/wow-arkinventory/web/ArkInventory-Bag.jpg
+
+AI's display windows are built from "virtual bars", you assign categories (either the default ones or ones you create via rules) to bars so that items in that category are displayed on the specific bars you want. There is no limit to the number of bars you can have inside a window but obviously you only have so much screen real estate before it becomes "too many".
+
+
+AI uses several methods to assign a default category to an item such as what professions you have, tooltip scanning, basic type/subtype and !PeriodicTable. You then assign those categories to a virtual bar.
+
+
+As the default categories are not perfect, nor will they be correct for the way some people play, you can over-ride them by creating a rule that matches either a single or multiple items.
+
+
+
+= Keybindings =
+
+AI will toggle via F12 (the default backpack open) or any other key you have assigned to open the backpack (so long as the Blizzard Bag/Bank frames are being hidden) but they're there in the event you want to map them elsewhere.  There are also keybinding choices to various other parts of AI.
+
+To access your Keybindings;
+
+  * Press ESCAPE to bring up the blizzard menu.
+  * click on Key Bindings.
+  * scroll down to !ArkInventory.
+  * bind the keys you want to use (or unbind if required). 
+
+
+
+= Reporting Bugs =
+
+Before reporting a bug please check the [http://code.google.com/p/arkinventory/issues/list issues list] to see if the bug you are about to report has already been reported (or dealt with).
+
+After checking that your bug hasn't been reported you can [http://code.google.com/p/arkinventory/issues/entry create a new issue].
+
+
+When entering an issue please make sure that you include the following;
+
+  * the AI version number (not the svn revision number). AI won't have mid version releases, except betas, and those will have beta version numbers.
+  * the version of WoW.
+  * what language (if not english).
+  * a screenshot for visual bugs (if you can't explain it clearly).
+  * the error message(s) (if you have an error mod installed then the entire stack trace would be even better).
+
+= Version History =
+
+If you really want to see what got changed in each revision there is a !VersionHistory.txt file included that has all those details.
+
+
+
+= To Do List =
+
+Currently empty, or at least nothing major. !ReadMe.txt may have some entries.
+
+
+
+= Screenshots =
+
+== The Bag ==
+http://groups.google.com/group/wow-arkinventory/web/ArkInventory-Bag-Changer.jpg
+
+  * Title frame: consists of the main icon, clicking on which will bring up the main menu, then the current characters name is displayed (in green for online and red for offline), lastly followed by several smaller icons which allow you to toggle the other display windows (as well as the current one), the close icon is obvious - this frame can be hidden if not required
+
+  * Container frame: where your bars and items are displayed
+
+  * Bag Changer frame: allows you to move, swap, add or remove a bag (it mirrors the same functionality that the Blizzard frame has) - note that while you have this frame displayed everything needs to be recalculated to cater for a lack of API functionality that can tell me when you've moved a bag so it will be slightly slower with this opened.  when you move the mouse over one of the bags it will highlight all the slots in that bag (you can change the colour if you need to). this frame can be hidden if not required
+
+  * Status frame: is for showing how many empty slots you have remaining, if you only have normal bags you'll only have a single xx/yy (where xx is the number of empty slots and yy is the total number of slots), if you have profession, ammo or soulshard bags you will also see xx/yy variants for each type of bag, it also has the standard gold frame - this frame can be hidden if not required
+
+
+
+== The Keyring ==
+http://groups.google.com/group/wow-arkinventory/web/ArkInventory-Keyring.jpg
+
+  * It would appear we have 32 keyring slots even though the default Blizzard container only ever shows the smallest number of slots possible (rounded up to a factor of 4).
+
+  * Note that their may be internal code that restricts the number of keyring slots you can actually access but as the Blizzard API is currently telling AI that there are 32 slots that's what it displays.
+
+
+== The Bank (in offline mode) ==
+http://groups.google.com/group/wow-arkinventory/web/ArkInventory-Bank-Offline.jpg
+
+  * The character name will be shown in red (instead of green) and the item icons are faded when you are viewing a bag, bank or keyring in offline mode.
+
+  * The item fading is an option that you can turn off if you want to see them at their normally displayed (alpha) level
+
+
+== The Guild Bank ==
+http://groups.google.com/group/wow-arkinventory/web/ArkInventory-GuildBank.jpg
+
+  * The above shows a user with guild leader access.
+
+  * total guild gold is displayed in the status window.
+
+
+== Searching ==
+
+requires that the tooltip option to show item counts is enabled (otherwise all you get is a big list of items that you and all your alts have with no way of seeing whats where)
+
+chat link and dressup clicks are functional
+
+http://groups.google.com/group/wow-arkinventory/web/ArkInventory-Search.jpg
+
+http://groups.google.com/group/wow-arkinventory/web/ArkInventory-Search-Search.jpg
+
+
+
+
+
+
+= Rules =
+
+What are rules? Rules let you to categorise your items exactly the way you want to by allowing you to use various bits of item data to write a formula that will match that item (and others like it).
+
+
+Once you have your rule created you simply assign it to the bar of your choice so that the items that match the rule will are displayed on that bar.
+
+
+Rules are global, that is every profile can see every rule you create, they can be enabled or disabled per profile and are set to disabled by default when you create a new profile.
+
+
+http://groups.google.com/group/wow-arkinventory/web/ArkInventory-Rules-View.jpg
+
+
+== Basics ==
+
+*Rule*: the number assigned to this rule. you cannot modify this value. rule numbers are assigned sequentially.
+
+
+*Enabled*: tick this if you want the rule to be used. disabled rules are ignored. default value is ticked.
+
+
+*Order*: rules are processed in ascending numerical order based on this value. default value is 0. if you find that another rule keeps picking up an item you want elsewhere then you would create another rule with a lower order to place it in the proper location. rules with the same order number are processed in a potentially random sequence (or at least one that cannot be known beforehand) so only reuse the same order number if the rules would not have any overlapping items.
+
+
+*Description*: a description of the rule.
+
+
+*Formula*: a formula that defines which items match a rule, defaults to false.
+
+
+http://groups.google.com/group/wow-arkinventory/web/ArkInventory-Rules-Edit.jpg
+
+== String Matching ==
+
+because the rule formulas are being interpreted via LUA there are some things you need to be aware of when trying to match strings, ie from name() and tooltip()
+
+
+there are a few "magic" characters, these are `^$()%.[]*+-?` if you want to search for one of these characters you must "escape" it or it won't match (and could do something totally different), you do this by putting a `%` in front of it.
+
+
+eg; if looking for an item with `"Mana-Etched"` in it's name you would need to enter `"mana%-etched"` to find it.
+
+
+there are also several "character classes", these are used match a single character from it's class
+
+  * `x`: (where `x` is not one of the magic characters `^$()%.[]*+-?)` represents the character `x` itself.
+  * `.`: (a dot) represents all characters.
+  * `%a`: represents all letters.
+  * `%d`: represents all digits.
+  * `%p`: represents all punctuation characters.
+  * `%s`: represents all space characters.
+  * `%w`: represents all alphanumeric characters.
+  * `%x`: represents all hexadecimal digits.
+  * `%x`: (where `x` is any non-alphanumeric character) represents the character `x`. This is the standard way to escape the magic characters. Any punctuation character (even the non magic) can be preceded by a `%` when used to represent itself in a pattern. 
+
+
+as mentioned before, the above will only match on a single character, when you need to match more than one character you add one of the following symbols directly after the class;
+
+  * `*` matches 0 or more repetitions of characters in the class. These repetition items will always match the longest possible sequence;
+  * `+` matches 1 or more repetitions of characters in the class. These repetition items will always match the longest possible sequence;
+  * `-` matches 0 or more repetitions of characters in the class. Unlike `*`, these repetition items will always match the shortest possible sequence;
+  *  `?` matches 0 or 1 occurrence of a character in the class; 
+
+
+you can make these patterns as simple or as complex as you need to match the specific piece of text you're after.
+
+
+if you need more information you should google "lua string pattern" as there is a wealth of information already out there that goes into minute detail that would easily fill this page up by itself.

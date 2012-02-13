@@ -1,0 +1,17 @@
+﻿## Interface: 30000
+## X-Curse-Packaged-Version: r235
+## X-Curse-Project-Name: LibRockModuleCore-1.0
+## X-Curse-Project-ID: librockmodulecore-1-0
+## X-Curse-Repository-ID: wow/librockmodulecore-1-0/mainline
+
+## Title: Lib: RockModuleCore-1.0
+## Notes: Module library
+## Author: ckknight
+## X-Website: http://www.wowace.com
+## X-Category: Library
+## X-Donate: Paypal:ckknight AT gmail DOT com
+## X-eMail: ckknight AT gmail DOT com
+## X-License: LGPL v2.1
+## LoadOnDemand: 1
+
+lib.xml

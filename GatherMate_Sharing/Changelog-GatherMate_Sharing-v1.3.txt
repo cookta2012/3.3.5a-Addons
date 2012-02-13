@@ -1,0 +1,319 @@
+------------------------------------------------------------------------
+r77 | kagaro | 2009-04-14 11:06:43 +0000 (Tue, 14 Apr 2009) | 1 line
+Changed paths:
+   A /tags/v1.3 (from /trunk:76)
+
+Tagging as v1.3
+------------------------------------------------------------------------
+r76 | kagaro | 2009-04-14 11:04:43 +0000 (Tue, 14 Apr 2009) | 1 line
+Changed paths:
+   M /trunk/GatherMate_Sharing.toc
+
+GatherMate_Sharing: version update to 1.3 to match curse and toc to 30100
+------------------------------------------------------------------------
+r74 | kagaro | 2009-03-24 20:24:20 +0000 (Tue, 24 Mar 2009) | 1 line
+Changed paths:
+   M /trunk/GatherMate_Sharing.toc
+
+GatherMate_Sharing: fix disembed setup in toc
+------------------------------------------------------------------------
+r73 | kagaro | 2008-12-19 16:36:03 +0000 (Fri, 19 Dec 2008) | 1 line
+Changed paths:
+   M /trunk/GatherMate_Sharing.lua
+
+GatherMate_Sharing: aded extra check to ensure it doesnt loop an add/delete
+------------------------------------------------------------------------
+r71 | kagaro | 2008-11-19 12:33:13 +0000 (Wed, 19 Nov 2008) | 1 line
+Changed paths:
+   M /trunk/GatherMate_Sharing.lua
+   M /trunk/GatherMate_Sharing.toc
+
+GatherMate_Sharing: incremented zone index
+------------------------------------------------------------------------
+r70 | next96 | 2008-11-03 05:05:08 +0000 (Mon, 03 Nov 2008) | 2 lines
+Changed paths:
+   M /trunk/Locales/GatherMate_Sharing-koKR.lua
+
+GatherMate_Sharing: 
+- Update locale koKR
+------------------------------------------------------------------------
+r68 | kagaro | 2008-10-14 11:43:56 +0000 (Tue, 14 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/GatherMate_Sharing.toc
+
+GatherMate_Sharing: toc udpate for 3.0
+------------------------------------------------------------------------
+r66 | kagaro | 2008-10-03 17:12:25 +0000 (Fri, 03 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/Libs
+
+GatherMate_Sharing: externals fix
+------------------------------------------------------------------------
+r65 | kagaro | 2008-09-30 15:56:52 +0000 (Tue, 30 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+Hopefully fix .pkgmeta
+------------------------------------------------------------------------
+r64 | kagaro | 2008-09-30 14:53:23 +0000 (Tue, 30 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+Hopefully fix .pkgmeta
+------------------------------------------------------------------------
+r62 | root | 2008-09-29 21:36:09 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   A /trunk/.pkgmeta
+   M /trunk/Libs
+
+Facilitate WowAce-on-CurseForge transition
+------------------------------------------------------------------------
+r60 | root | 2008-09-29 20:58:05 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   D /tmp/trunk/GatherMate_Sharing
+   A /trunk (from /tmp/trunk/GatherMate_Sharing:59)
+
+Importing old repo data under /trunk
+------------------------------------------------------------------------
+r59 | kagaro | 2008-09-16 11:47:31 +0000 (Tue, 16 Sep 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/GatherMate_Sharing/GatherMate_Sharing.toc
+
+GatherMate_Sharing updated email for transition.
+------------------------------------------------------------------------
+r58 | kagaro | 2008-09-11 15:03:26 +0000 (Thu, 11 Sep 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/GatherMate_Sharing/GatherMate_Sharing.lua
+
+GatherMate_Sharing: updated to fire node add message on reception. DRYCODE
+------------------------------------------------------------------------
+r55 | kagaro | 2008-08-05 12:04:54 +0000 (Tue, 05 Aug 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/GatherMate_Sharing/GatherMate_Sharing.toc
+
+GatherMate_Sharing: toc fix
+------------------------------------------------------------------------
+r54 | StingerSoft | 2008-07-30 07:00:53 +0000 (Wed, 30 Jul 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/GatherMate_Sharing/GatherMate_Sharing.toc
+   M /tmp/trunk/GatherMate_Sharing/Locales/GatherMate_Sharing-ruRU.lua
+
+GatherMate_Sharing: added ruRU localization
+------------------------------------------------------------------------
+r52 | xinhuan | 2008-03-25 19:37:00 +0000 (Tue, 25 Mar 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/GatherMate_Sharing/GatherMate_Sharing.toc
+
+GatherMate_Sharing: Update TOC to 20400
+------------------------------------------------------------------------
+r50 | xinhuan | 2008-02-20 06:57:59 +0000 (Wed, 20 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/GatherMate_Sharing/GatherMate_Sharing.lua
+
+GatherMate_Sharing: We will no longer attempt to send addon messages to the GUILD channel if we are not in a guild.
+------------------------------------------------------------------------
+r48 | xinhuan | 2008-02-15 02:07:58 +0000 (Fri, 15 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/GatherMate_Sharing/GatherMate_Sharing.lua
+   M /tmp/trunk/GatherMate_Sharing/Locales/GatherMate_Sharing-enUS.lua
+
+GatherMate_Sharing: Revert half of kagaro's failed merge from branch. And updated to work with receiving Treasure data.
+------------------------------------------------------------------------
+r47 | kagaro | 2008-02-14 13:45:38 +0000 (Thu, 14 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/GatherMate_Sharing/GatherMate_Sharing.lua
+   M /tmp/trunk/GatherMate_Sharing/Locales/GatherMate_Sharing-enUS.lua
+
+GatherMate_Sharing: updated changes to trunk
+------------------------------------------------------------------------
+r43 | xinhuan | 2008-02-11 15:54:11 +0000 (Mon, 11 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/GatherMate_Sharing/GatherMate_Sharing.lua
+
+GatherMate_Sharing: Fix for GatherMate_Sharing.lua:92: attempt to index field '?' (a nil value)
+------------------------------------------------------------------------
+r42 | nevcairiel | 2008-02-10 17:50:07 +0000 (Sun, 10 Feb 2008) | 3 lines
+Changed paths:
+   M /tmp/trunk/GatherMate_Sharing/GatherMate_Sharing.lua
+
+GatherMate_Sharing: 
+- fix for GM structure change
+- add treasure
+------------------------------------------------------------------------
+r41 | next96 | 2008-02-04 16:42:26 +0000 (Mon, 04 Feb 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/GatherMate_Sharing/Locales/GatherMate_Sharing-koKR.lua
+
+GatherMate_Sharing: 
+- Add Locale koKR
+------------------------------------------------------------------------
+r40 | pettigrow | 2008-02-04 16:29:01 +0000 (Mon, 04 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/GatherMate_Sharing/GatherMate_Sharing.toc
+   M /tmp/trunk/GatherMate_Sharing/Locales/GatherMate_Sharing-frFR.lua
+
+GatherMate_Sharing: frFR Update
+------------------------------------------------------------------------
+r39 | xinhuan | 2008-02-04 02:01:52 +0000 (Mon, 04 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/GatherMate_Sharing
+
+GatherMate_Sharing: Fix tsvn:logtemplate from GatharMate_Sharing: to GatherMate_Sharing: 
+------------------------------------------------------------------------
+r38 | xinhuan | 2008-02-04 01:59:34 +0000 (Mon, 04 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/GatherMate_Sharing/GatherMate_Sharing.toc
+
+GatherMate_Sharing: Add ## X-Embeds: Ace3 because it uses AceComm
+------------------------------------------------------------------------
+r37 | xinhuan | 2008-02-04 01:43:46 +0000 (Mon, 04 Feb 2008) | 1 line
+Changed paths:
+   A /tmp/trunk/GatherMate_Sharing (from /tmp/branches/GatherMate_Sharing:36)
+
+GatherMate_Sharing: Copy branch to trunk
+------------------------------------------------------------------------
+r36 | kagaro | 2008-02-03 20:25:04 +0000 (Sun, 03 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/GatherMate_Sharing/Libs
+
+GatherMate_Sharing: udpated externals
+------------------------------------------------------------------------
+r35 | xinhuan | 2008-02-01 20:55:51 +0000 (Fri, 01 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/GatherMate_Sharing/GatherMate_Sharing.lua
+
+GatharMate_Sharing: Do checking on incoming comms for invalid data. Do not perform implicit type-conversion using "123"+0 as it may throw errors on invalid data. Fix argument ordering in function call (error reported by Stavmar) to InjectNode.
+------------------------------------------------------------------------
+r34 | xinhuan | 2008-02-01 13:00:41 +0000 (Fri, 01 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/GatherMate_Sharing/GatherMate_Sharing.lua
+
+GatharMate_Sharing: Fix kagaro's spelling error: db.sharingChanel -> db.sharingChannel
+------------------------------------------------------------------------
+r33 | xinhuan | 2008-02-01 12:31:42 +0000 (Fri, 01 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/GatherMate_Sharing/GatherMate_Sharing.lua
+
+GatharMate_Sharing: Committing and fixing stuff for Laric while dead on an Illidan attempt.
+------------------------------------------------------------------------
+r32 | xinhuan | 2008-02-01 06:45:59 +0000 (Fri, 01 Feb 2008) | 2 lines
+Changed paths:
+   A /tmp/branches/GatherMate_Sharing/Locales/GatherMate_Sharing-zhCN.lua (from /tmp/branches/GatherMate_Sharing/Locales/GatherMate_Sharing-znCN.lua:26)
+   A /tmp/branches/GatherMate_Sharing/Locales/GatherMate_Sharing-zhTW.lua (from /tmp/branches/GatherMate_Sharing/Locales/GatherMate_Sharing-znTW.lua:26)
+   D /tmp/branches/GatherMate_Sharing/Locales/GatherMate_Sharing-znCN.lua
+   D /tmp/branches/GatherMate_Sharing/Locales/GatherMate_Sharing-znTW.lua
+   M /tmp/branches/GatherMate_Sharing/Locales.xml
+
+GatharMate_Sharing: Rename znCN and znTW to zhCN and zhTW, and correct the inside as well.
+~smack kagaro
+------------------------------------------------------------------------
+r31 | xinhuan | 2008-02-01 06:41:56 +0000 (Fri, 01 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/GatherMate_Sharing/GatherMate_Sharing.lua
+   M /tmp/branches/GatherMate_Sharing/Locales/GatherMate_Sharing-deDE.lua
+   M /tmp/branches/GatherMate_Sharing/Locales/GatherMate_Sharing-enUS.lua
+   M /tmp/branches/GatherMate_Sharing/Locales/GatherMate_Sharing-koKR.lua
+
+GatharMate_Sharing: Add a working configuration screen to GatherMate for GatherMate_Sharing. Localize strings. Fix "koKO" to "koKR".
+------------------------------------------------------------------------
+r30 | xinhuan | 2008-01-31 23:51:54 +0000 (Thu, 31 Jan 2008) | 1 line
+Changed paths:
+   M /tmp/branches/GatherMate_Sharing/GatherMate_Sharing.toc
+
+GatharMate_Sharing: Add GatherMate as a dependency lol!
+------------------------------------------------------------------------
+r29 | xinhuan | 2008-01-31 23:47:18 +0000 (Thu, 31 Jan 2008) | 1 line
+Changed paths:
+   M /tmp/branches/GatherMate_Sharing/GatherMate_Sharing.lua
+
+GatharMate_Sharing: Reinserted working callback for node deletion, and check that the option to sync node deletion is on/off. Added code to check that syncing is enabled for all communication functions before trying to send/receive anything.
+------------------------------------------------------------------------
+r28 | xinhuan | 2008-01-31 23:41:28 +0000 (Thu, 31 Jan 2008) | 1 line
+Changed paths:
+   M /tmp/branches/GatherMate_Sharing/GatherMate_Sharing.lua
+
+GatharMate_Sharing: Fix note sharing data format. zone argument is a string, not an integer so we need to convert that.
+------------------------------------------------------------------------
+r27 | xinhuan | 2008-01-31 23:33:04 +0000 (Thu, 31 Jan 2008) | 1 line
+Changed paths:
+   M /tmp/branches/GatherMate_Sharing/GatherMate_Sharing.lua
+
+GatharMate_Sharing: Remove callback for node deletion. There is no data to read/send if a node is already deleted, dummy.
+------------------------------------------------------------------------
+r26 | xinhuan | 2008-01-24 20:42:57 +0000 (Thu, 24 Jan 2008) | 1 line
+Changed paths:
+   M /tmp/branches/GatherMate_Sharing
+
+GatharMate_Sharing: Add properties
+------------------------------------------------------------------------
+r25 | xinhuan | 2008-01-24 20:41:37 +0000 (Thu, 24 Jan 2008) | 1 line
+Changed paths:
+   M /tmp/branches/GatherMate_Sharing/GatherMate_Sharing.lua
+
+GatharMate_Sharing: Fix a typo
+------------------------------------------------------------------------
+r24 | kagaro | 2008-01-24 14:48:59 +0000 (Thu, 24 Jan 2008) | 1 line
+Changed paths:
+   M /tmp/branches/GatherMate_Sharing/GatherMate_Sharing.lua
+
+GatherMate_Sharing: changed split function
+------------------------------------------------------------------------
+r23 | kagaro | 2008-01-24 14:38:21 +0000 (Thu, 24 Jan 2008) | 2 lines
+Changed paths:
+   M /tmp/branches/GatherMate_Sharing/GatherMate_Sharing.lua
+
+GatherMate_Sharing: drycode fix to variable reference
+
+------------------------------------------------------------------------
+r22 | kagaro | 2008-01-24 14:23:11 +0000 (Thu, 24 Jan 2008) | 1 line
+Changed paths:
+   M /tmp/branches/GatherMate_Sharing/GatherMate_Sharing.lua
+
+GatherMate_Sharing: initial pass
+------------------------------------------------------------------------
+r21 | kagaro | 2008-01-24 04:48:31 +0000 (Thu, 24 Jan 2008) | 1 line
+Changed paths:
+   M /tmp/branches/GatherMate_Sharing/Libs
+
+GatherMate_Sharing: externals added
+------------------------------------------------------------------------
+r20 | kagaro | 2008-01-24 04:46:17 +0000 (Thu, 24 Jan 2008) | 1 line
+Changed paths:
+   M /tmp/branches/GatherMate_Sharing/Locales.xml
+
+GatherMate_Sharing: fixed stub
+------------------------------------------------------------------------
+r19 | kagaro | 2008-01-24 04:45:49 +0000 (Thu, 24 Jan 2008) | 1 line
+Changed paths:
+   D /tmp/branches/GatherMate_Sharing/Locales/GatherMate_Sharing-koKO.lua
+   A /tmp/branches/GatherMate_Sharing/Locales/GatherMate_Sharing-koKR.lua (from /tmp/branches/GatherMate_Sharing/Locales/GatherMate_Sharing-koKO.lua:18)
+
+GatherMate_Sharing: fixed locale name for ko
+------------------------------------------------------------------------
+r18 | kagaro | 2008-01-24 04:44:40 +0000 (Thu, 24 Jan 2008) | 1 line
+Changed paths:
+   A /tmp/branches/GatherMate_Sharing (from /tmp/branchesGatherMate_Sharing:17)
+   D /tmp/branchesGatherMate_Sharing
+
+Typoed url
+------------------------------------------------------------------------
+r17 | kagaro | 2008-01-24 04:39:46 +0000 (Thu, 24 Jan 2008) | 1 line
+Changed paths:
+   A /tmp/branchesGatherMate_Sharing
+   A /tmp/branchesGatherMate_Sharing/GatherMate_Sharing.lua
+   A /tmp/branchesGatherMate_Sharing/GatherMate_Sharing.toc
+   A /tmp/branchesGatherMate_Sharing/Libs
+   A /tmp/branchesGatherMate_Sharing/Locales
+   A /tmp/branchesGatherMate_Sharing/Locales/GatherMate_Sharing-deDE.lua
+   A /tmp/branchesGatherMate_Sharing/Locales/GatherMate_Sharing-enUS.lua
+   A /tmp/branchesGatherMate_Sharing/Locales/GatherMate_Sharing-esES.lua
+   A /tmp/branchesGatherMate_Sharing/Locales/GatherMate_Sharing-frFR.lua
+   A /tmp/branchesGatherMate_Sharing/Locales/GatherMate_Sharing-koKO.lua
+   A /tmp/branchesGatherMate_Sharing/Locales/GatherMate_Sharing-ruRU.lua
+   A /tmp/branchesGatherMate_Sharing/Locales/GatherMate_Sharing-znCN.lua
+   A /tmp/branchesGatherMate_Sharing/Locales/GatherMate_Sharing-znTW.lua
+   A /tmp/branchesGatherMate_Sharing/Locales.xml
+   A /tmp/branchesGatherMate_Sharing/embeds.xml
+
+GatherMate_Sharing:Inital stubbing
+------------------------------------------------------------------------

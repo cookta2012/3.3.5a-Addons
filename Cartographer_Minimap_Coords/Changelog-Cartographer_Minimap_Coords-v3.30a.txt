@@ -1,0 +1,15 @@
+------------------------------------------------------------------------
+r35 | jebus905 | 2009-12-10 20:33:53 +0000 (Thu, 10 Dec 2009) | 2 lines
+Changed paths:
+   A /tags/v3.30a (from /trunk:34)
+
+Cartographer_Minimap_Coords:
+- TOC update for WoW 3.3
+------------------------------------------------------------------------
+r34 | jebus905 | 2009-12-10 20:33:19 +0000 (Thu, 10 Dec 2009) | 2 lines
+Changed paths:
+   M /trunk/Cartographer_Minimap_Coords.toc
+
+Cartographer_Minimap_Coords:
+- TOC update for WoW 3.3
+------------------------------------------------------------------------

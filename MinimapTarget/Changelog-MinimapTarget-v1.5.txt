@@ -1,0 +1,78 @@
+------------------------------------------------------------------------
+r54 | adirelle | 2009-06-04 12:38:17 +0000 (Thu, 04 Jun 2009) | 1 line
+Changed paths:
+   A /tags/v1.5 (from /trunk:53)
+
+Tagging as v1.5
+------------------------------------------------------------------------
+r53 | adirelle | 2009-06-04 12:27:33 +0000 (Thu, 04 Jun 2009) | 2 lines
+Changed paths:
+   M /trunk/.pkgmeta
+   A /trunk/Decorator.lua
+   M /trunk/MinimapTarget.lua
+   M /trunk/MinimapTarget.toc
+   A /trunk/MinimapTarget_Decorator
+   A /trunk/MinimapTarget_Decorator/MinimapTarget_Decorator.toc
+
+Added a optional decorator module that adds class, level and reaction info to menu entries. This module can be disabled in the addon screen.
+
+------------------------------------------------------------------------
+r52 | adirelle | 2009-06-04 09:18:32 +0000 (Thu, 04 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/MinimapTarget.lua
+
+Have the drycode working.
+------------------------------------------------------------------------
+r51 | adirelle | 2009-06-04 06:43:09 +0000 (Thu, 04 Jun 2009) | 2 lines
+Changed paths:
+   M /trunk/.pkgmeta
+   M /trunk/MinimapTarget.lua
+   M /trunk/MinimapTarget.toc
+
+Dropped Dewdrop in favor of an homemade secure menu (drycoded, so very likely to fail).
+
+------------------------------------------------------------------------
+r49 | adirelle | 2009-06-01 21:08:46 +0000 (Mon, 01 Jun 2009) | 2 lines
+Changed paths:
+   M /trunk/MinimapTarget.lua
+
+BGMinimapPlayerTracker compat.
+
+------------------------------------------------------------------------
+r47 | adirelle | 2009-05-16 23:54:55 +0000 (Sat, 16 May 2009) | 2 lines
+Changed paths:
+   M /trunk/MinimapTarget.lua
+
+Typo.
+
+------------------------------------------------------------------------
+r46 | adirelle | 2009-05-11 13:50:34 +0000 (Mon, 11 May 2009) | 3 lines
+Changed paths:
+   M /trunk/MinimapTarget.lua
+
+Do not try to display the menu in combat (it will not work anyway).
+Do not show duplicate entries.
+Be more forgiving with names containing spaces or dashes.
+------------------------------------------------------------------------
+r44 | adirelle | 2009-05-10 10:49:26 +0000 (Sun, 10 May 2009) | 4 lines
+Changed paths:
+   M /trunk
+   M /trunk/.pkgmeta
+   D /trunk/LICENSE.txt
+   M /trunk/MinimapTarget.lua
+   M /trunk/MinimapTarget.toc
+
+Fixed hooks.
+Removed obsolete svn:externals.
+TOC bump.
+
+------------------------------------------------------------------------
+r43 | adirelle | 2009-01-13 12:37:11 +0000 (Tue, 13 Jan 2009) | 2 lines
+Changed paths:
+   M /trunk/.pkgmeta
+   M /trunk/MinimapTarget.lua
+   M /trunk/MinimapTarget.toc
+
+Bumped to 30000.
+Removed Ace2 dependency.
+------------------------------------------------------------------------

@@ -1,0 +1,25 @@
+------------------------------------------------------------------------
+r50 | s1nless | 2009-09-07 23:06:06 +0000 (Mon, 07 Sep 2009) | 1 line
+Changed paths:
+   A /tags/v1.5b-release (from /trunk:49)
+
+Tagging as v1.5b-release
+------------------------------------------------------------------------
+r48 | S1nless | 2009-09-07 22:27:36 +0000 (Mon, 07 Sep 2009) | 1 line
+Changed paths:
+   M /trunk/AtlasMajorCities.toc
+
+english only, the others are testing the translation
+------------------------------------------------------------------------
+r47 | S1nless | 2009-09-07 22:25:14 +0000 (Mon, 07 Sep 2009) | 1 line
+Changed paths:
+   M /trunk/AtlasMajorCities.toc
+
+TOC Update 3.2
+------------------------------------------------------------------------
+r46 | S1nless | 2009-09-07 22:24:54 +0000 (Mon, 07 Sep 2009) | 1 line
+Changed paths:
+   M /trunk/Locale/amc_deDE.lua
+
+LittleMerlin german Update
+------------------------------------------------------------------------

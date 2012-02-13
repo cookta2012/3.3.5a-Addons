@@ -1,0 +1,455 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+
+	<Include file="MapNotesIconLib_Templates.xml"/>
+
+	<Frame name="MNILSelectorFrame" hidden="true" topLevel="true" frameStrata="FULLSCREEN_DIALOG" enableMouse="true" movable="true">
+		<Size>
+			<AbsDimension x="512" y="512"/>
+		</Size>
+		<Anchors>
+			<Anchor point="CENTER" relativeTo="UIParent"/>
+		</Anchors>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture name="MNILSelectorFrameBackground" file="Interface\AddOns\MapNotesIconLib\Graphics\MNIL_BG"/>
+			</Layer>
+			<Layer level="ARTWORK">
+				<FontString name="MNILSelectorFrameStatus" inherits="GameFontGreen" justifyH="RIGHT" text="MNIL_LIBSLOADED">
+					<Anchors>
+						<Anchor point="TOPRIGHT" relativePoint="TOP" relativeTo="MNILSelectorFrame">
+							<Offset>
+								<AbsDimension x="60" y="-66"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="MNILSelectorFrameStatus2" inherits="GameFontGreen"  justifyH="LEFT" justifyV="TOP" text=""/>
+				<FontString name="MNILSelectorFrameMNLibAuthor" inherits="MNIL_GreenFont" justifyH="RIGHT" text="MNIL_LAUTHOR">
+					<Anchors>
+						<Anchor point="TOPRIGHT" relativePoint="TOP" relativeTo="MNILSelectorFrame">
+							<Offset>
+									<AbsDimension x="-40" y="-132"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="MNILSelectorFrameMNLibAuthor2" inherits="MNIL_GreenFont" justifyH="LEFT" justifyV="TOP" text=""/>
+				<FontString name="MNILSelectorFrameMNLibDate" inherits="MNIL_GreenFont" justifyH="RIGHT" text="MNIL_LDATE">
+					<Anchors>
+						<Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="MNILSelectorFrameMNLibAuthor">
+							<Offset>
+								<AbsDimension x="0" y="-6"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="MNILSelectorFrameMNLibDate2" inherits="MNIL_GreenFont" justifyH="LEFT" justifyV="TOP" text=""/>
+				<FontString name="MNILSelectorFrameMNLibInfo" inherits="MNIL_GreenFont" justifyH="RIGHT" text="MNIL_LINFO">
+					<Anchors>
+						<Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="MNILSelectorFrameMNLibDate">
+							<Offset>
+								<AbsDimension x="0" y="-6"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="MNILSelectorFrameMNLibInfo2" inherits="MNIL_GreenFont" justifyH="LEFT" justifyV="TOP" text=""/>
+				<FontString name="MNILSelectorFrameMNLibIcons" inherits="MNIL_GreenFont" justifyH="LEFT" text="MNIL_LICONS">
+					<Anchors>
+						<Anchor point="CENTER">
+							<Offset>
+								<AbsDimension x="-160" y="50"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="MNILSelectorFrameMNLibIcons2" inherits="MNIL_GreenFont" justifyH="LEFT" justifyV="TOP" text=""/>
+				<FontString name="MNILSelectorFrameMNVersion" inherits="MNIL_BlackFont" justifyH="CENTER" text="MNIL_MNVERSION">
+					<Anchors>
+						<Anchor point="BOTTOM">
+							<Offset>
+								<AbsDimension x="8" y="76"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="MNILSelectorFrameMNILVersion" inherits="MNIL_BlackFont" justifyH="CENTER" text="MNIL_MNILVERSION">
+					<Anchors>
+						<Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="MNILSelectorFrameMNVersion">
+							<Offset>
+								<AbsDimension x="-12" y="-2"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+			<Layer level="OVERLAY">
+			</Layer>
+		</Layers>
+		<Frames>
+			<Frame name="MNIL_LibsDropDown" inherits="UIDropDownMenuTemplate">
+				<Anchors>
+					<Anchor point="TOP" relativePoint="TOP" relativeTo="MNILSelectorFrame">
+						<Offset>
+							<AbsDimension x="14" y="-104"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnShow>
+						MNIL.MNIL_LibsDropDown_OnLoad();
+					</OnShow>
+				</Scripts>
+			</Frame>
+			<Frame name="MNIL_LibIcon1"  inherits="MNIL_ILIconButtonTemplate" id="1" />
+			<Frame name="MNIL_LibIcon2"  inherits="MNIL_ILIconButtonTemplate" id="2" />
+			<Frame name="MNIL_LibIcon3"  inherits="MNIL_ILIconButtonTemplate" id="3" />
+			<Frame name="MNIL_LibIcon4"  inherits="MNIL_ILIconButtonTemplate" id="4" />
+			<Frame name="MNIL_LibIcon5"  inherits="MNIL_ILIconButtonTemplate" id="5" />
+			<Frame name="MNIL_LibIcon6"  inherits="MNIL_ILIconButtonTemplate" id="6" />
+			<Frame name="MNIL_LibIcon7"  inherits="MNIL_ILIconButtonTemplate" id="7" />
+			<Frame name="MNIL_LibIcon8"  inherits="MNIL_ILIconButtonTemplate" id="8" />
+			<Frame name="MNIL_LibIcon9"  inherits="MNIL_ILIconButtonTemplate" id="9" />
+			<Frame name="MNIL_LibIcon10" inherits="MNIL_ILIconButtonTemplate" id="10"/>
+			<Frame name="MNIL_LibIcon11" inherits="MNIL_ILIconButtonTemplate" id="11"/>
+			<Frame name="MNIL_LibIcon12" inherits="MNIL_ILIconButtonTemplate" id="12"/>
+			<Frame name="MNIL_LibIcon13" inherits="MNIL_ILIconButtonTemplate" id="13"/>
+			<Frame name="MNIL_LibIcon14" inherits="MNIL_ILIconButtonTemplate" id="14"/>
+			<Frame name="MNIL_LibIcon15" inherits="MNIL_ILIconButtonTemplate" id="15"/>
+			<Frame name="MNIL_LibIcon16" inherits="MNIL_ILIconButtonTemplate" id="16"/>
+			<Frame name="MNIL_LibIcon17" inherits="MNIL_ILIconButtonTemplate" id="17"/>
+			<Frame name="MNIL_LibIcon18" inherits="MNIL_ILIconButtonTemplate" id="18"/>
+			<Frame name="MNIL_LibIcon19" inherits="MNIL_ILIconButtonTemplate" id="19"/>
+			<Frame name="MNIL_LibIcon20" inherits="MNIL_ILIconButtonTemplate" id="20"/>
+			<Frame name="MNIL_LibIcon21" inherits="MNIL_ILIconButtonTemplate" id="21"/>
+			<Frame name="MNIL_LibIcon22" inherits="MNIL_ILIconButtonTemplate" id="22"/>
+			<Frame name="MNIL_LibIcon23" inherits="MNIL_ILIconButtonTemplate" id="23"/>
+			<Frame name="MNIL_LibIcon24" inherits="MNIL_ILIconButtonTemplate" id="24"/>
+			<Frame name="MNIL_LibIcon25" inherits="MNIL_ILIconButtonTemplate" id="52"/>
+			<Frame name="MNIL_LibIcon26" inherits="MNIL_ILIconButtonTemplate" id="26"/>
+			<Frame name="MNIL_LibIcon27" inherits="MNIL_ILIconButtonTemplate" id="27"/>
+			<Frame name="MNIL_LibIcon28" inherits="MNIL_ILIconButtonTemplate" id="28"/>
+			<Frame name="MNIL_LibIcon29" inherits="MNIL_ILIconButtonTemplate" id="29"/>
+			<Frame name="MNIL_LibIcon30" inherits="MNIL_ILIconButtonTemplate" id="30"/>
+			<Frame name="MNIL_LibIcon31" inherits="MNIL_ILIconButtonTemplate" id="31"/>
+			<Frame name="MNIL_LibIcon32" inherits="MNIL_ILIconButtonTemplate" id="32"/>
+			<Frame name="MNIL_LibIcon33" inherits="MNIL_ILIconButtonTemplate" id="33"/>
+			<Frame name="MNIL_LibIcon34" inherits="MNIL_ILIconButtonTemplate" id="34"/>
+			<Frame name="MNIL_LibIcon35" inherits="MNIL_ILIconButtonTemplate" id="35"/>
+			<Frame name="MNIL_LibIcon36" inherits="MNIL_ILIconButtonTemplate" id="36"/>
+			<Frame name="MNIL_LibIcon37" inherits="MNIL_ILIconButtonTemplate" id="37"/>
+			<Frame name="MNIL_LibIcon38" inherits="MNIL_ILIconButtonTemplate" id="38"/>
+			<Frame name="MNIL_LibIcon39" inherits="MNIL_ILIconButtonTemplate" id="39"/>
+			<Frame name="MNIL_LibIcon40" inherits="MNIL_ILIconButtonTemplate" id="40"/>
+
+			<Frame name="MNIL_LibPrev" inherits="MNIL_NavButtonTemplate">
+				<Anchors>
+					<Anchor point="RIGHT">
+						<Offset>
+							<AbsDimension x="-50" y="14"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this.onClickFunc = MNIL.IL_PrevIcons;
+						this.tooltipKey = "NV_PREVTOOLTIP";
+						this.enabled = true;
+						this.enabledTexture = "Interface\\AddOns\\MapNotesIconLib\\Graphics\\Up";
+						this.disabledTexture = "Interface\\AddOns\\MapNotesIconLib\\Graphics\\UpDisabled";
+						this.highlightedTexture = "Interface\\AddOns\\MapNotesIconLib\\Graphics\\UpLit";
+					</OnLoad>
+					<OnShow>
+						MNIL_LibPrevArtWorkTexture:SetTexture("Interface\AddOns\MapNotesIconLib\Graphics\Up");
+					</OnShow>
+				</Scripts>
+			</Frame>
+			<Frame name="MNIL_LibNext" inherits="MNIL_NavButtonTemplate">
+				<Anchors>
+					<Anchor point="TOP" relativePoint="BOTTOM" relativeTo="MNIL_LibPrev">
+						<Offset>
+							<AbsDimension x="0" y="-40"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this.onClickFunc = MNIL.IL_NextIcons;
+						this.tooltipKey = "NV_NEXTTOOLTIP";
+						this.enabled = true;
+						this.enabledTexture = "Interface\\AddOns\\MapNotesIconLib\\Graphics\\Down";
+						this.disabledTexture = "Interface\\AddOns\\MapNotesIconLib\\Graphics\\DownDisabled";
+						this.highlightedTexture = "Interface\\AddOns\\MapNotesIconLib\\Graphics\\DownLit";
+					</OnLoad>
+					<OnShow>
+						MNIL_LibNextArtWorkTexture:SetTexture("Interface\AddOns\MapNotesIconLib\Graphics\Down");
+					</OnShow>
+				</Scripts>
+			</Frame>
+			<Frame name="MNIL_LibOptions" inherits="MNIL_GenButtonTemplate">
+				<Anchors>
+					<Anchor point="BOTTOM">
+						<Offset>
+							<AbsDimension x="-48" y="125"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this.onClickFunc = MNIL.IL_OptionsOnClick;
+						this.tooltipKey = "NV_OPTIONSTOOLTIP";
+						this.enabled = true;
+						this.enabledTexture = "Interface\\AddOns\\MapNotesIconLib\\Graphics\\GenRaw";
+						this.disabledTexture = "Interface\\AddOns\\MapNotesIconLib\\Graphics\\GenDisabled";
+						this.highlightedTexture = "Interface\\AddOns\\MapNotesIconLib\\Graphics\\GenLitRaw";
+						MNIL.Button_SetText(this, MNIL_OPTIONS);
+					</OnLoad>
+				</Scripts>
+			</Frame>
+			<Frame name="MNIL_LibCancel" inherits="MNIL_GenButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="MNIL_LibOptions">
+						<Offset>
+							<AbsDimension x="36" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this.onClickFunc = MNIL.IL_CancelSelectorOnClick;
+						this.enabled = true;
+						this.enabledTexture = "Interface\\AddOns\\MapNotesIconLib\\Graphics\\GenRaw";
+						this.disabledTexture = "Interface\\AddOns\\MapNotesIconLib\\Graphics\\GenDisabled";
+						this.highlightedTexture = "Interface\\AddOns\\MapNotesIconLib\\Graphics\\GenLitRaw";
+						MNIL.Button_SetText(this, CANCEL);
+					</OnLoad>
+				</Scripts>
+			</Frame>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				MNIL.MNILSelectorFrame_OnLoad();
+			</OnLoad>
+			<OnEvent>
+				MNIL.OnEvent();
+			</OnEvent>
+			<OnShow>
+				MNIL.MNILSelectorFrame_OnShow();
+			</OnShow>
+			<OnHide>
+				MNIL.MNILSelectorFrame_OnHide();
+			</OnHide>
+			<OnMouseDown>
+				this:StartMoving();
+				this.isMoving = true;
+			</OnMouseDown>
+			<OnMouseUp>
+				this:StopMovingOrSizing();
+				this.isMoving = false;
+			</OnMouseUp>
+		</Scripts>
+	</Frame>
+
+	<Frame name="MNILOptionsFrame" hidden="true" topLevel="true" frameStrata="FULLSCREEN_DIALOG" enableMouse="true" movable="true">
+		<Size>
+			<AbsDimension x="256" y="256"/>
+		</Size>
+		<Anchors>
+			<Anchor point="CENTER" relativeTo="UIParent"/>
+		</Anchors>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture name="MNILOptionsFrameBackground" file="Interface\AddOns\MapNotesIconLib\Graphics\MapNotesIconLib_Options"/>
+			</Layer>
+			<Layer level="ARTWORK">
+				<FontString name="MNILOptionsLabel" inherits="GameFontGreen" justifyH="CENTER" text="MNIL_OTITLE">
+					<Anchors>
+						<Anchor point="TOP">
+							<Offset>
+								<AbsDimension x="0" y="-26"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="MNILOptionsPartyLabel" inherits="GameFontGreenSmall" justifyH="CENTER" text="MNIL_PARTYICON">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="MNILOptionsFrame">
+							<Offset>
+								<AbsDimension x="52" y="-66"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="MNILOptionstlocLabel" inherits="GameFontGreenSmall" justifyH="CENTER" text="MNIL_TLOCICON">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOP" relativeTo="MNILOptionsFrame">
+							<Offset>
+								<AbsDimension x="36" y="-66"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<Frame name="MNIL_OptionParty" inherits="MNIL_MNIconButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="MNILOptionsFrame">
+						<Offset>
+							<AbsDimension x="34" y="-64"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this.onClickFunc = MNIL.PartyIcon_OnClick;
+						this.tooltipKey = "GN_OPTIONSPARTY";
+						this.overlayHighlight = true;
+						this.enabled = true;
+						this.GetTexture = MNIL.Button_GetTexture;
+						this.SetTexture = MNIL.Button_SetTexture;
+					</OnLoad>
+					<OnShow>
+						MNIL.PartyIcon_OnShow();
+					</OnShow>
+				</Scripts>
+			</Frame>
+			<Frame name="MNIL_Optiontloc" inherits="MNIL_MNIconButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativePoint="TOP" relativeTo="MNILOptionsFrame">
+						<Offset>
+							<AbsDimension x="18" y="-64"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this.onClickFunc = MNIL.tlocIcon_OnClick;
+						this.tooltipKey = "GN_OPTIONSTLOC";
+						this.overlayHighlight = true;
+						this.enabled = true;
+						this.GetTexture = MNIL.Button_GetTexture;
+						this.SetTexture = MNIL.Button_SetTexture;
+					</OnLoad>
+					<OnShow>
+						MNIL.tlocIcon_OnShow();
+					</OnShow>
+				</Scripts>
+			</Frame>
+
+			<Frame name="MNIL_OptionsBrowse" inherits="MNIL_GenButtonTemplate">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" relativeTo="MNILOptionsFrame">
+						<Offset>
+							<AbsDimension x="32" y="58"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this.onClickFunc = MNIL.IL_BrowseOnClick;
+						this.enabled = true;
+						this.enabledTexture = "Interface\\AddOns\\MapNotesIconLib\\Graphics\\GenRaw";
+						this.disabledTexture = "Interface\\AddOns\\MapNotesIconLib\\Graphics\\GenDisabled";
+						this.highlightedTexture = "Interface\\AddOns\\MapNotesIconLib\\Graphics\\GenLitRaw";
+						MNIL.Button_SetText(this, MNIL_BROWSE);
+					</OnLoad>
+				</Scripts>
+			</Frame>
+			<Frame name="MNIL_OptionsClean" inherits="MNIL_GenButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="MNIL_OptionsBrowse">
+						<Offset>
+							<AbsDimension x="32" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this.onClickFunc = MNIL.CleanOnClick;
+						this.tooltipKey = "IL_CLEANTOOLTIP";
+						this.enabled = true;
+						this.enabledTexture = "Interface\\AddOns\\MapNotesIconLib\\Graphics\\GenRaw";
+						this.disabledTexture = "Interface\\AddOns\\MapNotesIconLib\\Graphics\\GenDisabled";
+						this.highlightedTexture = "Interface\\AddOns\\MapNotesIconLib\\Graphics\\GenLitRaw";
+						MNIL.Button_SetText(this, MNIL_CLEAN);
+					</OnLoad>
+				</Scripts>
+			</Frame>
+			<Frame name="MNIL_OptionsReset" inherits="MNIL_GenButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="MNIL_OptionsBrowse">
+						<Offset>
+							<AbsDimension x="0" y="-10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this.onClickFunc = MNIL.ResetOnClick;
+						this.enabled = true;
+						this.enabledTexture = "Interface\\AddOns\\MapNotesIconLib\\Graphics\\GenRaw";
+						this.disabledTexture = "Interface\\AddOns\\MapNotesIconLib\\Graphics\\GenDisabled";
+						this.highlightedTexture = "Interface\\AddOns\\MapNotesIconLib\\Graphics\\GenLitRaw";
+						MNIL.Button_SetText(this, MNIL_RESET);
+					</OnLoad>
+				</Scripts>
+			</Frame>
+			<Frame name="MNIL_OptionsCancel" inherits="MNIL_GenButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="MNIL_OptionsReset">
+						<Offset>
+							<AbsDimension x="32" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this.onClickFunc = MNIL.IL_CancelOptionsOnClick;
+						this.enabled = true;
+						this.enabledTexture = "Interface\\AddOns\\MapNotesIconLib\\Graphics\\GenRaw";
+						this.disabledTexture = "Interface\\AddOns\\MapNotesIconLib\\Graphics\\GenDisabled";
+						this.highlightedTexture = "Interface\\AddOns\\MapNotesIconLib\\Graphics\\GenLitRaw";
+						MNIL.Button_SetText(this, CANCEL);
+					</OnLoad>
+				</Scripts>
+			</Frame>
+		</Frames>
+		<Scripts>
+			<OnMouseDown>
+				this:StartMoving();
+				this.isMoving = true;
+			</OnMouseDown>
+			<OnMouseUp>
+				this:StopMovingOrSizing();
+				this.isMoving = false;
+			</OnMouseUp>
+		</Scripts>
+	</Frame>
+
+	<Frame name="MNIL_CustomIcon" parent="MapNotesEditFrame" topLevel="true" inherits="MNIL_IconButtonTemplate" enableMouse="true">
+		<Size>
+			<AbsDimension x="16" y="16"/>
+		</Size>
+		<Anchors>
+			<Anchor point="TOPRIGHT"/>
+		</Anchors>
+		<Scripts>
+			<OnLoad>
+				this.onClickFunc = MNIL.MNIL_CustomIcon_OnClick;
+				this.tooltipKey = "IL_CUSTOMICONTOOLTIP";
+				this.overlayHighlight = true;
+				this.enabled = true;
+			</OnLoad>
+			<OnShow>
+				MNIL_CustomIcon:SetFrameLevel( MapNotesEditFrame:GetFrameLevel() + 2 );
+				MNIL.MNIL_CustomIcon_OnShow();
+			</OnShow>
+			<OnHide>
+				MNIL.MNIL_CustomIcon_OnHide();
+			</OnHide>
+		</Scripts>
+	</Frame>
+
+</Ui>

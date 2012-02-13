@@ -1,0 +1,35 @@
+------------------------------------------------------------------------
+r1122 | elsia | 2010-03-30 14:20:55 +0000 (Tue, 30 Mar 2010) | 1 line
+Changed paths:
+   A /tags/v3.3h release (from /trunk:1121)
+
+Tagging as v3.3h release
+------------------------------------------------------------------------
+r1121 | elsia | 2010-03-28 01:35:27 +0000 (Sun, 28 Mar 2010) | 2 lines
+Changed paths:
+   M /trunk/GUI_Config.lua
+   M /trunk/GUI_Main.lua
+
+- Fix for new texture tiling feature
+
+------------------------------------------------------------------------
+r1120 | elsia | 2010-03-11 01:00:32 +0000 (Thu, 11 Mar 2010) | 2 lines
+Changed paths:
+   M /trunk/Tracker.lua
+
+- Heals of hostile targets are no longer recorded under healing done, but remain recorded under healing taken.
+
+------------------------------------------------------------------------
+r1119 | elsia | 2010-03-10 01:25:59 +0000 (Wed, 10 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/Tracker.lua
+
+- Added absorb annotation to death track event strings.
+------------------------------------------------------------------------
+r1118 | elsia | 2010-02-05 05:23:18 +0000 (Fri, 05 Feb 2010) | 2 lines
+Changed paths:
+   M /trunk/Tracker.lua
+
+- Annotate hits in the offensive details which also have a partial block associated with then. It will now look like this: Hit (Blocked)
+
+------------------------------------------------------------------------

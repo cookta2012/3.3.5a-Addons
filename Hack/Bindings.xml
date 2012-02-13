@@ -1,0 +1,15 @@
+<Bindings>
+	<Binding name="Show Main Window" header="HACK"> HackListFrame:Show() </Binding>
+        <!-- It's fucking ridiculous that we have to hardcode shit like this...
+             Come on, Blizz, give us a real binding API! -->
+	<Binding name="Hack Run #1"> Hack.Run(1) </Binding>
+	<Binding name="Hack Run #2"> Hack.Run(2) </Binding>
+	<Binding name="Hack Run #3"> Hack.Run(3) </Binding>
+	<Binding name="Hack Run #4"> Hack.Run(4) </Binding>
+	<Binding name="Hack Run #5"> Hack.Run(5) </Binding>
+	<Binding name="Hack Run #6"> Hack.Run(6) </Binding>
+	<Binding name="Hack Run #7"> Hack.Run(7) </Binding>
+	<Binding name="Hack Run #8"> Hack.Run(8) </Binding>
+	<Binding name="Hack Run #9"> Hack.Run(9) </Binding>
+	<Binding name="Hack Run #10"> Hack.Run(10) </Binding>
+</Bindings>
